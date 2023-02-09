@@ -17,10 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('property_id');
             $table->string('facility');
-            $table->string('image');
             $table->timestamps();
-
-
          $table->foreign('property_id')->references('id')->on('properties');
         });
     }

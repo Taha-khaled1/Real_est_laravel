@@ -103,13 +103,13 @@ class PropertyController extends Controller
         $propertyDetalis->price = $request->price; 
         $propertyDetalis->description = $request->description; 
         $propertyDetalis->space = $request->space; 
-        $propertyDetalis->numbeer_toilet = $request->name; 
+      //  $propertyDetalis->numbeer_toilet = $request->name; 
         $propertyDetalis->numbeer_room = $request->numbeer_room; 
         $propertyDetalis->property_direction = $request->property_direction; 
         $propertyDetalis->numbeer_toilet = $request->numbeer_toilet; 
         $propertyDetalis->longitude = "35.89999"; 
         $propertyDetalis->latitude = "37.8888"; 
-        $propertyDetalis->classification = $request->classification; 
+      //  $propertyDetalis->classification = $request->classification; 
         $propertyDetalis->seller_phone = $request->country; 
         $propertyDetalis->property_id = $property->id;
         $propertyDetalis->Rental_term = "1.55"; 
