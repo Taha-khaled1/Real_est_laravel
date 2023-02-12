@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('css')
+<link href="{{URL::asset('passets/css-rtl/style-dark.css')}}" rel="stylesheet">
 <!-- Internal Select2 css -->
 <link href="{{URL::asset('assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
 <!--Internal  Datetimepicker-slider css -->

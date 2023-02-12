@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Facility extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     public function property()
     {
         return $this->belongsTo(Property::class);

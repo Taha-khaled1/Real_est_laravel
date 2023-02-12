@@ -159,8 +159,8 @@
                             <select name="user_type" id="user_type" class="custom-select my-1 mr-sm-2" required>
 
                                 <option>مسؤال</option>
-                                <option>مالك</option>
                                 <option>مستخدم</option>
+
                             </select>
 
                             <div class="form-group">
@@ -179,12 +179,15 @@
                                 <label for="password">كلمة السر</label>
                                 <input type="password" class="form-control" name="password" id="password">
                             </div>
+
                           
                         </div>
+
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success">تاكيد</button>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -218,8 +221,8 @@
                             <label class="my-1 mr-2" for="inlineFormCustomSelectPref">القسم</label>
                             <select name="user_type" id="user_type" class="custom-select my-1 mr-sm-2" required>
 
-                                <option>مسؤال</option>
-                                <option>مالك</option>
+                                <option>مسؤال </option>
+                          
                                 <option>مستخدم</option>
                             </select>
 

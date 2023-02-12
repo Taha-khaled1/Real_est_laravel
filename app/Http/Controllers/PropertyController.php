@@ -122,6 +122,10 @@ class PropertyController extends Controller
         $catogery = Catogery::all();
         $property = Property::all()->where('status',1);
         return view('realest.property_view', ['propertydata' => $property,'catogery'=>$catogery]);
+    }    public function test()
+    {
+       
+        return view('realest.test');
     }
 
     public function ads()

@@ -39,7 +39,12 @@ class UserController extends Controller
     {
         $user = new User(); // اسم المودل
         $user->name = $request->name; 
-        $user->user_type = $request->user_type;
+       
+        if ($user->user_type=='مسؤال') {
+            $user->user_type = "admin";
+        } else {
+            $user->user_type = "user";
+        }
         $user->phone = $request->phone;
         $user->country = $request->country;
         $user->email = $request->email;
@@ -80,7 +85,15 @@ class UserController extends Controller
     {
            $user =  User::findorFail($request->pro_id);
            $user->name = $request->name; 
-           $user->user_type = $request->user_type;
+
+            if ($user->user_type=='مسؤال') {
+                $user->user_type = "admin";
+            } else {
+                $user->user_type = "user";
+            }
+
+          
+
            $user->phone = $request->phone;
            $user->country = $request->country;
            
