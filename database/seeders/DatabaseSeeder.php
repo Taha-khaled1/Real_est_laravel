@@ -37,6 +37,8 @@ class DatabaseSeeder extends Seeder
             CatogerysTableSeeder::class,
             PropertiesTableSeeder::class,
             SettingsTableSeeder::class,
+            ReportTableSeeder::class,
+            EnquyrisTableSeeder::class,
         ]);
     }
 

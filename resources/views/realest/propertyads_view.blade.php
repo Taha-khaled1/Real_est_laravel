@@ -94,7 +94,7 @@
                                     <th class="border-bottom-0">نوع العقار</th>
                                     <th class="border-bottom-0">المدينه</th>
                                     {{-- <th class="border-bottom-0">رقم الهاتف</th> --}}
-                                    <th class="border-bottom-0">السعر</th>
+									<th class="border-bottom-0">السعر</th>
                                     <th class="border-bottom-0">مساحة العقار</th>
                                     <th class="border-bottom-0">العمليات</th>
 
@@ -109,40 +109,24 @@
                                         <td>{{ $property->name }}</td>
                                         <td>{{ $property->catogery->name }}</td>
                                         <td>{{ $property->country }}</td>
-                                        {{-- <td>{{ $property->property_details->seller_phone }}</td> --}}
+										{{-- <td>{{ $property->property_details->seller_phone }}</td> --}}
                                         <td>{{ $property->property_details->price }}</td>
                                         <td>{{ $property->property_details->space }}</td>
 
-
                                         <td>
                                             <div style="display: flex;">
-                                                <form action='property.recommended' method="post">
-                                                    {{ method_field('POST') }}
-                                                    {{ csrf_field() }}
-                                                    @if ($property->recommended == 0)
-                                                        <button class="btn btn-outline-success btn-sm" name="id"
-                                                            value={{ $property->id }} data-toggle="modal"
-                                                            data-target="#edit_property">موصي به</button>
-                                                    @else
-                                                    <button class="btn btn-outline-success btn-sm" name="id"
-                                                    value={{ $property->id }} data-toggle="modal"
-                                                    data-target="#edit_property">ازله من الموصي  به</button>
-                                                    @endif
-                                                </form>
-
-
-                                                {{-- <form action='property.edit' method="post">
-                                                    {{ method_field('POST') }}
-                                                    {{ csrf_field() }}
-                                                    <button class="btn btn-outline-success btn-sm" name="id"
-                                                        value={{ $property->id }} data-toggle="modal"
-                                                        data-target="#edit_property">موصي به</button>
-                                                </form> --}}
-                                                <button class="btn btn-outline-danger btn-sm "
-                                                    data-pro_id="{{ $property->id }}" data-name="{{ $property->name }}"
-                                                    data-toggle="modal" data-target="#modaldemo9">حذف</button>
+                                              <form action='property.edit' method="post">
+                                                {{ method_field('POST') }}
+                                                {{ csrf_field() }}
+                                                <button class="btn btn-outline-success btn-sm"
+                                                  name="id" value={{$property->id}}
+                                                  data-toggle="modal" data-target="#edit_property">موافقه</button>
+                                              </form>
+                                              <button class="btn btn-outline-danger btn-sm "
+                                                data-pro_id="{{ $property->id }}" data-name="{{ $property->name }}"
+                                                data-toggle="modal" data-target="#modaldemo9">حذف</button>
                                             </div>
-                                        </td>
+                                          </td>
                                     </tr>
                                 @endforeach
                             </tbody>

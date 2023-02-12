@@ -41,7 +41,7 @@ class PropertyController extends Controller
                             ->orWhere('country', 'LIKE', '%'.$searchTerm.'%')
                             ->paginate(12);
     
-        return response()->json($properties);
+        return response()->json($properties->where('status',1));
     }
 
 
@@ -111,7 +111,7 @@ class PropertyController extends Controller
                 $q->whereBetween('price', [$request->input('price_min'), $request->input('price_max')]);
             });
         }
-            $properties = $query->get();
+            $properties = $query->where('status',1)->get();
     
             return response()->json($properties);
         }
@@ -164,7 +164,12 @@ class PropertyController extends Controller
     public function create()
     {
         $catogerys= Catogery::all();
-        return response()->json($catogerys);
+        return response()->json([
+            'status_code' => 200,
+            'message' => 'Success',
+          'catogerys'=>  $catogerys
+        
+        ]);
     }
 
     /**
@@ -180,7 +185,8 @@ class PropertyController extends Controller
     public function getMostViewedProperties() {
         $properties = Property::orderBy('views', 'desc')->take(10)->get();
 
-        return response()->json([ 'success' => true, 'data' => $properties], 200);
+        return response()->json([            'status_code' => 200,
+        'message' => 'Success', 'properties' => $properties->where('status',1)], 200);
     
     }
     public function updateViews($id)
@@ -207,7 +213,7 @@ class PropertyController extends Controller
      */
     public function show()
     {
-        $newProperties = Property::orderBy('created_at', 'desc')->limit(10)->get();
+        $newProperties = Property::orderBy('created_at', 'desc')->where('status',1)->limit(10)->get();
         return response()->json($newProperties);
     }
     /**
@@ -226,7 +232,14 @@ class PropertyController extends Controller
             return response()->json(['error' => 'Property not found'], 404);
         }
     
-        return response()->json($property);
+        return response()->json(
+        [
+      
+            'status_code' => 200,
+            'message' => 'Success',
+            'property' => $property,
+            ]
+        );
     }
 
     /**

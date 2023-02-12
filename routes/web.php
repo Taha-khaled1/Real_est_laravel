@@ -26,20 +26,25 @@ Route::get('/', function () {
     return view('auth\login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('realest.dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware(['auth', 'verified'])->group(function () {
 
   Route::controller(PropertyController::class)->group(function () {
+        Route::get('/dashboarddata', 'dashboarddata')->name('dashboarddata');
         Route::get('/propertys', 'index')->name('propertys');
         Route::get('/propertyinsertview', 'indexinsert')->name('propertyinsertview');
         Route::post('/property.store', 'store')->name('property.store');
+        Route::post('/property.recommended', 'recommended')->name('property.recommended');
+        Route::post('/property.edit', 'edit')->name('property.edit');
         Route::post('/property.destroy', 'destroy')->name('property.destroy');
+        Route::get('/adsproperty', 'ads')->name('adsproperty');
     });
     Route::controller(CatogeryController::class)->group(function () {
-        Route::get('/catogery', 'index')->name('catogery');
+       // Route::get('/catogery', 'index')->name('catogery');
+        Route::get('/catogeryview', 'index')->name('catogeryview');
         Route::post('/catogerystore', 'store')->name('catogery.store');
         Route::post('/catogeryupdate', 'update')->name('catogery.update');
         Route::post('/catogerydestroy', 'destroy')->name('catogery.destroy');

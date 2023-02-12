@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Catogery;
+use App\Models\Enquiry;
 use App\Models\Facility;
 use App\Models\Image;
 use App\Models\Property;
 use App\Models\PropertyDetalis;
+use App\Models\Report ;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class PropertyController extends Controller
 {
@@ -16,12 +21,117 @@ class PropertyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function dashboarddata()
+     {
+        $totalProperties = Property::count();
+        $totaldontProperties = Property::where('status',0)-> count();
+        $totalUsers = User::count();      
+        $totalQueries = Enquiry::count();
+        $totalReports = Report::count();
+        $totalCountries = User::select('country')->whereNotNull('country')->distinct()->count();
+        $last5Customers = Enquiry::orderBy('created_at', 'desc')->take(5)->get();  
+        $mostCountries = DB::table('properties')
+            ->select(Property::raw('count(*) as count, country'))
+            ->groupBy('country')
+            ->orderBy('count', 'desc')
+            ->limit(4)
+            ->get();
+
+            $mostuserCountries = DB::table('users')
+            ->select(Property::raw('count(*) as count, country'))
+            ->groupBy('country')
+            ->orderBy('count', 'desc')
+            ->limit(4)
+            ->get();
+            
+
+
+          
+
+
+            $highestQueriedProperty = DB::table('properties')
+            ->join('enquiries', 'properties.id', '=', 'enquiries.property_id')
+            ->select('properties.id', 'properties.name', 'properties.views',   'properties.country', 'properties.catogerie_id', 'properties.user_id', 'properties.created_at', DB::raw('count(enquiries.id) as inquiry_count'))
+            ->groupBy('properties.id', 'properties.name', 'properties.views',  'properties.country', 'properties.catogerie_id', 'properties.user_id', 'properties.created_at')
+            ->orderBy('inquiry_count', 'desc')->limit(5)
+            ->get();
+
+            $mostViewedProperties = DB::table('properties')
+            ->orderBy('views', 'desc')->limit(5)
+            ->get();
+
+
+            $highestReportedProperty = DB::table('properties')
+            ->join('reports', 'properties.id', '=', 'reports.property_id')
+            ->select('properties.id', 'properties.name', 'properties.views',  'properties.country', 'properties.catogerie_id', 'properties.user_id', 'properties.created_at', DB::raw('count(reports.id) as report_count'))
+            ->groupBy('properties.id', 'properties.name', 'properties.views',   'properties.country', 'properties.catogerie_id', 'properties.user_id', 'properties.created_at')
+            ->orderBy('report_count', 'desc')->limit(5)
+            ->get();
+
+      
+
+
+            // "id": 15,
+            // "name": "شاليه وليد سليمان",
+            // "picture": "public/property/i.png",
+            // "country": "الشارقه",
+            // "status": 1,
+            // "views": 500,
+            // "recommended": 0,
+            // "catogerie_id": 2,
+            // "user_id": 1,
+            // "created_at": "2023-02-09 08:07:42",
+            // "updated_at": "2023-02-10 18:07:42"
+
+
+
+
+
+
+         return response()->view('realest.dashboard',[
+
+            'totalProperties' => $totalProperties,
+            'totaldontProperties' => $totaldontProperties,
+            'totalUsers'=>$totalUsers, 
+            'totalReports'=>$totalReports,
+            'totalQueries' => $totalQueries,
+            // 'totalreports'=>$totalreports,
+            'totalCountries'=>$totalCountries,
+            'last5Customers'=>$last5Customers,
+            'mostCountries'=>$mostCountries, 
+            'mostuserCountries' => $mostuserCountries,
+
+
+            'highestQueriedProperty'=>$highestQueriedProperty,
+            'mostViewedProperties'=>$mostViewedProperties, 
+            'highestReportedProperty' => $highestReportedProperty,
+
+
+
+
+         ]);
+     }
+ 
+
+
+
+
     public function index()
     {
         $catogery = Catogery::all();
-        $property = Property::all();
+        $property = Property::all()->where('status',1);
         return view('realest.property_view', ['propertydata' => $property,'catogery'=>$catogery]);
     }
+
+    public function ads()
+    {
+
+        $property = Property::all()->where('status',0);
+        return view('realest.propertyads_view', ['propertydata' => $property]);
+    }
+
+
 
     public function indexinsert()
     {
@@ -164,11 +274,31 @@ class PropertyController extends Controller
      * @param  \App\Models\Property  $property
      * @return \Illuminate\Http\Response
      */
-    public function edit(Property $property)
+    public function edit(Request $request)
     {
-        //
+        $user =  Property::findorFail($request->id);
+        $user->status = 1; 
+        $user->save();
+        session()->flash('Edit', 'تم قبول الاعلان بنجاح');
+        return back();
+        
     }
+    public function recommended(Request $request)
+    {
+        $user =  Property::findorFail($request->id);
+        if ($user->recommended == 0) {
+            $user->recommended = 1; 
+            $user->save();
+            session()->flash('Edit', 'تم اضافة العقار الي الموصي به بنجاح');
+        } else {
+            $user->recommended = 0; 
+            $user->save();
+            session()->flash('delete', 'تم حذف العقار من الموصي به بنجاح');
+        }
 
+        return back();
+        
+    }
     /**
      * Update the specified resource in storage.
      *
