@@ -30,7 +30,7 @@ return new class extends Migration
 
           //  $table->string('classification');
             $table->string('seller_phone')->nullable();;
-            $table->timestamps();
+        
             $table->unsignedBigInteger('property_id');
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
         });

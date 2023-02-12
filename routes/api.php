@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('recommendhotel',[PropertyController::class, 'recommendhotel'])->name('recommendhotel');
 Route::get('newproperty',[PropertyController::class, 'show'])->name('newproperty');
 Route::get('filterdata',[PropertyController::class, 'filter'])->name('filterdata');
 Route::get('settingesapp',[PropertyController::class, 'settinges'])->name('settingesapp');

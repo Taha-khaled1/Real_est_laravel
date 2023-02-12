@@ -23,8 +23,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 1,
             'user_id' => 1,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -45,8 +45,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -56,26 +55,22 @@ class PropertiesTableSeeder extends Seeder
           [
             'property_id' => $property_id,
             'image_path' => 'public/property/a.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
           ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -85,20 +80,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -120,8 +112,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 1,
             'user_id' => 1,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -142,8 +134,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -153,26 +144,22 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/b.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -182,20 +169,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -215,8 +199,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 1,
             'user_id' => 2,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -236,8 +220,7 @@ class PropertiesTableSeeder extends Seeder
             'latitude' => '25.276987',
             'address' => 'دبي مول وبجوار برج خليفة',
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -246,26 +229,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [
             'property_id' => $property_id,
             'image_path' => 'public/property/c.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -275,20 +254,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -308,8 +284,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 1,
             'user_id' => 2,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -329,8 +305,7 @@ class PropertiesTableSeeder extends Seeder
             'latitude' => '25.276987',
             'address' => 'دبي مول وبجوار برج خليفة',            
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -340,26 +315,22 @@ class PropertiesTableSeeder extends Seeder
               [
             'property_id' => $property_id,
             'image_path' => 'public/property/d.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
            ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -369,20 +340,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -402,8 +370,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 2,
             'user_id' => 1,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -424,8 +392,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -434,26 +401,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [
             'property_id' => $property_id,
             'image_path' => 'public/property/e.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -463,20 +426,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -496,8 +456,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 2,
             'user_id' => 1,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -518,8 +478,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -528,26 +487,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [
             'property_id' => $property_id,
             'image_path' => 'public/property/f.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -557,20 +512,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -590,8 +542,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 3,
             'user_id' => 6,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -612,8 +564,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -622,26 +573,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [
             'property_id' => $property_id,
             'image_path' => 'public/property/g.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -651,20 +598,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -684,8 +628,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 3,
             'user_id' => 3,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -704,8 +648,7 @@ class PropertiesTableSeeder extends Seeder
             'latitude' => '25.276987',
             'address' => 'دبي مول وبجوار برج خليفة',          
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -714,26 +657,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [
             'property_id' => $property_id,
             'image_path' => 'public/property/h.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -743,20 +682,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -776,8 +712,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 4,
             'user_id' => 4,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -798,8 +734,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -808,26 +743,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [
             'property_id' => $property_id,
             'image_path' => 'public/property/o.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -837,20 +768,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -870,8 +798,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 4,
             'user_id' => 4,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -892,8 +820,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -902,26 +829,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [
             'property_id' => $property_id,
             'image_path' => 'public/property/x.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -931,20 +854,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -964,8 +884,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 4,
             'user_id' => 4,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -986,8 +906,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -996,26 +915,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [
             'property_id' => $property_id,
             'image_path' => 'public/property/y.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -1025,20 +940,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -1058,8 +970,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 4,
             'user_id' => 5,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -1080,8 +992,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -1090,26 +1001,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [    [
             'property_id' => $property_id,
             'image_path' => 'public/property/z.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -1119,20 +1026,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -1152,8 +1056,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 1,
             'user_id' => 1,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -1174,8 +1078,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -1184,26 +1087,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [
             'property_id' => $property_id,
             'image_path' => 'public/property/r.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -1213,20 +1112,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -1246,8 +1142,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 3,
             'user_id' => 7,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -1268,8 +1164,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -1280,26 +1175,22 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/w.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -1309,20 +1200,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);
@@ -1342,8 +1230,8 @@ class PropertiesTableSeeder extends Seeder
             'status' => '1',
             'catogerie_id' => 2,
             'user_id' => 1,
-            'created_at' => now(),
-            'updated_at' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
         ];
 
         $property_id = DB::table('properties')->insertGetId($property);
@@ -1364,8 +1252,7 @@ class PropertiesTableSeeder extends Seeder
             'address' => 'دبي مول وبجوار برج خليفة',
             
             'seller_phone' => '555-555-5555',
-            'created_at' => now(),
-            'updated_at' => now(),
+
             'property_id' => $property_id,
         ];
 
@@ -1375,26 +1262,22 @@ class PropertiesTableSeeder extends Seeder
       
             'property_id' => $property_id,
             'image_path' => 'public/property/i.png',
-            'created_at' => now(),
-            'updated_at' => now(),
+
         ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/aa.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/bb.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],  
               [
                 'property_id' => $property_id,
                 'image_path' => 'public/property/cc.png',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
 
@@ -1404,20 +1287,17 @@ class PropertiesTableSeeder extends Seeder
             [
                 'property_id' => $property_id,
                 'facility' => 'مكيفات',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'مدخل خاص',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
             [
                 'property_id' => $property_id,
                 'facility' => 'انترنت',
-                'created_at' => now(),
-                'updated_at' => now(),
+
             ],
         ];
         DB::table('facilities')->insert($property_facilities);

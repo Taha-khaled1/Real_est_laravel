@@ -39,9 +39,14 @@ class PropertyController extends Controller
         $searchTerm = $request->input('search');
         $properties = Property::where('name', 'LIKE', '%'.$searchTerm.'%')
                             ->orWhere('country', 'LIKE', '%'.$searchTerm.'%')
-                            ->paginate(12);
+                            ->paginate(10);
     
-        return response()->json($properties->where('status',1));
+        return response()->json([ 
+            'status_code' => 200,
+            'message' => 'Success',
+            'properties' => $properties->where('status',1), 
+           
+    ]);
     }
 
 
@@ -113,7 +118,12 @@ class PropertyController extends Controller
         }
             $properties = $query->where('status',1)->get();
     
-            return response()->json($properties);
+            return response()->json([ 
+                'status_code' => 200,
+                'message' => 'Success',
+                'properties' => $properties->where('status',1), 
+               
+        ]);
         }
     
  
@@ -167,7 +177,7 @@ class PropertyController extends Controller
         return response()->json([
             'status_code' => 200,
             'message' => 'Success',
-          'catogerys'=>  $catogerys
+            'catogerys'=>  $catogerys
         
         ]);
     }
@@ -185,10 +195,26 @@ class PropertyController extends Controller
     public function getMostViewedProperties() {
         $properties = Property::orderBy('views', 'desc')->take(10)->get();
 
-        return response()->json([            'status_code' => 200,
-        'message' => 'Success', 'properties' => $properties->where('status',1)], 200);
+        return response()->json( [            
+            'status_code' => 200,
+            'message' => 'Success',
+            'properties' => $properties->where('status',1)],200,[],200);
+       
     
     }
+
+    public function recommendhotel() {
+        $properties = Property::where('recommended',1)->get();
+
+        return response()->json([            
+        'status_code' => 200,
+        'message' => 'Success',
+        'properties' => $properties->where('status',1)], 200);
+    
+    }
+
+
+
     public function updateViews($id)
     {
 
@@ -201,7 +227,7 @@ class PropertyController extends Controller
         $property->views += 1;
         $property->save();
     
-        return response()->json(['message' => 'Views updated successfully']);
+        return response()->json(['message' => 'تم تحديث المشاهده بنجاح']);
     }
 
 
@@ -214,7 +240,11 @@ class PropertyController extends Controller
     public function show()
     {
         $newProperties = Property::orderBy('created_at', 'desc')->where('status',1)->limit(10)->get();
-        return response()->json($newProperties);
+        return response()->json( [          
+        'status_code' => 200,
+        'message' => 'Success',
+        'property' => $newProperties,
+        ]);
     }
     /**
      * Show the form for editing the specified resource.
