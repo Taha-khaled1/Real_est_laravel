@@ -256,7 +256,7 @@ class PropertyController extends Controller
     {
       
 
-        $property = Property::with('property_details', 'images', 'facilities')->find($id);
+        $property = Property::with('property_details', 'images', 'facilities', 'user','catogery')->find($id);
 
         if (!$property) {
             return response()->json(['error' => 'Property not found'], 404);

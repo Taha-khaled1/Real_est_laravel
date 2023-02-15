@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('country')->nullable();
-            $table->string('user_type')->nullable();
+            $table->string('user_type')->default('user');
             $table->string('phone')->nullable();
             $table->integer('number_ads')->default(15);
             $table->string('email')->unique();

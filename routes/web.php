@@ -8,6 +8,9 @@ use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WebControlle;
+use App\Mail\Testmail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +24,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/send',function () {
+    Mail::to('d4a3bd7aa2@boxmail.lol')->send(new Testmail);
 
+    return response('seeeeend');
+});
 Route::get('/', function () {
     return view('auth\login');
 });
@@ -29,7 +36,14 @@ Route::get('/', function () {
 // Route::get('/dashboard', function () {
 //     return view('realest.dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
+Route::controller(PropertyController::class)->group(function () {
 
+Route::get('/test', [WebControlle::class,'index'])->name('test');
+Route::post('/addenqueris', [WebControlle::class,'addenqueris'])->name('addenqueris');
+Route::post('/addreport', [WebControlle::class,'addreport'])->name('addreport');
+Route::get('/detelisscreen/{id}', [WebControlle::class,'detalisscreen'])->name('detelisscreen');
+
+});
 Route::middleware(['auth', 'verified'])->group(function () {
 
   Route::controller(PropertyController::class)->group(function () {
@@ -41,8 +55,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/property.edit', 'edit')->name('property.edit')->middleware('admin');
         Route::post('/property.destroy', 'destroy')->name('property.destroy')->middleware('admin');
         Route::get('/adsproperty', 'ads')->name('adsproperty')->middleware('admin');
-        Route::get('/test', 'test')->name('test')->middleware('admin');
     });
+    
     Route::controller(CatogeryController::class)->group(function () {
        // Route::get('/catogery', 'index')->name('catogery');
         Route::get('/catogeryview', 'index')->name('catogeryview')->middleware('admin');

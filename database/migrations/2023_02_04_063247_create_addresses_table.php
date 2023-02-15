@@ -18,9 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('address_line1');
             $table->string('address_line2')->nullable();
-            $table->string('city');
-            $table->string('state');
-            $table->string('postal_code');
+            $table->string('city')->nullable();;
   
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
        

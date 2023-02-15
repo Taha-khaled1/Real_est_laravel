@@ -13,12 +13,12 @@ class PropertiesTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    function run()
     {  //------------------------------------------------------------------------------------- 0
         $property = [
             'views' => rand(1, 399),
             'name' => 'منزل الانوار',
-            'picture' => 'public/property/a.png',
+            'picture' => 'property/a.png',
             'country' => 'دبي',
             'status' => '1',
             'catogerie_id' => 1,
@@ -54,22 +54,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [        
           [
             'property_id' => $property_id,
-            'image_path' => 'public/property/a.png',
+            'image_path' => 'property/a.png',
 
           ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -107,7 +107,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'منزل محمد علي',
-            'picture' => 'public/property/b.png',
+            'picture' => 'property/b.png',
             'country' => 'دبي',
             'status' => '1',
             'catogerie_id' => 1,
@@ -143,22 +143,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [    
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/b.png',
+                'image_path' => 'property/b.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -194,7 +194,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'منزل الخليفه',
-            'picture' => 'public/property/c.png',
+            'picture' => 'property/c.png',
             'country' => 'دبي',
             'status' => '1',
             'catogerie_id' => 1,
@@ -228,22 +228,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [            [
             'property_id' => $property_id,
-            'image_path' => 'public/property/c.png',
+            'image_path' => 'property/c.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -279,7 +279,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'منزل ابن الواليد',
-            'picture' => 'public/property/d.png',
+            'picture' => 'property/d.png',
             'country' => 'دبي',
             'status' => '1',
             'catogerie_id' => 1,
@@ -314,22 +314,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [          
               [
             'property_id' => $property_id,
-            'image_path' => 'public/property/d.png',
+            'image_path' => 'property/d.png',
 
            ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -365,7 +365,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'شاليه يوسف اوباما',
-            'picture' => 'public/property/e.png',
+            'picture' => 'property/e.png',
             'country' => 'ابوظبي',
             'status' => '1',
             'catogerie_id' => 2,
@@ -400,22 +400,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [            [
             'property_id' => $property_id,
-            'image_path' => 'public/property/e.png',
+            'image_path' => 'property/e.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -451,7 +451,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'شاليه زياد احمد',
-            'picture' => 'public/property/f.png',
+            'picture' => 'property/f.png',
             'country' => 'ابوظبي',
             'status' => '1',
             'catogerie_id' => 2,
@@ -486,22 +486,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [            [
             'property_id' => $property_id,
-            'image_path' => 'public/property/f.png',
+            'image_path' => 'property/f.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -537,7 +537,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'فندق احمد مفتاح الاول',
-            'picture' => 'public/property/g.png',
+            'picture' => 'property/g.png',
             'country' => 'ابوظبي',
             'status' => '1',
             'catogerie_id' => 3,
@@ -572,22 +572,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [            [
             'property_id' => $property_id,
-            'image_path' => 'public/property/g.png',
+            'image_path' => 'property/g.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -623,7 +623,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'فندق العجمي السابع',
-            'picture' => 'public/property/h.png',
+            'picture' => 'property/h.png',
             'country' => 'عجمان',
             'status' => '1',
             'catogerie_id' => 3,
@@ -656,22 +656,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [            [
             'property_id' => $property_id,
-            'image_path' => 'public/property/h.png',
+            'image_path' => 'property/h.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -707,7 +707,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'فله محمدالانوار',
-            'picture' => 'public/property/o.png',
+            'picture' => 'property/o.png',
             'country' => 'الشارقه',
             'status' => '1',
             'catogerie_id' => 4,
@@ -742,22 +742,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [            [
             'property_id' => $property_id,
-            'image_path' => 'public/property/o.png',
+            'image_path' => 'property/o.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -793,7 +793,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'فله اليوسفي',
-            'picture' => 'public/property/x.png',
+            'picture' => 'property/x.png',
             'country' => 'عجمان',
             'status' => '1',
             'catogerie_id' => 4,
@@ -828,22 +828,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [            [
             'property_id' => $property_id,
-            'image_path' => 'public/property/x.png',
+            'image_path' => 'property/x.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -879,7 +879,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'فله مجدي محمد',
-            'picture' => 'public/property/y.png',
+            'picture' => 'property/y.png',
             'country' => 'عجمان',
             'status' => '1',
             'catogerie_id' => 4,
@@ -914,22 +914,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [            [
             'property_id' => $property_id,
-            'image_path' => 'public/property/y.png',
+            'image_path' => 'property/y.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -965,7 +965,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'فله المحمدي',
-            'picture' => 'public/property/z.png',
+            'picture' => 'property/z.png',
             'country' => 'الشارقه',
             'status' => '1',
             'catogerie_id' => 4,
@@ -1000,22 +1000,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [    [
             'property_id' => $property_id,
-            'image_path' => 'public/property/z.png',
+            'image_path' => 'property/z.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -1051,7 +1051,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'منزل العمده محمد',
-            'picture' => 'public/property/r.png',
+            'picture' => 'property/r.png',
             'country' => 'عجمان',
             'status' => '1',
             'catogerie_id' => 1,
@@ -1086,22 +1086,22 @@ class PropertiesTableSeeder extends Seeder
 
         $property_images = [            [
             'property_id' => $property_id,
-            'image_path' => 'public/property/r.png',
+            'image_path' => 'property/r.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -1137,7 +1137,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'فندق المنصوره',
-            'picture' => 'public/property/w.png',
+            'picture' => 'property/w.png',
             'country' => 'الشارقه',
             'status' => '1',
             'catogerie_id' => 3,
@@ -1174,22 +1174,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/w.png',
+                'image_path' => 'property/w.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
@@ -1225,7 +1225,7 @@ class PropertiesTableSeeder extends Seeder
         $property = [
             'views' => rand(1, 399),
             'name' => 'شاليه وليد سليمان',
-            'picture' => 'public/property/i.png',
+            'picture' => 'property/i.png',
             'country' => 'الشارقه',
             'status' => '1',
             'catogerie_id' => 2,
@@ -1261,22 +1261,22 @@ class PropertiesTableSeeder extends Seeder
         $property_images = [            [ 
       
             'property_id' => $property_id,
-            'image_path' => 'public/property/i.png',
+            'image_path' => 'property/i.png',
 
         ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/aa.png',
+                'image_path' => 'property/aa.png',
 
             ],
             [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/bb.png',
+                'image_path' => 'property/bb.png',
 
             ],  
               [
                 'property_id' => $property_id,
-                'image_path' => 'public/property/cc.png',
+                'image_path' => 'property/cc.png',
 
             ],
         ];
