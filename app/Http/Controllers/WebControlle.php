@@ -6,6 +6,7 @@ use App\Models\Catogery;
 use App\Models\Enquiry;
 use App\Models\Property;
 use App\Models\Report;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -50,8 +51,61 @@ class WebControlle extends Controller
 
     }
 
+    public function moreproperty($country){
+        $property = Property::where('country',$country)->get();
 
 
+        
+        return view('realest.more_view',['property'=>$property]);
+
+
+
+    }
+
+
+
+    public function morepropertyCato($catogery){
+        $property = Property::where('catogerie_id',$catogery)->get();
+
+
+        
+        return view('realest.more_view',['property'=>$property]);
+
+
+
+    }
+
+
+    public function aboutpage(){
+      
+        $setting = Setting::first();
+
+        
+        return view('realest.about_view', ['setting' => $setting]);
+
+
+
+    }
+    public function terms(){
+      
+        
+
+        
+        return view('realest.terms');
+
+
+
+    }
+    public function blogview(){
+      
+        
+
+        
+        return view('realest.blog');
+
+
+
+    }
     public function addreport(Request $request)
     {
 

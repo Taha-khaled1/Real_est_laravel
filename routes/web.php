@@ -36,13 +36,27 @@ Route::get('/', function () {
 // Route::get('/dashboard', function () {
 //     return view('realest.dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
+Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
+Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
+Route::put('/blogs/{id}', [BlogController::class, 'update'])->name('blogs.update');
+Route::delete('/blogs/{id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+
+
+
 Route::controller(PropertyController::class)->group(function () {
 
 Route::get('/test', [WebControlle::class,'index'])->name('test');
 Route::post('/addenqueris', [WebControlle::class,'addenqueris'])->name('addenqueris');
 Route::post('/addreport', [WebControlle::class,'addreport'])->name('addreport');
 Route::get('/detelisscreen/{id}', [WebControlle::class,'detalisscreen'])->name('detelisscreen');
-
+Route::get('/moreproperty/{country}', [WebControlle::class,'moreproperty'])->name('moreproperty');
+Route::get('/blogview', [WebControlle::class,'blogview'])->name('blogview');
+Route::get('/aboutpage', [WebControlle::class,'aboutpage'])->name('aboutpage');Route::get('/terms', [WebControlle::class,'terms'])->name('terms');
+Route::get('/morepropertyCato/{catogery}', [WebControlle::class,'morepropertyCato'])->name('morepropertyCato');
 });
 Route::middleware(['auth', 'verified'])->group(function () {
 

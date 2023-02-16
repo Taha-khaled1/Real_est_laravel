@@ -1,3 +1,4 @@
+
 @section('css')
 <link rel="stylesheet" href="{{ asset('assets/css-rtl/styeltweb.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/swiper-bundle.min.css') }}">
@@ -87,6 +88,7 @@ header{
                     </form>
                 </div>
             </div>
+            
         </header>
         <div class="3kares-most-visited p-sm-5 p-1">
             <div class="container">
@@ -325,7 +327,7 @@ header{
                  @foreach ($catogerys as $item)
                  <div class="col-lg-3 my-2">
                     <div class="properti_city position-relative">
-                        <a href="#">
+                        <a href="morepropertyCato/{{$item->id}}">
                             <div class="thumb"><img class="img-fluid w-100" src="{{$item->image_path}}" alt="pc1.jpg"></div>
                             <div class="overlay">
                                 <div class="details text-light">
@@ -366,7 +368,7 @@ header{
     
 <div class="col-lg-8 my-2">
     <div class="properti_city position-relative">
-        <a href="#">
+        <a href="moreproperty/{{$mostCountries[0]->country}}">
             <div class="thumb"><img class="img-fluid w-100" src="assets/img/backgrounds/pc2.jpg" alt="pc1.jpg"></div>
             <div class="overlay">
                 <div class="details text-light">
@@ -381,7 +383,7 @@ header{
 
                     <div class="col-lg-4 my-2">
                         <div class="properti_city position-relative">
-                            <a href="#">
+                            <a href="moreproperty/{{$mostCountries[1]->country}}">
                                 <div class="thumb"><img class="img-fluid w-100" src="assets/img/backgrounds/pc1.jpg" alt="pc1.jpg"></div>
                                 <div class="overlay">
                                     <div class="details text-light">
@@ -395,7 +397,7 @@ header{
 
                     <div class="col-lg-4 my-2">
                         <div class="properti_city position-relative">
-                            <a href="#">
+                            <a href="moreproperty/{{$mostCountries[2]->country}}">
                                 <div class="thumb"><img class="img-fluid w-100" src="assets/img/backgrounds/pc3.jpg" alt="pc1.jpg"></div>
                                 <div class="overlay">
                                     <div class="details text-light">
@@ -409,7 +411,7 @@ header{
 
                     <div class="col-lg-8 my-2">
                         <div class="properti_city position-relative">
-                            <a href="#">
+                            <a href="moreproperty/{{$mostCountries[3]->country}}">
                                 <div class="thumb"><img class="img-fluid w-100" src="assets/img/backgrounds/1.jpg" alt="pc1.jpg"></div>
                                 <div class="overlay">
                                     <div class="details text-light">

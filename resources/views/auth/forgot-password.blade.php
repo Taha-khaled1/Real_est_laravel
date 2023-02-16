@@ -1,3 +1,29 @@
+@extends('layouts.master2')
+
+@section('title')
+تسجيل الدخول
+@stop
+
+
+@section('css')
+{{-- <style>
+.ht-xl-80p {
+    height: 80%;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  </style> --}}
+
+<!-- Sidemenu-respoansive-tabs css -->
+<link href="{{URL::asset('assets/plugins/sidemenu-responsive-tabs/css/sidemenu-responsive-tabs.css')}}" rel="stylesheet">
+@endsection
+
+
 <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
         {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
