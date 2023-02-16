@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CatogeryController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\ProfileController;
@@ -38,13 +39,13 @@ Route::get('/', function () {
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
-Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
+Route::get('/blogview', [BlogController::class, 'index'])->name('blogview');
+Route::get('/blogscreate', [BlogController::class, 'create'])->name('blogscreate');
 Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
 Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
 Route::put('/blogs/{id}', [BlogController::class, 'update'])->name('blogs.update');
 Route::delete('/blogs/{id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
-
+Route::get('/blogs/{id}', [BlogController::class, 'show'])->name('showblog');
 
 
 Route::controller(PropertyController::class)->group(function () {
@@ -54,7 +55,7 @@ Route::post('/addenqueris', [WebControlle::class,'addenqueris'])->name('addenque
 Route::post('/addreport', [WebControlle::class,'addreport'])->name('addreport');
 Route::get('/detelisscreen/{id}', [WebControlle::class,'detalisscreen'])->name('detelisscreen');
 Route::get('/moreproperty/{country}', [WebControlle::class,'moreproperty'])->name('moreproperty');
-Route::get('/blogview', [WebControlle::class,'blogview'])->name('blogview');
+
 Route::get('/aboutpage', [WebControlle::class,'aboutpage'])->name('aboutpage');Route::get('/terms', [WebControlle::class,'terms'])->name('terms');
 Route::get('/morepropertyCato/{catogery}', [WebControlle::class,'morepropertyCato'])->name('morepropertyCato');
 });

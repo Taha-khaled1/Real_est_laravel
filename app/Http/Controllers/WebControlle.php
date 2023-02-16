@@ -96,16 +96,6 @@ class WebControlle extends Controller
 
 
     }
-    public function blogview(){
-      
-        
-
-        
-        return view('realest.blog');
-
-
-
-    }
     public function addreport(Request $request)
     {
 

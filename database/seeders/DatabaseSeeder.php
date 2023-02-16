@@ -39,6 +39,7 @@ class DatabaseSeeder extends Seeder
             SettingsTableSeeder::class,
             ReportTableSeeder::class,
             EnquyrisTableSeeder::class,
+            BlogsTableSeeder::class,
         ]);
     }
 

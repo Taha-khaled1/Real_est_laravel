@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="{{ asset('vendor/lightcase/lightcase.css') }}">
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-
-     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
 
@@ -116,7 +114,6 @@
 	<a href="javascript:void(0)" id="side-search-close">&times;</a>
 	<div class="sidenav-content">
 		<form action="">
-            <img src="" alt="">
 
 			<div class="input-group md-form form-sm form-2 pl-0">
 			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
@@ -130,78 +127,31 @@
 		</form>
 	</div>
 	
-</div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/bg.jpg)">
+</div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(/{{$blogs->image}})">
   <div class="container text-center">
-    <h1 class="display-2 mb-4">Blog</h1>
+    <h1 class="display-2 mb-4">Single Blog</h1>
   </div>
-</div>	<!-- Blog Section -->
-<section id="blog" class="bg-grey">
+</div>	<!-- Contact Form Section -->
+<section id="single-content" class="bg-white">
     <div class="container">
-        <div class="section-content">
-            <div class="title-wrap mb-5" data-aos="fade-up">
-                <h2 class="section-title">Latest <b>news</b></h2>
-                <p class="section-sub-title">Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-            </div>
+        <div class="section-content blog-content">
+            
             <div class="row">
-                <!-- Blog -->
-                <div class="col-md-12 blog-holder">
-                    <div class="row">
-                       
-                     
-                                
-                          @foreach ($blogs as $item)
-                              
-                          
-                      
-                        <!-- Blog Item -->
-                        <div class="col-md-4 blog-item-wrapper" data-aos="fade-up">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="single.html"><img src="/{{$item->image}}" alt=""></a>
-                                </div>
-                                <div class="blog-text">
-                                    <div class="blog-tag">
-                                        <a href="#"><h6><small>CODE</small></h6></a>
-                                    </div>
-                                    <div class="blog-title">
-                                        <a href="single.html"><h4>{{$item->title}}</h4></a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <p class="blog-date">{{$item->created_at}}</p> 
-                                      
-                                    </div>
-                                    <div class="blog-desc">
-                                        <p>{{ substr($item->content, 0, 300) . (strlen($item->content) > 300 ? "..." : "") }}</p>
-                                        @if (strlen($item->content) > 300)
-                                            <a href={{ route('showblog', $item->id) }}>Read more</a>
-                                        @endif
-                                    </div>
-                                    <div class="blog-author">
-                                        <p>by John Doe</p>
-                                    </div>
-                                    {{-- {{ route('articles.show', $item->id) }} --}}
-                                    <div class="blog-share-wrapper">
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-facebook-square"></i>
-                                        </a>
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-twitter-square"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End of Blog Item -->
-                        @endforeach
-                        <!-- End of Blog Item -->
-                    </div>
-                </div>
-                <!-- End of Blog -->
+                <!-- Single Content Holder -->
+                <div class="col-md-8 offset-md-2 mt-4">
+                    <h4>{{$blogs->title}}</h4>
+                    <img class="float-left" width="320px" src="/{{$blogs->image}}" alt="">
+                    <p>{{$blogs->content}}</p>
+                    {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste harum, ut magni cupiditate. Nihil ipsum debitis voluptates voluptate illum consectetur sapiente dolorem facilis, eum nobis sequi eveniet assumenda vel voluptatem!</p>
+                    <p>Consectetur adipisicing elit. Sint, corrupti deleniti, rem mollitia quam cum quo, animi ipsa praesentium officiis ducimus! Modi aperiam, nulla ipsum, totam natus consequuntur fugiat blanditiis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste harum, ut magni cupiditate. Nihil ipsum debitis voluptates voluptate illum consectetur sapiente dolorem facilis, eum nobis sequi eveniet assumenda vel voluptatem!</p>
+                </div> --}}
+                <!-- End of Contact Form Holder -->
             </div>
         </div>
     </div>
 </section>
-<!-- End of Blog Section -->	<!-- Features Section-->
+<!-- End of Contact Form Section -->	<!-- Features Section-->
 <section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg);">
     <div class="container">
         <div class="section-content" data-aos="fade-up">

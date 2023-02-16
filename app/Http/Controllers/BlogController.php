@@ -13,8 +13,8 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {    $blogs = Blog::all();
+        return view('realest.blog',['blogs'=>$blogs]);
     }
 
     /**
@@ -23,8 +23,8 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {    $blogs = Blog::with('user')->get();
+        return response()->view('realest.blogdash',['blogs'=>$blogs]);
     }
 
     /**
@@ -63,9 +63,10 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show($id)
     {
-        //
+        $blog = Blog::find($id);
+        return view('realest.singleblog', ['blogs'=>$blog]);
     }
 
     /**
