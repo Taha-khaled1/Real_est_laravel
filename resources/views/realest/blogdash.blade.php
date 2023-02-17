@@ -100,7 +100,8 @@
 												
 													<a class="modal-effect btn btn-sm btn-info" data-effect="effect-scale"
 														data-id="{{ $catogery->id}}" data-title="{{ $catogery->title}}"
-														data-image_path="{{ $catogery->image_path }}" data-toggle="modal"
+														data-content="{{ $catogery->content}}" 
+														data-image="{{ $catogery->image }}" data-toggle="modal"
 														href="#exampleModal2" title="تعديل"><i class="las la-pen"></i></a>
 											
 		
@@ -129,22 +130,25 @@
 						<div class="modal-dialog" role="document">
 							<div class="modal-content modal-content-demo">
 								<div class="modal-header">
-									<h6 class="modal-title">اضافة قسم</h6><button aria-label="Close" class="close" data-dismiss="modal"
+									<h6 class="modal-title">اضافة مقال</h6><button aria-label="Close" class="close" data-dismiss="modal"
 										type="button"><span aria-hidden="true">&times;</span></button>
 								</div>
 								<div class="modal-body">
-									<form action="{{ route('catogery.store') }}" method="post" enctype="multipart/form-data">
+									<form action="{{ route('blogs.store') }}" method="post" enctype="multipart/form-data">
 										{{ csrf_field() }}
 				
 										<div class="form-group">
-											<label for="exampleInputEmail1">اسم القسم</label>
-											<input type="text" class="form-control" id="title" title="title">
+											<label for="exampleInputEmail1">عنوان المقال</label>
+											<input type="text" class="form-control" id="title" name="title">
 										</div>
-				
 										<div class="form-group">
-											<label for="image">تحميل صوره لنوع العقار</label>
+											<label for="exampleInputEmail1">تفاصيل المقال</label>
+											<input type="text" class="form-control" id="content" name="content">
+										</div>
+										<div class="form-group">
+											<label for="image">تحميل صوره للمقال</label>
 											<div class="custom-file">
-												<input type="file" class="custom-file-input" id="image" title="image">
+												<input type="file" class="custom-file-input" id="image" name="image">
 												<label class="custom-file-label" for="image">اختار صوره</label>
 											</div>
 											<img src="#" id="preview" style="display: none; max-width: 200px; max-height: 200px;">
@@ -171,18 +175,22 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="{{ route("catogery.update") }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route("blogs.update") }}" method="post" enctype="multipart/form-data">
 			
 			{{ csrf_field() }}
-			<input type="hidden" title="id" id="id" value="">
+			<input type="hidden" name="id" id="id" value="">
 			<div class="form-group">
 				<label for="recipient-title" class="col-form-label">اسم القسم</label>
-				<input class="form-control" title="title" id="title" type="text">
+				<input class="form-control" name="title" id="title" type="text">
 			</div>
 			<div class="form-group">
-				<label for="recipient-title" class="col-form-label">صوره القسم</label>
-				<input class="form-control" title="image_path" id="image_path" type="file">
-				<img src="image_path"  id="image_path" class="img-thumbnail" style="width: 100px; height: 100px;">
+				<label for="recipient-title" class="col-form-label">وصف المقال</label>
+				<input class="form-control" name="content" id="content" type="text">
+			</div>
+			<div class="form-group">
+				<label for="recipient-title" class="col-form-label">صوره المقال</label>
+				<input class="form-control" name="image" id="image" value="image" type="file">
+				<img src="image"  id="image" class="img-thumbnail" style="width: 100px; height: 100px;">
 			</div>
 			</div>
 			<div class="modal-footer">
@@ -202,13 +210,13 @@
 							<h6 class="modal-title">حذف القسم</h6><button aria-label="Close" class="close" data-dismiss="modal"
 								type="button"><span aria-hidden="true">&times;</span></button>
 						</div>
-						<form action="{{ route("catogery.destroy") }}"method="post">
+						<form action="{{ route("blogs.destroy") }}"method="post">
 							{{ method_field('post') }}
 							{{ csrf_field() }}
 							<div class="modal-body">
 								<p>هل انت متاكد من عملية الحذف ؟</p><br>
-								<input type="hidden" title="id" id="id" value="">
-								<input class="form-control" title="title" id="title" type="text" readonly>
+								<input type="hidden" name="id" id="id" value="">
+								<input class="form-control" name="title" id="title" type="text" readonly>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
@@ -261,11 +269,11 @@
         var button = $(event.relatedTarget)
         var id = button.data('id')
         var title = button.data('title')
-        var image_path = button.data('image_path')
+        var image = button.data('image')
         var modal = $(this)
         modal.find('.modal-body #id').val(id);
         modal.find('.modal-body #title').val(title);
-        modal.find('.modal-body #image_path').val(image_path);
+        modal.find('.modal-body #image').val(image);
     })
 </script> --}}
 
@@ -293,11 +301,13 @@
 		var button = $(event.relatedTarget) 
 		var id = button.data('id')
 		var title = button.data('title')
-		var image_path = button.data('image_path')
+		var content = button.data('content')
+		var image = button.data('image')
 		var modal = $(this)
 		modal.find('.modal-body #id').val(id)
 		modal.find('.modal-body #title').val(title)
-		modal.find('.modal-body #image_path').attr('src', image_path)
+		modal.find('.modal-body #content').val(content)
+		modal.find('.modal-body #image').attr('src', image)
 	  })
 	});
   </script>

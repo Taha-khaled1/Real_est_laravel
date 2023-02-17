@@ -45,7 +45,7 @@ header{
         @include('layouts.nav')
         <header class="pt-5 position-relative">
             <div class="shadow position-absolute w-100 h-100 top-0 left-0 start-0 end-0"></div>
-            <div class="container header-content position-relative">
+            {{-- <div class="container header-content position-relative">
                 <h1 class="text-white text-center">اعثر علي منزل أحلامك</h1>
                 <div class="row box p-4 col-lg-8 m-auto mt-5 rounded shadow-lg">
                     <form action="#" method="POST">
@@ -87,7 +87,7 @@ header{
                         <button class="btn btn-primary rounded-0 px-5 py-3 mt-4 blue-background-color d-flex align-items-center w-100 text-center justify-content-center">بحث <i class="fa fa-search me-2"></i></button>
                     </form>
                 </div>
-            </div>
+            </div> --}}
             
         </header>
         <div class="3kares-most-visited p-sm-5 p-1">
@@ -98,7 +98,7 @@ header{
                         <span class="heading-divider"></span>
                         <p class="mb-5 fs-5">أكثر العقارات زيارة في أخر 24 ساعة</p>
                     </div>
-                    <a href="#"><button class="btn fs-14  py-3 lh-15 px-5 mb-6 mb-lg-0">شاهد المزيد <img src="assets/img/backgrounds/arrow-back-long-svgrepo-com.svg" width="30" height="30" alt=""></button></a>
+                   
                 </div>
                 <div class="owl-carousel py-5 owl-theme">
 
@@ -159,7 +159,7 @@ header{
                         <span class="heading-divider"></span>
                         <p class="mb-5 fs-5">تصفح احدث عقارات السكنية اليوم.</p>
                     </div>
-                    <a href="#"><button class="btn fs-14  py-3 lh-15 px-5 mb-6 mb-lg-0">شاهد المزيد <img src="assets/img/backgrounds/arrow-back-long-svgrepo-com.svg" width="30" height="30" alt=""></button></a>
+                   
                 </div>
                 <div class="owl-carousel py-5 owl-theme">
 
@@ -186,7 +186,7 @@ header{
                          <div class="card-body mt-2 p-0">
                              <div class="px-4">
                                  <p class="text-danger fw-bold">حصري</p>
-                                 <a href="details.html" class="text-decoration-none"><h5 class="card-title mt-3 fw-bold gray-color">{{$item->name}}</h5></a>
+                                 <a href="detelisscreen/{{$item->id}}" class="text-decoration-none"><h5 class="card-title mt-3 fw-bold gray-color">{{$item->name}}</h5></a>
                                  <p class="mt-3 fw-light d-flex align-items-center gray-color"><img src="assets/img/backgrounds/location-sign-svgrepo-com.svg" class="location ms-2" width="15" height="15" alt="">{{$item->country}}</p>
                                  <!-- <ul class="p-0 d-flex justify-content-between">
                                      <li class="list-inline-item m-0">رقم العقار: <span class="english-text">4</span></li>
@@ -259,7 +259,7 @@ header{
                         <span class="heading-divider"></span>
                         <p class="mb-5 fs-5">تصفح العقارات الموصى بها.</p>
                     </div>
-                    <a href="#"><button class="btn fs-14  py-3 lh-15 px-5 mb-6 mb-lg-0">شاهد المزيد <img src="assets/img/backgrounds/arrow-back-long-svgrepo-com.svg" width="30" height="30" alt=""></button></a>
+                   
                 </div>
                 <div class="owl-carousel py-5 owl-theme">
 
@@ -282,7 +282,7 @@ header{
                          <div class="card-body mt-2 p-0">
                              <div class="px-4">
                                  <p class="text-danger fw-bold">حصري</p>
-                                 <a href="details.html" class="text-decoration-none"><h5 class="card-title mt-3 fw-bold gray-color">{{$item->name}}</h5></a>
+                                 <a href="detelisscreen/{{$item->id}}" class="text-decoration-none"><h5 class="card-title mt-3 fw-bold gray-color">{{$item->name}}</h5></a>
                                  <p class="mt-3 fw-light d-flex align-items-center gray-color"><img src="assets/img/backgrounds/location-sign-svgrepo-com.svg" class="location ms-2" width="15" height="15" alt="">{{$item->country}}</p>
                                  <!-- <ul class="p-0 d-flex justify-content-between">
                                      <li class="list-inline-item m-0">رقم العقار: <span class="english-text">4</span></li>
@@ -319,7 +319,7 @@ header{
                         <span class="heading-divider"></span>
                         <p class="mb-5 fs-5">تصفح احدث عقارات اليوم.</p>
                     </div>
-                    <a href="#"><button class="btn fs-14  py-3 lh-15 px-5 mb-6 mb-lg-0">شاهد المزيد <img src="assets/img/backgrounds/arrow-back-long-svgrepo-com.svg" width="30" height="30" alt=""></button></a>
+                   
                 </div>
                 <div class="row">
                   
@@ -361,7 +361,7 @@ header{
                         <span class="heading-divider"></span>
                         <p class="mb-5 fs-5">تصفح اشهر المدن التي تحتوي علي عقارات</p>
                     </div>
-                    <a href="#"><button class="btn fs-14  py-3 lh-15 px-5 mb-6 mb-lg-0">شاهد المزيد <img src="assets/img/backgrounds/arrow-back-long-svgrepo-com.svg" width="30" height="30" alt=""></button></a>
+                   
                 </div>
                 <div class="row">
 {{-- @foreach ($mostCountries as $item) --}}

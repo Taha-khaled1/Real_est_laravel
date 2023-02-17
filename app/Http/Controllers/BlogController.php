@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
@@ -37,23 +38,24 @@ class BlogController extends Controller
     {
         $validatedData = $request->validate([
             'title' => 'required',
-            'slug' => 'required|unique:blogs',
+          
             'content' => 'required',
             'image' => 'required|image|max:2048',
         ]);
+        $image = $request->file('image');
+        $filename = time().'.'.$image->getClientOriginalExtension();
+        $path = $image->storeAs('catogeryimage', $filename,'Taha');
 
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('images'), $imageName);
 
         $blog = new Blog;
         $blog->title = $request->title;
-        $blog->slug = $request->slug;
+        $blog->slug = "request->slug";
         $blog->content = $request->content;
-        $blog->image = $imageName;
+        $blog->image = $path;
         $blog->user_id = auth()->user()->id;
         $blog->save();
-
-        return redirect()->route('blogs.index')->with('success','Blog created successfully.');
+        session()->flash('Add', 'تم اضافة القسم بنجاح ');
+        return back();
     }
 
 
@@ -88,29 +90,31 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $validatedData = $request->validate([
-            'title' => 'required',
-            'slug' => 'required|unique:blogs,slug,'.$id,
-            'content' => 'required',
-            'image' => 'image|max:2048',
-        ]);
+  
 
-        $blog = Blog::find($id);
-        $blog->title = $request->title;
-        $blog->slug = $request->slug;
-        $blog->content = $request->content;
-
+        $blog = Blog::find($request->id);
+      
         if ($request->hasFile('image')) {
-            $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('images'), $imageName);
-            $blog->image = $imageName;
+            $file_path = public_path($request->image);
+
+            if(file_exists($file_path)) {
+                unlink($file_path);
+            }
+            $image = $request->file('image');
+            $filename = time().'.'.$image->getClientOriginalExtension();
+            $path = $image->storeAs('catogeryimage', $filename,'Taha');
+            $blog->image = $path;
         }
-
+        $blog->title = $request->title;
+        $blog->slug = "request->slug";
+        $blog->content = $request->content;
+        $blog->user_id= auth()->user()->id;
+       
         $blog->save();
-
-        return redirect()->route('blogs.index')->with('success','Blog updated successfully.');
+        session()->flash('edit','تم تعديل القسم بنجاج');
+        return back();
     }
     /**
      * Remove the specified resource from storage.
@@ -118,11 +122,19 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        $blog = Blog::find($id);
-        $blog->delete();
+     
+       $blog = Blog::find($request->id);
+     
+       $file_path = public_path($blog->image);
+       if(file_exists($file_path)) {
+           unlink($file_path);
+       }
+       $blog->delete();
 
-        return redirect()->route('blogs.index')->with('success','Blog deleted successfully.');
+     
+       session()->flash('delete','تم حذف القسم بنجاح');
+       return back();
     }
 }

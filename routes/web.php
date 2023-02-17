@@ -41,10 +41,10 @@ Route::get('/', function () {
 
 Route::get('/blogview', [BlogController::class, 'index'])->name('blogview');
 Route::get('/blogscreate', [BlogController::class, 'create'])->name('blogscreate');
-Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+Route::post('/blogs.store', [BlogController::class, 'store'])->name('blogs.store');
 Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
-Route::put('/blogs/{id}', [BlogController::class, 'update'])->name('blogs.update');
-Route::delete('/blogs/{id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+Route::post('/blogs.update', [BlogController::class, 'update'])->name('blogs.update');
+Route::post('/blogs.destroy', [BlogController::class, 'destroy'])->name('blogs.destroy');
 Route::get('/blogs/{id}', [BlogController::class, 'show'])->name('showblog');
 
 
