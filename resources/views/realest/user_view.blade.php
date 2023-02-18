@@ -117,6 +117,7 @@
                                             <button class="btn btn-outline-success btn-sm" data-name="{{ $user->name }}"
                                                 data-pro_id="{{ $user->id }}" data-user_type={{ $user->user_type }}
                                                 data-phone="{{ $user->phone }}" data-country="{{ $user->country }}"
+                                                data-number_ads="{{ $user->number_ads }}"
                                                 data-toggle="modal" data-target="#edit_user">تعديل</button>
 
 
@@ -155,13 +156,14 @@
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>
 
-                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">القسم</label>
-                            <select name="user_type" id="user_type" class="custom-select my-1 mr-sm-2" required>
+                            <div class="mb-4">
+                                <p class="mg-b-10">القسم</p>
+                                <select name="user_type" class="form-control SlectBox" onclick="console.log($(this).val())" onchange="console.log('change is firing')">
+                                    <option title="Volvo is a car"  value="admin">مسؤال</option>
+                                    <option value="user">مستخدم</option>
 
-                                <option>مسؤال</option>
-                                <option>مستخدم</option>
-
-                            </select>
+                                </select>
+                            </div>
 
                             <div class="form-group">
                                 <label for="title">رقم الهاتف</label>
@@ -218,18 +220,36 @@
                                 <input type="text" class="form-control" name="name" id="name">
                             </div>
 
-                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">القسم</label>
-                            <select name="user_type" id="user_type" class="custom-select my-1 mr-sm-2" required>
-
-                                <option>مسؤال </option>
                           
-                                <option>مستخدم</option>
-                            </select>
+
+
+                            <div class="mb-4">
+                                <p class="mg-b-10">القسم</p>
+                                <select id="user_type" name="user_type" class="form-control SlectBox" onclick="console.log($(this).val())" onchange="console.log('change is firing')">
+                                    <option title="Volvo is a car"  value="admin">مسؤال</option>
+
+                                    <option value="user">مستخدم</option>
+
+                                </select>
+                            </div>
+
+
+
+
+                            <div class="form-group">       
+                                <label for="title">عدد الاعلانات المسموح بها</label>
+                                {{-- <input type="hidden" class="form-control" name="pro_id" id="pro_id"
+                                    value=""> --}}
+                                <input type="text" class="form-control" name="number_ads" id="number_ads">
+                            </div>
+
+
 
                             <div class="form-group">
                                 <label for="title">رقم الهاتف</label>
                                 <input type="text" class="form-control" name="phone" id="phone">
                             </div>
+                            
                             <div class="form-group">
                                 <label for="title">البلد </label>
                                 <input type="text" class="form-control" name="country" id="country">
@@ -319,12 +339,14 @@
             var pro_id = button.data('pro_id')
             var phone = button.data('phone')
             var country = button.data('country')
+            var number_ads = button.data('number_ads')
             var modal = $(this)
             modal.find('.modal-body #name').val(name);
             modal.find('.modal-body #user_type').val(user_type);
             modal.find('.modal-body #pro_id').val(pro_id);
             modal.find('.modal-body #phone').val(phone);
             modal.find('.modal-body #country').val(country);
+            modal.find('.modal-body #number_ads').val(number_ads);
         })
 
 

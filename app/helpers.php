@@ -8,6 +8,9 @@ function Getusername(){
 function Getuserphone(){
     return Auth::User()->phone;
 }
+function  Getusertype(){
+    return Auth::User()->user_type;
+}
 
 function Getuserid(){
     return Auth::User()->id;

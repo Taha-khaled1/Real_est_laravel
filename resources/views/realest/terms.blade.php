@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/bootstrap.min.css') }}">
         <style>
-       
         </style>
         <title>الشروط والأحكام</title>
     </head>
@@ -98,8 +97,9 @@
                                         <li> 10.1 إذا كانت لديك أي أسئلة حول هذه البنود والشروط ، فيرجى الاتصال بنا على [insert contact information]. </li>
                                     </ul>
             </div>
+           
         </div>
-        @include('layouts.fotterone')
+      
         <script src="{{ asset('assets/js/libraries/jquery-3.6.0.min.js') }}"></script>
         <script src="{{ asset('assets/js/libraries/owl.carousel.min.js') }}"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>

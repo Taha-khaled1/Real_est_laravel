@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('picture');
             $table->string('country');
             $table->integer('status')->default(0);
-            $table->integer('views');
+            $table->integer('views')->default(0);
             $table->integer('recommended')->default(0);
             $table->unsignedBigInteger('catogerie_id');
             $table->foreign('catogerie_id')->references('id')->on('catogerys')->onDelete('cascade');

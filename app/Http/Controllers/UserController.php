@@ -37,14 +37,21 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+         
+            'phone' => 'required|numeric',
+    
+    
+        ],[
+    
+        
+            'phone.numeric' =>'يرجي ادخال رقم الهاتف عدد وليس اي شئ اخر',
+        ]);
+
         $user = new User(); // اسم المودل
         $user->name = $request->name; 
-       
-        if ($user->user_type=='مسؤال') {
-            $user->user_type = "admin";
-        } else {
-            $user->user_type = "user";
-        }
+
+        $user->user_type = $request->user_type;
         $user->phone = $request->phone;
         $user->country = $request->country;
         $user->email = $request->email;
@@ -82,22 +89,25 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
-    {
+        {
+            $request->validate([
+            'number_ads' => 'required|numeric',
+            'phone' => 'required|numeric',
+
+
+        ],[
+
+            'number_ads.numeric' =>'يرجي ادخال الاعلانات عدد وليس اي شئ اخر',
+            'phone.numeric' =>'يرجي ادخال رقم الهاتف عدد وليس اي شئ اخر',
+        ]);
            $user =  User::findorFail($request->pro_id);
            $user->name = $request->name; 
-
-            if ($user->user_type=='مسؤال') {
-                $user->user_type = "admin";
-            } else {
-                $user->user_type = "user";
-            }
-
-          
-
+           $user->number_ads = $request->number_ads; 
+           $user->user_type = $request->user_type;
            $user->phone = $request->phone;
            $user->country = $request->country;
-           
            $user->save();
+
            session()->flash('Edit', 'تم تعديل القسم بنجاح');
            return back();
     }

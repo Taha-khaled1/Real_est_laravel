@@ -10,7 +10,7 @@
             <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='test') }}" @auth {{'style=display:block;'}} @endauth>الرئيسية</a>
         </li>
           <li class="nav-item me-2">
-            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='propertyinsertview') }}">إضافة عقار</a>
+            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='propertyinsertweb') }}">إضافة عقار</a>
           </li>
           <li class="nav-item me-2">
             <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='blogview') }}">مدونه</a>
@@ -18,9 +18,9 @@
           <li class="nav-item me-2">
             <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='terms') }}">الشروط والأحكام</a>
           </li>
-          <li class="nav-item me-2">
+          {{-- <li class="nav-item me-2">
             <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='aboutpage') }}">معلومات عنا</a>
-          </li>
+          </li> --}}
         </ul>
         <div class="d-flex">
             <!-- <a href="#" class="text-black text-decoration-none nav-link rounded text-dark">تسجيل دخول <i class="fa fa-user"></i></a> -->
@@ -31,7 +31,7 @@
               <ul class="dropdown-menu border-top border-0 text-end" aria-labelledby="dropdownMenuButton1" dir="ltr">
                 <li class="dropdown-item" dir="rtl">مرحبا {{Getusername()}}!</li>
                 <li class="dropdown-item"><hr class="mb-1 mt-0"></li>                          
-                <li><a class="dropdown-item" href="#">الإعدادات <i class="fa fa-gear"></i></a></li>
+                <li><a class="dropdown-item"  href="{{ url('/' . $page='profile') }}">الإعدادات <i class="fa fa-gear"></i></a></li>
                 <li><a class="dropdown-item" href="{{ route('logout') }}"
                   onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i
                   class="bx bx-log-out"></i>تسجيل خروج</a>

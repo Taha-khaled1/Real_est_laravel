@@ -30,9 +30,9 @@ Route::get('/send',function () {
 
     return response('seeeeend');
 });
-Route::get('/', function () {
-    return view('auth\login');
-});
+ Route::get('/login', function () {
+     return view('auth\login');
+ })->name('login');
 
 // Route::get('/dashboard', function () {
 //     return view('realest.dashboard');
@@ -49,7 +49,7 @@ Route::get('/blogs/{id}', [BlogController::class, 'show'])->name('showblog');
 
 
 Route::controller(PropertyController::class)->group(function () {
-
+Route::get('/', [WebControlle::class,'index'])->name('test');
 Route::get('/test', [WebControlle::class,'index'])->name('test');
 Route::post('/addenqueris', [WebControlle::class,'addenqueris'])->name('addenqueris');
 Route::post('/addreport', [WebControlle::class,'addreport'])->name('addreport');
@@ -65,6 +65,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/dashboard', 'dashboarddata')->name('dashboard')->middleware('admin');
         Route::get('/propertys', 'index')->name('propertys')->middleware('admin');
         Route::get('/propertyinsertview', 'indexinsert')->name('propertyinsertview');
+        Route::get('/propertyinsertweb', 'indexinsertweb')->name('propertyinsertweb');
         Route::post('/property.store', 'store')->name('property.store')->middleware('admin');
         Route::post('/property.recommended', 'recommended')->name('property.recommended')->middleware('admin');
         Route::post('/property.edit', 'edit')->name('property.edit')->middleware('admin');
@@ -103,6 +104,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::controller(UserController::class)->group(function () {
         Route::get('/user', 'index')->name('user');
         Route::post('/user.store', 'store')->name('user.store');
+        Route::post('/user.edit', 'edit')->name('user.edit');
         Route::post('/user.update', 'update')->name('user.update')->middleware('admin');
         Route::post('/user.destroy', 'destroy')->name('user.destroy')->middleware('admin');
     });

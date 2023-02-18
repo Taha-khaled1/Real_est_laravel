@@ -136,7 +136,11 @@ class PropertyController extends Controller
     }
 
 
-
+    public function indexinsertweb()
+    {
+        $dataCatogery = Catogery::all();
+        return view('realest.property_insert_web',['catogery' => $dataCatogery]);
+    }
     public function indexinsert()
     {
         $dataCatogery = Catogery::all();
@@ -172,7 +176,7 @@ class PropertyController extends Controller
             'numbeer_room' => 'required|integer',
             'property_direction' => 'required|string',
             'numbeer_toilet' => 'required|integer',
-            'classification' => 'required|string',
+           // 'classification' => 'required|string',
             // 'seller_phone' => 'string',
             "Rental_term"=> 'required|string',
             'address' =>'required|string',
@@ -190,11 +194,10 @@ class PropertyController extends Controller
             'space' => 'يرجي ادحال المساحه',
             'numbeer_room' => 'يرجي ادخال عدد الغرف',
             'property_direction' => 'يرجي ادحال الاتجاه',
-            'numbeer_toilet' => 'يرجي ادخال عدد الحمامات',
-            'classification' => 'يرجي ادحال تصنيف العقار',         
+            'numbeer_toilet' => 'يرجي ادخال عدد الحمامات',    
             'address' =>'يرجي ادخال العنوان',
             'Rental_term' =>'يرجي ادخال المده',
-           // 'images.required' =>'يرجي ادخال الصوره',
+          // 'images.required' =>'يرجي ادخال الصوره',
            'space.numeric' =>'يرجي ادخال المساحه عدد وليس اي شئ اخر',
            'price.numeric' =>'يرجي ادخال السعر عدد وليس اي شئ اخر',
 
@@ -206,10 +209,17 @@ class PropertyController extends Controller
 
         $property = new Property(); 
         $property->name = $request->name; 
+        $property->views = 0; 
         $property->country = $request->country; 
         $property->catogerie_id = $request->catogerie_id; 
         $property->user_id = Getuserid();  
         $property->picture =$path;
+        if (Getusertype()=='admin') {
+            $property->status =1; 
+        } else {
+            $property->status =0; 
+        }
+        
         $property->save();
 
 

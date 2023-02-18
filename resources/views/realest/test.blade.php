@@ -41,55 +41,14 @@ header{
         <link rel="icon" href="logoapp (1).png">
     </head>
     <body>
-        @include('layouts.headone')
         @include('layouts.nav')
         <header class="pt-5 position-relative">
             <div class="shadow position-absolute w-100 h-100 top-0 left-0 start-0 end-0"></div>
-            {{-- <div class="container header-content position-relative">
-                <h1 class="text-white text-center">اعثر علي منزل أحلامك</h1>
-                <div class="row box p-4 col-lg-8 m-auto mt-5 rounded shadow-lg">
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <input type="text" class="form-control ms-2 rounded-0 p-3" placeholder="شريط البحث">
-                        </div>
-                        <div class="form-group row mt-4">
-                            <div class="col-lg-6">
-                                <input type="number" class="form-control ms-2 rounded-0 p-3 mb-0" placeholder="الحد الادني للسعر" min="40" max="1000">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="number" class="form-control ms-2 rounded-0 p-3 mb-0" placeholder="الحد الأقصي">
-                            </div>
-                            <div class="col-lg-12 mt-4">
-                                <input type="text" class="form-control ms-2 rounded-0 p-3 mb-0" placeholder="المدينة">
-                            </div>
-                            <div class="col-lg-6 mt-4">
-                                <select class="form-control rounded-0 p-3">
-                                    <option value="" disabled selected>عدد الغرف</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-6 mt-4">
-                                <select class="form-control rounded-0 p-3">
-                                    <option value="" disabled selected>عدد الحمامات</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-6 mt-4">
-                                <select class="form-control rounded-0 p-3">
-                                    <option value="" disabled selected>نوع العقار</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-6 mt-4">
-                                <select class="form-control rounded-0 p-3">
-                                    <option value="" disabled selected>مدة الإيجار</option>
-                                </select>
-                            </div>
-                        
-                        </div>
-                        <button class="btn btn-primary rounded-0 px-5 py-3 mt-4 blue-background-color d-flex align-items-center w-100 text-center justify-content-center">بحث <i class="fa fa-search me-2"></i></button>
-                    </form>
-                </div>
-            </div> --}}
-            
         </header>
+
+
+
+
         <div class="3kares-most-visited p-sm-5 p-1">
             <div class="container">
                 <div class="title d-flex flex-wrap justify-content-between align-items-center">
@@ -106,7 +65,7 @@ header{
 
 
            
-                   @foreach ($propertiesviews as $item)
+             @foreach ($propertiesviews as $item)
               
                    <div class="item">
                     <div class="card" dir="rtl">
@@ -125,11 +84,6 @@ header{
                                 <p class="text-danger fw-bold">حصري</p>
                                 <a href="detelisscreen/{{$item->id}}" class="text-decoration-none"><h5 class="card-title mt-3 fw-bold gray-color">{{$item->name}}</h5></a>
                                 <p class="mt-3 fw-light d-flex align-items-center gray-color"><img src="assets/img/backgrounds/location-sign-svgrepo-com.svg" class="location ms-2" width="15" height="15" alt="">{{$item->country}}</p>
-                                <!-- <ul class="p-0 d-flex justify-content-between">
-                                    <li class="list-inline-item m-0">رقم العقار: <span class="english-text">4</span></li>
-                                    <li class="list-inline-item m-0">رقم العقار: <span class="english-text">4</span></li>
-                                    <li class="list-inline-item m-0">رقم العقار: <span class="english-text">4</span></li>
-                                </ul> -->
                             </div>
                             <hr class="m-0 mb-1">
                             <div class="publisher d-flex align-items-center justify-content-between p-4">
@@ -142,7 +96,7 @@ header{
                     </div>
                 </div>  
          
-                   @endforeach
+          @endforeach
 
 
 
@@ -151,6 +105,10 @@ header{
                 </div>
             </div>
         </div>
+
+
+
+
         <div class="3kares-most-visited p-sm-5 p-1">
             <div class="container">
                 <div class="title d-flex flex-wrap justify-content-between align-items-center">
@@ -422,9 +380,6 @@ header{
                             </a>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -438,7 +393,7 @@ header{
                         <p>نحن نعمل فقط مع أفضل الشركات حول العالم</p>
                     </div>
                     <div class="col-lg-6 text-start">
-                        <a href="#"><button class="btn fs-14  py-3 lh-15 px-5 mb-6 mb-lg-0">تسجيل الدخول <img src="assets/img/backgrounds/arrow-back-long-svgrepo-com.svg" width="30" height="30" alt=""></button></a>                    </div>
+                        <a href="login"><button class="btn fs-14  py-3 lh-15 px-5 mb-6 mb-lg-0">تسجيل الدخول <img src="assets/img/backgrounds/arrow-back-long-svgrepo-com.svg" width="30" height="30" alt=""></button></a>                    </div>
                     </div>
                 </div>
             </div>

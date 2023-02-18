@@ -20,6 +20,9 @@
 <!--Internal  TelephoneInput css-->
 <link rel="stylesheet" href="{{URL::asset('assets/plugins/telephoneinput/telephoneinput-rtl.css')}}">
 <style>
+    body {
+background-color: #33475b;
+}
     #location-data {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +132,7 @@
 							<div class="card-body">
 
 								<div class="main-content-label mg-b-5">
-									المعلومات الاساسيه للعقار
+									{{Getusertype()}}
 								</div>
                                 <p> </p>
                                
@@ -215,11 +218,10 @@
                                         <p class="mg-b-10">مدة الايجار</p>
                                         <select name="Rental_term" class="form-control SlectBox" onclick="console.log($(this).val())" onchange="console.log('change is firing')">
                                             <!--placeholder-->
-                                            <option title="Volvo is a car"  value="سنوي">سنوي</option>            
-                                            <option value="سنوي">سنوي</option>                                 
+                                            <option title="Volvo is a car"  value="سنوي">سنوي</option>                                           
                                             <option value="شهري">شهري</option>
                                             <option value="يومي">يومي</option>
-                                            <option value="تمليك">تمليك</option>
+                                            <option value="تمليك">للبيع</option>
                                         </select>
                                     </div>
                                     <div class="mb-4">
@@ -231,14 +233,6 @@
                                            <option value="{{$data->id}}">{{$data->name}}</option>
                                            @endforeach
 
-                                        </select>
-                                    </div>
-                                    <div class="mb-4">
-                                        <p class="mg-b-10">تصنيف العقار </p>
-                                        <select name="classification" class="form-control SlectBox" onclick="console.log($(this).val())" onchange="console.log('change is firing')">
-                                            <!--placeholder-->
-                                            <option title="Volvo is a car"  value="volvo">عقار للبيع</option>
-                                            <option value="saab">عقار للايجار</option>
                                         </select>
                                     </div>
                                     <div class="mb-4">

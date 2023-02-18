@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="{{URL::asset('assets/css-rtl/sidemenu.css')}}">
 @yield('css')
 <!--- Style css -->
+<style>  body {
+    background-color: #33475b;
+    }</style>
 <link href="{{URL::asset('assets/css-rtl/style.css')}}" rel="stylesheet">
 <!--- Dark-mode css -->
 <link href="{{URL::asset('assets/css-rtl/style-dark.css')}}" rel="stylesheet">
