@@ -1,42 +1,40 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
 use App\Http\Controllers\Controller;
-use Illuminate\Auth\Events\Verified;
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Models\User;
+use App\Notifications\EmailverfyNotification;
+use Ichtrojan\Otp\Otp;
 use Illuminate\Http\Request;
 
 class EmailVerificationController extends Controller
 {
-
-    public function sendVerificationEmail(Request $request)
-    {
-        if ($request->user()->hasVerifiedEmail()) {
-            return [
-                'message' => 'Already Verified'
-            ];
-        }
-
-        $request->user()->sendEmailVerificationNotification();
-
-        return ['status' => 'verification-link-sent'];
+    public $otp;
+    public function __construct() {
+        $this->otp = new Otp;
     }
-
-    public function verify(EmailVerificationRequest $request)
+    
+    public function sendEmailverfyc(Request $request)
     {
-        if ($request->user()->hasVerifiedEmail()) {
-            return [
-                'message' => 'Email already verified'
-            ];
-        }
+             $user = $request->user;
+             $user->notify(new EmailverfyNotification());
+             return response()->json('Successfully sent verified email message to user', 200);
+        
+    }
+    
 
-        if ($request->user()->markEmailAsVerified()) {
-            event(new Verified($request->user()));
+    public function verifyEmail(Request $request)
+    {
+        $otp2 = $this->otp->validate($request->email, $request->otp);
+        
+        if (!$otp2->status) {
+            return response()->json('Error verifying email', 404);
         }
-
-        return [
-            'message'=>'Email has been verified'
-        ];
+        
+        $user = User::where('email', $request->email)->first();
+        $user->email_verified_at = now();
+        $user->save();
+        
+        return response()->json('Successfully verified email', 200);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
+use App\Notifications\LoginNotification;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -14,7 +15,7 @@ use App\Notifications\ResetPasswordNotification;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable , Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -57,11 +58,12 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Blog::class,'user_id');
     }
-    // public function sendPasswordResetNotification($token)
+
+    // public function sendPasswordResetNotification($userr)
     // {
+    //     $userr->notify(new LoginNotification);
+    //     // $url = 'https://spa.test/reset-password?token=' . $token;
 
-    //     $url = 'https://spa.test/reset-password?token=' . $token;
-
-    //     $this->notify(new ResetPasswordNotifications($url));
+    //     // $this->notify(new ResetPasswordNotifications($url));
     // }
 }

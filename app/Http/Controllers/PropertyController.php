@@ -335,7 +335,7 @@ class PropertyController extends Controller
     {
         $property = Property::findOrFail($request->pro_id);
         $property->delete();
-        session()->flash('delete', 'تم حذف المنتج بنجاح');
+        session()->flash('delete', 'تم حذف العقار بنجاح');
         return back();
     }
 }

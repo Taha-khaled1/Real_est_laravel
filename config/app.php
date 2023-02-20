@@ -181,7 +181,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Ichtrojan\Otp\OtpServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -209,6 +210,9 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'Otp' => Ichtrojan\Otp\Otp::class,
+        'Image' => Intervention\Image\Facades\Image::class
+        
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 

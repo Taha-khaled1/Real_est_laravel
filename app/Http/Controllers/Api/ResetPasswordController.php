@@ -5,64 +5,54 @@ use Dotenv\Exception\ValidationException;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use App\Notifications\ResetPassNotification;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Validation\Rules\Password as RulesPassword;
+use Ichtrojan\Otp\Otp;
 class ResetPasswordController extends Controller
 {
-    public function forgotPassword(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email',
-        ]);
-
-        $status = Password::sendResetLink(
-            $request->only('email')
-        );
-
-        if ($status == Password::RESET_LINK_SENT) {
-            return [
-                'status' => __($status)
-            ];
-        }
-
-        throw ValidationException::withMessages([
-            'email' => [trans($status)],
-        ]);
+    public $otp;
+    public function __construct() {
+        $this->otp = new Otp;
     }
 
-    public function reset(Request $request)
+
+    public function forgotPassword(Request $request)
     {
-        $request->validate([
-            'token' => 'required',
-            'email' => 'required|email',
-            'password' => ['required', 'confirmed', RulesPassword::defaults()],
+        $validatedData = $request->validate([
+            'email' => 'required|email|exists:users',
         ]);
+      
+        $inpout=$request->only('email');
+        $user=User::where('email',$inpout)->first();
+        $user->notify(new ResetPassNotification);
+        return response()->json(['massge'=>'تم ارسال كود نسيت كلمة السر']);
+    }
 
-        $status = Password::reset(
-            $request->only('email', 'password', 'password_confirmation', 'token'),
-            function ($user) use ($request) {
-                $user->forceFill([
-                    'password' => Hash::make($request->password),
-                    'remember_token' => Str::random(60),
-                ])->save();
 
-                $user->tokens()->delete();
 
-                event(new PasswordReset($user));
-            }
-        );
 
-        if ($status == Password::PASSWORD_RESET) {
-            return response([
-                'message'=> 'Password reset successfully'
-            ]);
+    public function resetPassword(Request $request)
+    {   
+        $request->validate([
+            'otp' => ['required','max:6'],
+            'email' => 'required|email|exists:users',
+            'password' => ['required', RulesPassword::defaults()],
+        ]);
+        $otp2 = $this->otp->validate($request->email, $request->otp);
+        
+        if (!$otp2->status) {
+            return response()->json('Error verifying email', 404);
         }
 
-        return response([
-            'message'=> __($status)
-        ], 500);
 
+        $user = User::where('email', $request->email)->first();
+        $user->password =bcrypt($request->password);
+        $user->save();
+        $user->tokens()->delete();
+        return response()->json(['message' => 'Successfully ResetPass']);
     }
 }

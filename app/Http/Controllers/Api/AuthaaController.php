@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Notifications\EmailverfyNotification;
+use App\Notifications\LoginNotification;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 class AuthaaController extends Controller
 {
+    use Notifiable;
     public function login(Request $request)
     {
         $credentials = $request->only(['email', 'password']);
@@ -19,32 +23,17 @@ class AuthaaController extends Controller
 
         $user = Auth::user();
         $token = $user->createToken('authToken')->plainTextToken;
-
+        $user->notify(new LoginNotification);
         return response()->json(['token' => $token,'user'=>$user],200);
     }
 
 
-   // $token = $user->createToken('authToken')->plainTextToken;
-
-   // return response()->json(['user' => $user, 'token' => $token], 200);
-
-
-
 
    public function logout(Request $request) {
-    // auth()->user()->tokens()->delete();
-
-    // return [
-    //     'message' => 'Logged out'
-    // ];
-
-
-    if ($request->user()) {
-        $request->user()->tokens()->delete();
+ 
+        $request->user->tokens()->delete();
         return response()->json(['message' => 'Successfully logged out']);
-    } else {
-        return response()->json(['error' => 'No user found'], 400);
-    }
+    
 }
 
 
@@ -72,7 +61,7 @@ class AuthaaController extends Controller
   
 
         $token = $user->createToken('Laravel Sanctum')->plainTextToken;
-
+        $user->notify(new EmailverfyNotification);
         return response()->json(['token' => $token], 200);
     }
 
