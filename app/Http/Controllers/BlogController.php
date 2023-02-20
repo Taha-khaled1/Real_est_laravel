@@ -14,7 +14,7 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {    $blogs = Blog::all();
+    {    $blogs = Blog::with('user')->get();
         return view('realest.blog',['blogs'=>$blogs]);
     }
 

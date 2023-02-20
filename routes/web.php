@@ -39,74 +39,89 @@ Route::get('/send',function () {
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::get('/blogview', [BlogController::class, 'index'])->name('blogview');
-Route::get('/blogscreate', [BlogController::class, 'create'])->name('blogscreate');
-Route::post('/blogs.store', [BlogController::class, 'store'])->name('blogs.store');
-Route::get('/blogs/{id}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
-Route::post('/blogs.update', [BlogController::class, 'update'])->name('blogs.update');
-Route::post('/blogs.destroy', [BlogController::class, 'destroy'])->name('blogs.destroy');
-Route::get('/blogs/{id}', [BlogController::class, 'show'])->name('showblog');
 
-
-Route::controller(PropertyController::class)->group(function () {
-Route::get('/', [WebControlle::class,'index'])->name('test');
-Route::get('/test', [WebControlle::class,'index'])->name('test');
-Route::post('/addenqueris', [WebControlle::class,'addenqueris'])->name('addenqueris');
-Route::post('/addreport', [WebControlle::class,'addreport'])->name('addreport');
-Route::get('/detelisscreen/{id}', [WebControlle::class,'detalisscreen'])->name('detelisscreen');
-Route::get('/moreproperty/{country}', [WebControlle::class,'moreproperty'])->name('moreproperty');
-
-Route::get('/aboutpage', [WebControlle::class,'aboutpage'])->name('aboutpage');Route::get('/terms', [WebControlle::class,'terms'])->name('terms');
-Route::get('/morepropertyCato/{catogery}', [WebControlle::class,'morepropertyCato'])->name('morepropertyCato');
+Route::controller(BlogController::class)->group(function () {
+Route::get('/blogview',  'index')->name('blogview');
+Route::get('/blogscreate',  'create')->name('blogscreate')->middleware(['admin','auth']);
+Route::post('/blogs.store', 'store')->name('blogs.store')->middleware(['admin','auth']);;
+Route::get('/blogs/{id}/edit',  'edit')->name('blogs.edit')->middleware(['admin','auth']);;
+Route::post('/blogs.update', 'update')->name('blogs.update')->middleware(['admin','auth']);;
+Route::post('/blogs.destroy', 'destroy')->name('blogs.destroy')->middleware(['admin','auth']);;
+Route::get('/blogs/{id}', 'show')->name('showblog');
 });
-Route::middleware(['auth', 'verified'])->group(function () {
+
+
+
+
+
+
+Route::controller(WebControlle::class)->group(function () {
+Route::get('/','index')->name('test');
+Route::get('/test','index')->name('test');
+Route::post('/addenqueris','addenqueris')->name('addenqueris');
+Route::post('/addreport', 'addreport')->name('addreport');
+Route::get('/detelisscreen/{id}', 'detalisscreen')->name('detelisscreen');
+Route::get('/moreproperty/{country}', 'moreproperty')->name('moreproperty');
+Route::get('/aboutpage', 'aboutpage')->name('aboutpage');
+Route::get('/terms', 'terms')->name('terms');
+Route::get('/morepropertyCato/{catogery}', 'morepropertyCato')->name('morepropertyCato');
+});
+
+
+
+
+
+
+
+
+Route::middleware('auth')->group(function () {
 
   Route::controller(PropertyController::class)->group(function () {
-        Route::get('/dashboard', 'dashboarddata')->name('dashboard')->middleware('admin');
-        Route::get('/propertys', 'index')->name('propertys')->middleware('admin');
+        Route::get('/dashboard', 'dashboarddata')->name('dashboard')->middleware(['admin','auth']);
+        Route::get('/propertys', 'index')->name('propertys')->middleware(['admin','auth']);
         Route::get('/propertyinsertview', 'indexinsert')->name('propertyinsertview');
         Route::get('/propertyinsertweb', 'indexinsertweb')->name('propertyinsertweb');
-        Route::post('/property.store', 'store')->name('property.store')->middleware('admin');
-        Route::post('/property.recommended', 'recommended')->name('property.recommended')->middleware('admin');
-        Route::post('/property.edit', 'edit')->name('property.edit')->middleware('admin');
-        Route::post('/property.destroy', 'destroy')->name('property.destroy')->middleware('admin');
-        Route::get('/adsproperty', 'ads')->name('adsproperty')->middleware('admin');
+        Route::post('/property.store', 'store')->name('property.store')->middleware(['admin','auth']);
+        Route::post('/property.recommended', 'recommended')->name('property.recommended')->middleware(['admin','auth']);
+        Route::post('/property.edit', 'edit')->name('property.edit')->middleware(['admin','auth']);
+        Route::post('/property.destroy', 'destroy')->name('property.destroy')->middleware(['admin','auth']);
+        Route::get('/adsproperty', 'ads')->name('adsproperty')->middleware(['admin','auth']);
     });
     
     Route::controller(CatogeryController::class)->group(function () {
        // Route::get('/catogery', 'index')->name('catogery');
-        Route::get('/catogeryview', 'index')->name('catogeryview')->middleware('admin');
-        Route::post('/catogerystore', 'store')->name('catogery.store')->middleware('admin');
-        Route::post('/catogeryupdate', 'update')->name('catogery.update')->middleware('admin');
-        Route::post('/catogerydestroy', 'destroy')->name('catogery.destroy')->middleware('admin');
+        Route::get('/catogeryview', 'index')->name('catogeryview')->middleware(['admin','auth']);
+        Route::post('/catogerystore', 'store')->name('catogery.store')->middleware(['admin','auth']);
+        Route::post('/catogeryupdate', 'update')->name('catogery.update')->middleware(['admin','auth']);
+        Route::post('/catogerydestroy', 'destroy')->name('catogery.destroy')->middleware(['admin','auth']);
     });
 
 
     Route::controller(SettingController::class)->group(function () {
-        Route::get('/setting', 'index')->name('setting')->middleware('admin');
-        Route::post('/setting.store', 'store')->name('setting.store')->middleware('admin');
-        Route::post('/setting.update', 'update')->name('setting.update')->middleware('admin');
-        Route::post('/setting.destroy', 'destroy')->name('setting.destroy')->middleware('admin');
+        Route::get('/setting', 'index')->name('setting')->middleware(['admin','auth']);
+        Route::post('/setting.store', 'store')->name('setting.store')->middleware(['admin','auth']);
+        Route::post('/setting.update', 'update')->name('setting.update')->middleware(['admin','auth']);
+        Route::post('/setting.destroy', 'destroy')->name('setting.destroy')->middleware(['admin','auth']);
     });
 
     Route::controller(ReportController::class)->group(function () {
-        Route::get('/report', 'index')->name('report')->middleware('admin');
-        Route::post('/report.store', 'store')->name('report.store')->middleware('admin');
-        Route::post('/report.update', 'update')->name('report.update')->middleware('admin');
-        Route::post('/report.destroy', 'destroy')->name('report.destroy')->middleware('admin');
+        Route::get('/report', 'index')->name('report')->middleware(['admin','auth']);
+        Route::post('/report.store', 'store')->name('report.store')->middleware(['admin','auth']);
+        Route::post('/report.update', 'update')->name('report.update')->middleware(['admin','auth']);
+        Route::post('/report.destroy', 'destroy')->name('report.destroy')->middleware(['admin','auth']);
     });
     Route::controller(EnquiryController::class)->group(function () {
-        Route::get('/enquiry', 'index')->name('enquiry')->middleware('admin');
-        Route::post('/enquiry.store', 'store')->name('enquiry.store')->middleware('admin');
-        Route::post('/enquiry.update', 'update')->name('enquiry.update')->middleware('admin');
-        Route::post('/enquiry.destroy', 'destroy')->name('enquiry.destroy')->middleware('admin');
+        Route::get('/enquiry', 'index')->name('enquiry')->middleware(['admin','auth']);
+        Route::post('/enquiry.store', 'store')->name('enquiry.store')->middleware(['admin','auth']);
+        Route::post('/enquiry.update', 'update')->name('enquiry.update')->middleware(['admin','auth']);
+        Route::post('/enquiry.destroy', 'destroy')->name('enquiry.destroy')->middleware(['admin','auth']);
     });
     Route::controller(UserController::class)->group(function () {
-        Route::get('/user', 'index')->name('user');
-        Route::post('/user.store', 'store')->name('user.store');
-        Route::post('/user.edit', 'edit')->name('user.edit');
-        Route::post('/user.update', 'update')->name('user.update')->middleware('admin');
-        Route::post('/user.destroy', 'destroy')->name('user.destroy')->middleware('admin');
+        Route::get('/user', 'index')->name('user')->middleware(['admin','auth']);;
+        Route::post('/user.store', 'store')->name('user.store')->middleware(['admin','auth']);;
+        Route::post('/user.edit', 'edit')->name('user.edit')->middleware(['admin','auth']);;
+        Route::post('/user.update', 'update')->name('user.update')->middleware(['admin','auth']);
+        Route::post('/user.destroy', 'destroy')->name('user.destroy')->middleware(['admin','auth']);
     });
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -114,7 +129,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     
-})->middleware(['auth', 'verified']);//AdminController
+});
 
 //Route::get('/{page}', 'AdminController@index');
 require __DIR__.'/auth.php';

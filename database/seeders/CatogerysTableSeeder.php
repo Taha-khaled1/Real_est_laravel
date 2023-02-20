@@ -19,7 +19,7 @@ class CatogerysTableSeeder extends Seeder
              Catogery::create([
                 'name' => 'منازل',
                 'Created_by' => 'محمود محمد',
-                'image_path' => 'public/catogery/1.png',
+                'image_path' => 'catogery/1.png',
                 'created_at' => now(),
                 'updated_at' => now()
             ]);
@@ -27,7 +27,7 @@ class CatogerysTableSeeder extends Seeder
             Catogery::create([
                 'name' => 'شاليهات',
                 'Created_by' => 'محمود محمد',
-                'image_path' => 'public/catogery/2.png',
+                'image_path' => 'catogery/2.png',
                 'created_at' => now(),
                 'updated_at' => now()
             ]);
@@ -36,7 +36,7 @@ class CatogerysTableSeeder extends Seeder
             Catogery::create([
                 'name' => 'فنادق',
                 'Created_by' => 'محمود محمد',
-                'image_path' => 'public/catogery/3.png',
+                'image_path' => 'catogery/3.png',
                 'created_at' => now(),
                 'updated_at' => now()
             ]);
@@ -44,7 +44,7 @@ class CatogerysTableSeeder extends Seeder
             Catogery::create([
                 'name' => 'فلل',
                 'Created_by' => 'محمود محمد',
-                'image_path' => 'public/catogery/4.png',
+                'image_path' => 'catogery/4.png',
                 'created_at' => now(),
                 'updated_at' => now()
             ]);
