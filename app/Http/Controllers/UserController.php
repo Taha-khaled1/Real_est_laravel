@@ -57,6 +57,9 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
         $user->save();
+        session()->flash('Edit', 'تم اضافة المستخدم بنجاح');
+        return back();
+  
     }
 
     /**
@@ -91,24 +94,23 @@ class UserController extends Controller
     public function update(Request $request)
         {
             $request->validate([
-            'number_ads' => 'required|numeric',
+            
             'phone' => 'required|numeric',
 
 
         ],[
 
-            'number_ads.numeric' =>'يرجي ادخال الاعلانات عدد وليس اي شئ اخر',
+           
             'phone.numeric' =>'يرجي ادخال رقم الهاتف عدد وليس اي شئ اخر',
         ]);
            $user =  User::findorFail($request->pro_id);
            $user->name = $request->name; 
-           $user->number_ads = $request->number_ads; 
            $user->user_type = $request->user_type;
            $user->phone = $request->phone;
            $user->country = $request->country;
            $user->save();
 
-           session()->flash('Edit', 'تم تعديل القسم بنجاح');
+           session()->flash('Edit', 'تم تعديل المستخدم بنجاح');
            return back();
     }
 

@@ -9,6 +9,7 @@
 	{{ method_field('post') }}
 	{{ csrf_field() }}
 				<!-- row -->
+				<p></p>
 				<div class="row row-sm">
 				
 					<!-- Col -->
