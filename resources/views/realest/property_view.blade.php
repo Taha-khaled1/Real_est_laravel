@@ -131,13 +131,13 @@
                                                 </form>
 
 
-                                                {{-- <form action='property.edit' method="post">
-                                                    {{ method_field('POST') }}
-                                                    {{ csrf_field() }}
+                                                <form action='showparoperty'>
+                                                 
                                                     <button class="btn btn-outline-success btn-sm" name="id"
                                                         value={{ $property->id }} data-toggle="modal"
-                                                        data-target="#edit_property">موصي به</button>
-                                                </form> --}}
+                                                        data-target="#edit_property">رؤية العقار</button>
+                                                </form>
+
                                                 <button class="btn btn-outline-danger btn-sm "
                                                     data-pro_id="{{ $property->id }}" data-name="{{ $property->name }}"
                                                     data-toggle="modal" data-target="#modaldemo9">حذف</button>

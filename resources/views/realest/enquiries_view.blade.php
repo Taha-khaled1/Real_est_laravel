@@ -113,19 +113,24 @@
                                         <td>{{ $enquiry->property->id }}</td>
                                         <td>{{ $enquiry->description }}</td>
                                         <td>
-
+                                            <div style="display: flex;">
                                             {{-- <button class="btn btn-outline-success btn-sm"
                                                 data-name="{{ $enquiry->name }}" data-pro_id="{{ $enquiry->id }}"
                                                 data-section_name="wrerwer" data-description="{{ $enquiry->description }}"
                                                 data-toggle="modal" data-target="#edit_enquiry">تعديل</button> --}}
 
-
+                                                <form action='showparoperty'>
+                                                 
+                                                    <button class="btn btn-outline-success btn-sm" name="id"
+                                                        value={{ $enquiry->property->id }} data-toggle="modal"
+                                                        data-target="#edit_property">رؤية العقار</button>
+                                                </form>
 
                                             <button class="btn btn-outline-danger btn-sm "
                                                 data-pro_id="{{ $enquiry->id }}" data-name="{{ $enquiry->username }}"
                                                 data-toggle="modal" data-target="#modaldemo9">حذف</button>
 
-
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

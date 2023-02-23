@@ -78,6 +78,7 @@ Route::middleware('auth')->group(function () {
 
   Route::controller(PropertyController::class)->group(function () {
         Route::get('/dashboard', 'dashboarddata')->name('dashboard')->middleware(['admin','auth']);
+        Route::get('/showparoperty', 'show')->name('showparoperty')->middleware(['admin','auth']);
         Route::get('/propertys', 'index')->name('propertys')->middleware(['admin','auth']);
         Route::get('/propertyinsertview', 'indexinsert')->name('propertyinsertview');
         Route::get('/propertyinsertweb', 'indexinsertweb')->name('propertyinsertweb');

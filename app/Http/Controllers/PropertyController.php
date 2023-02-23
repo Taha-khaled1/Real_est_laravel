@@ -9,6 +9,7 @@ use App\Models\Image;
 use App\Models\Property;
 use App\Models\PropertyDetalis;
 use App\Models\Report ;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -277,9 +278,16 @@ class PropertyController extends Controller
      * @param  \App\Models\Property  $property
      * @return \Illuminate\Http\Response
      */
-    public function show(Property $property)
+    public function show(Request $request)
     {
-        //
+        $id=$request->id;
+        $property = Property::with('property_details', 'images', 'facilities','user','catogery')->find($id);
+
+        if (!$property) {
+            return response()->json(['error' => 'Property not found'], 404);
+        }
+
+       return view('realest.property_insert_detalis', ['property' => $property]);
     }
 
     /**
