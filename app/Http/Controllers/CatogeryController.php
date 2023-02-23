@@ -57,7 +57,7 @@ class CatogeryController extends Controller
         if($b_exist){
 
             session()->flash('Erorr', 'اسم القسم موجود بالفعل');
-            return redirect('/catogery');
+            return back();
 
         }else{
                 $image = $request->file('image');
@@ -70,7 +70,7 @@ class CatogeryController extends Controller
                 $product->Created_by = Getusername();
                 $product->save();
                 session()->flash('Add', 'تم اضافة القسم بنجاح ');
-                return redirect('/catogery');
+                return back();
               
             }
 
@@ -145,7 +145,7 @@ class CatogeryController extends Controller
         ]);
 
         session()->flash('edit','تم تعديل القسم بنجاج');
-        return redirect('/catogery');
+        return back();
     }
 
     /**
@@ -166,6 +166,6 @@ class CatogeryController extends Controller
 
       
         session()->flash('delete','تم حذف القسم بنجاح');
-        return redirect('/catogery');
+        return back();
     }
 }
