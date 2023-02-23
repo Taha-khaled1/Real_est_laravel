@@ -32,7 +32,7 @@ class AuthaaController extends Controller
    public function logout(Request $request) {
  
         $request->user->tokens()->delete();
-        return response()->json(['message' => 'Successfully logged out']);
+        return response()->json(['message' => 'Success','status_code' => 200,],200);
     
 }
 
@@ -62,7 +62,9 @@ class AuthaaController extends Controller
 
         $token = $user->createToken('Laravel Sanctum')->plainTextToken;
         $user->notify(new EmailverfyNotification);
-        return response()->json(['token' => $token], 200);
+        return response()->json(['token' => $token,'message' => 'Success','status_code' => 200,],200);
+
+
     }
 
 

@@ -20,7 +20,7 @@ class ProfileMobileController extends Controller
         $user->country=$request->country;
         $user->phone=$request->phone ;
         $user->save();
-        return response()->json(['message' => 'User information updated successfully']);
+        return response()->json(['message' => 'Success','status_code' => 200,],200 );
     }
     
 
@@ -39,7 +39,7 @@ class ProfileMobileController extends Controller
     
         $user->update(['password' => Hash::make($validatedData['new_password'])]);
     
-        return response()->json(['message' => 'Password changed successfully']);
+        return response()->json(['message' => 'Success','status_code' => 200,],200 );
     }
     
 }

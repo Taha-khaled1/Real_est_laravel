@@ -32,7 +32,12 @@ class PropertyController extends Controller
             ->limit(4)
             ->get();
 
-        return response()->json($mostCountries);
+        return response()->json(            
+        [
+        'status_code' => 200,
+        'message' => 'Success',
+        'properties' => $mostCountries->where('status',1)
+        ], 200);
     }
 
 
@@ -126,7 +131,7 @@ class PropertyController extends Controller
                 'message' => 'Success',
                 'properties' => $properties->where('status',1), 
                
-        ]);
+        ],200);
         }
     
  
@@ -150,7 +155,7 @@ class PropertyController extends Controller
 
 
 
-            return response()->json(['message' => 'Views updated successfully']);
+            return response()->json(['message' => 'success']);
         }
         public function addenqueris(Request $request)
         {
@@ -165,7 +170,7 @@ class PropertyController extends Controller
 
 
 
-            return response()->json(['message' => 'Views updated successfully']);
+            return response()->json(['message' => 'success']);
         }
 
 
@@ -182,7 +187,7 @@ class PropertyController extends Controller
              'message' => 'Success',
              'catogerys'=>  $catogerys
         
-        ]);
+        ],200);
     }
 
     /**
@@ -289,7 +294,7 @@ class PropertyController extends Controller
         }
 
 
-return response('تم اضافة العقار بمجاح');
+     return response( ['message' => 'Success',],200);
     }
     public function getMostViewedProperties() {
         $properties = Property::orderBy('views', 'desc')->take(10)->get();
@@ -297,7 +302,7 @@ return response('تم اضافة العقار بمجاح');
         return response()->json( [            
             'status_code' => 200,
             'message' => 'Success',
-            'properties' => $properties->where('status',1)],200,[],200);
+            'properties' => $properties->where('status',1)],200);
        
     
     }
@@ -320,13 +325,13 @@ return response('تم اضافة العقار بمجاح');
         
         $property = Property::find($id);
         if (!$property) {
-            return response()->json(['error' => 'Property not found'], 404);
+            return response()->json(['message' => 'erorr'], 404);
         }
     
         $property->views += 1;
         $property->save();
     
-        return response()->json(['message' => 'تم تحديث المشاهده بنجاح']);
+        return response()->json(['message' => 'Success',],200);
     }
 
 
@@ -343,7 +348,7 @@ return response('تم اضافة العقار بمجاح');
         'status_code' => 200,
         'message' => 'Success',
         'property' => $newProperties,
-        ]);
+        ],200);
     }
     /**
      * Show the form for editing the specified resource.
@@ -367,7 +372,7 @@ return response('تم اضافة العقار بمجاح');
             'status_code' => 200,
             'message' => 'Success',
             'property' => $property,
-            ]
+        ],200
         );
     }
 

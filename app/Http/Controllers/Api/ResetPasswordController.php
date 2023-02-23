@@ -29,7 +29,7 @@ class ResetPasswordController extends Controller
         $inpout=$request->only('email');
         $user=User::where('email',$inpout)->first();
         $user->notify(new ResetPassNotification);
-        return response()->json(['massge'=>'تم ارسال كود نسيت كلمة السر']);
+        return response()->json(['message' => 'Success','status_code' => 200,],200 );
     }
 
 
@@ -53,6 +53,6 @@ class ResetPasswordController extends Controller
         $user->password =bcrypt($request->password);
         $user->save();
         $user->tokens()->delete();
-        return response()->json(['message' => 'Successfully ResetPass']);
+        return response()->json(['message' => 'Success','status_code' => 200,],200 );
     }
 }

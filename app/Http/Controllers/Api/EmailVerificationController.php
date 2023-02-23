@@ -18,7 +18,7 @@ class EmailVerificationController extends Controller
     {
              $user = $request->user;
              $user->notify(new EmailverfyNotification());
-             return response()->json('Successfully sent verified email message to user', 200);
+             return response()->json(['message' => 'Success','status_code' => 200,],200 );
         
     }
     
@@ -35,6 +35,6 @@ class EmailVerificationController extends Controller
         $user->email_verified_at = now();
         $user->save();
         
-        return response()->json('Successfully verified email', 200);
+        return response()->json(['message' => 'Success','status_code' => 200,],200 );
     }
 }
