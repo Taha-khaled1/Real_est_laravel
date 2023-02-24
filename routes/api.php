@@ -52,7 +52,7 @@ Route::controller(AuthaaController::class)->group(function () {
 
 
 Route::controller(PropertyController::class)->group(function () {
-Route::get('newproperty', 'show')->name('newproperty')->middleware('sanctum');
+Route::get('newproperty', 'show')->name('newproperty');
 Route::get('recommendhotel', 'recommendhotel')->name('recommendhotel');
 Route::get('filterdata', 'filter')->name('filterdata');
 Route::get('settingesapp', 'settinges')->name('settingesapp');
