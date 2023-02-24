@@ -36,7 +36,7 @@ class PropertyController extends Controller
         [
         'status_code' => 200,
         'message' => 'Success',
-        'properties' => $mostCountries->where('status',1)
+        'mostCountries' => $mostCountries,
         ], 200);
     }
 
@@ -52,7 +52,7 @@ class PropertyController extends Controller
         return response()->json([ 
             'status_code' => 200,
             'message' => 'Success',
-            'properties' => $properties->where('status',1), 
+            'property' => $properties->where('status',1), 
            
     ]);
     }
@@ -129,7 +129,7 @@ class PropertyController extends Controller
             return response()->json([ 
                 'status_code' => 200,
                 'message' => 'Success',
-                'properties' => $properties->where('status',1), 
+                'property' => $properties->where('status',1), 
                
         ],200);
         }
@@ -302,7 +302,7 @@ class PropertyController extends Controller
         return response()->json( [            
             'status_code' => 200,
             'message' => 'Success',
-            'properties' => $properties->where('status',1)],200);
+            'property' => $properties->where('status',1)],200);
        
     
     }
@@ -313,7 +313,7 @@ class PropertyController extends Controller
         return response()->json([            
         'status_code' => 200,
         'message' => 'Success',
-        'properties' => $properties->where('status',1)], 200);
+        'property' => $properties->where('status',1)], 200);
     
     }
 
@@ -358,23 +358,25 @@ class PropertyController extends Controller
      */
     public function showdetalis($id)
     {
-      
-
-        $property = Property::with('property_details', 'images', 'facilities', 'user','catogery')->find($id);
-
+        $property = Property::with(['property_details', 'images' => function ($query) {
+            $query->select('image_path', 'property_id');
+        }, 'facilities'=> function ($query) {
+            $query->select('facility', 'property_id');
+        }, 'user'])->find($id);
+    
         if (!$property) {
             return response()->json(['error' => 'Property not found'], 404);
         }
     
-        return response()->json(
-        [
-      
+        $imagePaths = $property->images->pluck('image_path')->toArray();
+        $facility = $property->facilities->pluck('facility')->toArray();
+        return response()->json([
             'status_code' => 200,
             'message' => 'Success',
-            'property' => $property,
-        ],200
-        );
+            'property' => array_merge($property->toArray(), ['images' => $imagePaths],['facilities' => $facility]),
+        ], 200);
     }
+    
 
     /**
      * Update the specified resource in storage.
