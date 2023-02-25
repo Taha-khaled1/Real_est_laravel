@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Catogery;
-use App\Models\enquiry;
+use App\Models\Enquiry;
 use App\Models\Facility;
 use App\Models\Image;
 use App\Models\Property;
@@ -52,7 +52,7 @@ class PropertyController extends Controller
         return response()->json([ 
             'status_code' => 200,
             'message' => 'Success',
-            'property' => $properties->where('status',1), 
+            'property' => $properties, 
            
     ]);
     }
@@ -124,12 +124,12 @@ class PropertyController extends Controller
                 $q->whereBetween('price', [$request->input('price_min'), $request->input('price_max')]);
             });
         }
-            $properties = $query->where('status',1)->get();
+            $properties = $query->where('status',1)->paginate(10);
     
             return response()->json([ 
                 'status_code' => 200,
                 'message' => 'Success',
-                'property' => $properties->where('status',1), 
+                'property' => $properties, 
                
         ],200);
         }
