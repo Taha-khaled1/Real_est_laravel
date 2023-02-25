@@ -26,7 +26,7 @@ class EmailverfyNotification extends Notification
       $this->massge="use the code bellow for verfycation email";
       $this->fromemail="test@yahao.com";
       $this->subject="verfycation needed";
-      $this->mailer="mailgun";
+      $this->mailer="smtp";
       $this->otp=new Otp;
     }
     
@@ -51,7 +51,7 @@ class EmailverfyNotification extends Notification
     public function toMail($notifiable)
     { 
         $otp = $this->otp->generate($notifiable->email, 6, 60);
-        return (new MailMessage)->mailer("mailgun")->subject($this->subject)->
+        return (new MailMessage)->mailer("smtp")->subject($this->subject)->
         greeting('welcome'.$notifiable->name)->line($this->massge)->line('code : '.$otp->token);
     }
 

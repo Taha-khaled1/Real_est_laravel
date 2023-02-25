@@ -24,7 +24,7 @@ class LoginNotification extends Notification
       $this->massge="You just Logged in";
       $this->fromemail="test@yahao.com";
       $this->subject="New logged in";
-      $this->mailer="mailgun";
+      $this->mailer="smtp";
     }
 
     /**
@@ -47,7 +47,7 @@ class LoginNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->mailer("mailgun")->subject($this->subject)->greeting('hello'.$notifiable->name)->line($this->massge);
+                    ->mailer("smtp")->subject($this->subject)->greeting('hello'.$notifiable->name)->line($this->massge);
     }
 
     /**
