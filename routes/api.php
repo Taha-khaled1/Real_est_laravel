@@ -21,7 +21,7 @@ use Laravel\Sanctum\PersonalAccessToken;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+ 
 Route::post('verification-notification', [EmailVerificationController::class, 'sendEmailverfyc'])->name('verification-notification')->middleware('sanctum');
 Route::post('verify-email', [EmailVerificationController::class, 'verifyEmail'])->name('verify-email');
 Route::post('forgot-password', [ResetPasswordController::class, 'forgotPassword']);

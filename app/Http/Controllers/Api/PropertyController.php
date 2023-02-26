@@ -253,7 +253,7 @@ class PropertyController extends Controller
         $property->status =0; 
         $property->save();
 
-
+ 
         $propertyDetalis = new PropertyDetalis(); 
         $propertyDetalis->price = $request->price; 
         $propertyDetalis->description = $request->description; 
