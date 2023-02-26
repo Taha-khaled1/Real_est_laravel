@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\DB;
 
 class PropertyController extends Controller
 {
-
+    
     /**
      * Display a listing of the resource.
      *
@@ -47,6 +47,7 @@ class PropertyController extends Controller
         $searchTerm = $request->input('search');
         $properties = Property::where('name', 'LIKE', '%'.$searchTerm.'%')
                             ->orWhere('country', 'LIKE', '%'.$searchTerm.'%')
+                            ->orWhere('catogerie_id', 'LIKE', '%'.$searchTerm.'%')->where('status',1)
                             ->paginate(10);
     
         return response()->json([ 
@@ -212,6 +213,7 @@ class PropertyController extends Controller
             // 'seller_phone' => 'string',
             "Rental_term"=> 'required|string',
             'address' =>'required|string',
+            'user_id' =>'required',
           //  "classification"=> "volvo",
             'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
@@ -232,26 +234,23 @@ class PropertyController extends Controller
           // 'images.required' =>'يرجي ادخال الصوره',
            'space.numeric' =>'يرجي ادخال المساحه عدد وليس اي شئ اخر',
            'price.numeric' =>'يرجي ادخال السعر عدد وليس اي شئ اخر',
-
+           'user_id' => 'يرجي ادخال  معرف المستخدم',
         ]);
-        $imagessss = $request->file('images');
+
+     
+        $image = $request->file('images');
       
-        $filename = time().'.'.$imagessss[0]->getClientOriginalExtension();
-        $path = $imagessss[0]->storeAs('catogeryimage', $filename,'Taha');//اسم الفولدر /اسم الملف /disksال 
+        $filename = time().'.'.$image->getClientOriginalExtension();
+        $path = $image->storeAs('catogeryimage', $filename,'Taha');//اسم الفولدر /اسم الملف /disksال 
 
         $property = new Property(); 
         $property->name = $request->name; 
         $property->views = 0; 
         $property->country = $request->country; 
         $property->catogerie_id = $request->catogerie_id; 
-        $property->user_id = Getuserid();  
+        $property->user_id = $request->user_id;  
         $property->picture =$path;
-        if (Getusertype()=='admin') {
-            $property->status =1; 
-        } else {
-            $property->status =0; 
-        }
-        
+        $property->status =0; 
         $property->save();
 
 
@@ -268,25 +267,25 @@ class PropertyController extends Controller
       //  $propertyDetalis->classification = $request->classification; 
         $propertyDetalis->seller_phone = $request->country; 
         $propertyDetalis->property_id = $property->id;
-        $propertyDetalis->Rental_term = "1.55"; 
+        $propertyDetalis->Rental_term = $request->Rental_term;
       //  $propertyDetalis->picture = 'catogeryimage/'.$filename;
         $propertyDetalis->building_type = 'سكني';
         $propertyDetalis->save();
 
         
        
-        foreach($imagessss as $image) {
-        $randomNumber = mt_rand();
+   
+        $randomNumber = mt_rand(1,10000);
         $filename = time().'.'.$image->getClientOriginalExtension();
         $path = $image->storeAs('catogeryimage', "$randomNumber".$filename,'Taha');
         $image = new Image(); 
         $image->image_path = $path;
         $image->property_id = $property->id;
         $image->save();
-        }
+     
+        $futuress = explode(',', $request->future);
 
-
-        foreach ($request->future as $fut) {
+        foreach ($futuress as $fut) {
             $model = new Facility();
             $model->facility = $fut;
             $model->property_id = $property->id;

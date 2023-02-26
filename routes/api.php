@@ -63,7 +63,7 @@ Route::get('propertydetalis/{id}', 'showdetalis')->name('propertydetalis');
 Route::post('updateviews/{id}', 'updateViews')->name('updateviews');
 Route::post('addreport', 'addreport')->name('addreport');
 Route::post('addenqueris', 'addenqueris')->name('addenqueris');
-Route::post('addproperty/{id}', 'updateViews')->name('addproperty');
+Route::post('addproperty', 'store')->name('addproperty');
 Route::get('mostview', 'getMostViewedProperties')->name('mostview');
 })->middleware(['auth:sanctum']);
 Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

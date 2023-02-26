@@ -17,6 +17,7 @@ class ProfileMobileController extends Controller
             'phone' => 'required|string|max:255',
         ]);
         $user = $request->user;
+        $user->name=$request->name;
         $user->country=$request->country;
         $user->phone=$request->phone ;
         $user->save();
