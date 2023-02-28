@@ -60,11 +60,6 @@ header{
                    
                 </div>
                 <div class="owl-carousel py-5 owl-theme">
-
- 
-
-
-           
              @foreach ($propertiesviews as $item)
               
                    <div class="item">
@@ -95,13 +90,8 @@ header{
                         </div>
                     </div>
                 </div>  
-         
+
           @endforeach
-
-
-
-                    
-
                 </div>
             </div>
         </div>

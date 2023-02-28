@@ -104,7 +104,7 @@
                 <!-- Single Content Holder -->
                 <div class="col-md-8 offset-md-2 mt-4">
                     <h4>{{$blogs->title}}</h4>
-                    <img class="float-left" width="320px" src="/{{$blogs->image}}" alt="">
+                    <img class="float-left" width="320px" src="{{$blogs->image}}" alt="">
                     <p>{{$blogs->content}}</p>
                     {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste harum, ut magni cupiditate. Nihil ipsum debitis voluptates voluptate illum consectetur sapiente dolorem facilis, eum nobis sequi eveniet assumenda vel voluptatem!</p>
                     <p>Consectetur adipisicing elit. Sint, corrupti deleniti, rem mollitia quam cum quo, animi ipsa praesentium officiis ducimus! Modi aperiam, nulla ipsum, totam natus consequuntur fugiat blanditiis.</p>
