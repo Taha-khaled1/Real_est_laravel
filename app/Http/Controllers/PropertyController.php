@@ -207,7 +207,7 @@ class PropertyController extends Controller
       
         $filename = time().'.'.$imagessss[0]->getClientOriginalExtension();
         $path = $imagessss[0]->storeAs('catogeryimage', $filename,'Taha');//اسم الفولدر /اسم الملف /disksال 
-
+        ///
         $property = new Property(); 
         $property->name = $request->name; 
         $property->views = 0; 
