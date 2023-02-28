@@ -8,7 +8,7 @@
     -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Roxy by GetTemplates.co</title>
+    <title>المدونه</title>
     <meta name="description" content="Roxy">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -76,7 +76,7 @@
 		<p>
 			<span class="fs-16 primary-color">(+68) 120034509</span>
 		</p>
-		<p>info@yourdomain.com</p>
+		<p>https://blossomblue.realestate</p>
 	</div>
 </div><div id="side-search" class="sidenav">
 	<a href="javascript:void(0)" id="side-search-close">&times;</a>

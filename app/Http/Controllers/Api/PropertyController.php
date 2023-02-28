@@ -215,7 +215,7 @@ class PropertyController extends Controller
             'address' =>'required|string',
             'user_id' =>'required',
           //  "classification"=> "volvo",
-            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+           // 'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
         ],[
             'name.required' =>'يرجي ادخال اسم العقار',
