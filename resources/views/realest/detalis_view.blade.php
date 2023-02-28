@@ -152,7 +152,7 @@
 
                 @foreach ($property->images as $item)
                 <swiper-slide>
-                    <a href="{{$item->image_path}}" data-lightbox="image-1" data-title="My caption"><img src="{{$item->image_path}}" /></a>
+                    <a href="/public/{{$item->image_path}}" data-lightbox="image-1" data-title="My caption"><img src="/public/{{$item->image_path}}" /></a>
                 </swiper-slide>
                 @endforeach
               
