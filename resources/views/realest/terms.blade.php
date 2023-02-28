@@ -14,6 +14,7 @@
         <style>
         </style>
         <title>الشروط والأحكام</title>
+        <link rel="icon" href="BLOSSOM.png">
     </head>
     <body>
         @include('layouts.headone')

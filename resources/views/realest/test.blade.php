@@ -38,7 +38,7 @@ header{
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/bootstrap.min.css') }}">
         <title>الصفحه الرئيسيه</title>
-        <link rel="icon" href="logoapp (1).png">
+        <link rel="icon" href="BLOSSOM.png">
     </head>
     <body>
         @include('layouts.nav')
