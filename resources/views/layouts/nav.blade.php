@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow-lg py-3" id="navbar">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="public/assets/img/backgrounds/logo.png" alt="" width="130"></a>
+      <a class="navbar-brand" href="#"><img src="assets/img/backgrounds/logo.png" alt="" width="130"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +27,7 @@
 
             @auth
             <div class="dropdown">
-              <img src="/assets/img/backgrounds/icons8-user-48.png" width="40" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" />                          
+              <img src="assets/img/backgrounds/icons8-user-48.png" width="40" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" />                          
               <ul class="dropdown-menu border-top border-0 text-end" aria-labelledby="dropdownMenuButton1" dir="ltr">
                 <li class="dropdown-item" dir="rtl">مرحبا {{Getusername()}}!</li>
                 <li class="dropdown-item"><hr class="mb-1 mt-0"></li>                          
