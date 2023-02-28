@@ -12,6 +12,7 @@
     <title>المدونه</title>
     <meta name="description" content="Roxy">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 
     <!-- External CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/bootstrap.min.css') }}">
