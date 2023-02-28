@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <html lang="en" dir="rtl">
     <head>
+      <link rel="icon" href="/public/BLOSSOM.png">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/owl.carousel.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/bootstrap.min.css') }}">
+
         <style>
             swiper-container {
               width: 100%;
@@ -80,7 +82,7 @@
                 -moz-columns: 3;
             }
         </style>
-        <title>عقارك</title>
+        <title>العقارات</title>
     </head>
     <body>
        
