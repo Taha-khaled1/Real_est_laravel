@@ -391,7 +391,7 @@ header{
         @include('layouts.fotterone')
         <script src="{{ asset('assets/js/libraries/jquery-3.6.0.min.js') }}"></script>
         <script src="{{ asset('assets/js/libraries/owl.carousel.min.js') }}"></script>
-        <script src="{{ asset('assets/js/app.js') }}"></script>
+        <script src="{{ asset('assets/js/app.js?v=123') }}"></script>
         <script src="{{ asset('assets/js/libraries/bootstrap.min.js') }}"></script>
         <script src="{{ asset('assets/js/libraries/a1a75d5546.js') }}"></script>
         <script src="{{ asset('assets/s/libraries/swiper-bundle.min.js') }}"></script>
