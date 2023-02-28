@@ -82,11 +82,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/propertys', 'index')->name('propertys')->middleware(['admin','auth']);
         Route::get('/propertyinsertview', 'indexinsert')->name('propertyinsertview');
         Route::get('/propertyinsertweb', 'indexinsertweb')->name('propertyinsertweb');
-        Route::post('/property.store', 'store')->name('property.store')->middleware(['admin','auth']);
+        Route::post('/property.store', 'store')->name('property.store')->middleware(['auth']);
         Route::post('/property.recommended', 'recommended')->name('property.recommended')->middleware(['admin','auth']);
         Route::post('/property.edit', 'edit')->name('property.edit')->middleware(['admin','auth']);
         Route::post('/property.destroy', 'destroy')->name('property.destroy')->middleware(['admin','auth']);
-        Route::get('/adsproperty', 'ads')->name('adsproperty')->middleware(['admin','auth']);
+        Route::get('/adsproperty', 'ads')->name('adsproperty')->middleware(['auth']);
     });
     
     Route::controller(CatogeryController::class)->group(function () {
