@@ -87,7 +87,7 @@
     <body>
         @include('layouts.headone')
         @include('layouts.nav')
-    
+    <p></p>
 
         @if ($errors->any())
         <div class="alert alert-danger">
