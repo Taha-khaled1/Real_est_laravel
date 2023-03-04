@@ -98,10 +98,7 @@
 		</form>
 	</div>
 	
-</div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(img/bg.jpg)">
-  <div class="container text-center">
-    <h1 class="display-2 mb-4">المدونه</h1>
-  </div>
+</div>
 </div>	<!-- Blog Section -->
 <section id="blog" class="bg-grey">
     <div class="container">
@@ -168,19 +165,6 @@
     </div>
 </section>
 <!-- End of Blog Section -->	<!-- Features Section-->
-<section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg);">
-    <div class="container">
-        <div class="section-content" data-aos="fade-up">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="mb-2"></h2>
-                    <p></p>
-              
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- End of Features Section--></div>
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>

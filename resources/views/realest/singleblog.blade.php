@@ -91,20 +91,21 @@
 		</form>
 	</div>
 	
-</div>	<div class="jumbotron jumbotron-single d-flex align-items-center" style="background-image: url(/{{$blogs->image}})">
-  <div class="container text-center">
-    <h1 class="display-2 mb-4">Single Blog</h1>
-  </div>
-</div>	<!-- Contact Form Section -->
+</div>
+<style>
+  .content-blog{
+    text-align: center;
+  }
+</style>
 <section id="single-content" class="bg-white">
     <div class="container">
         <div class="section-content blog-content">
             
             <div class="row">
                 <!-- Single Content Holder -->
-                <div class="col-md-8 offset-md-2 mt-4">
+                <div class="col-md-8 offset-md-2 mt-4 content-blog">
+                   <img  width="320px" class="mb-3" src="/public/{{$blogs->image}}" alt="">
                     <h4>{{$blogs->title}}</h4>
-                    <img class="float-left" width="320px" src="/public/{{$blogs->image}}" alt="">
                     <p>{{$blogs->content}}</p>
                     {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste harum, ut magni cupiditate. Nihil ipsum debitis voluptates voluptate illum consectetur sapiente dolorem facilis, eum nobis sequi eveniet assumenda vel voluptatem!</p>
                     <p>Consectetur adipisicing elit. Sint, corrupti deleniti, rem mollitia quam cum quo, animi ipsa praesentium officiis ducimus! Modi aperiam, nulla ipsum, totam natus consequuntur fugiat blanditiis.</p>
@@ -115,6 +116,7 @@
         </div>
     </div>
 </section>
+
 <!-- End of Contact Form Section -->	<!-- Features Section-->
 <section id="cta" class="bg-fixed overlay" style="background-image: url(img/bg.jpg);">
     <div class="container">
@@ -123,7 +125,6 @@
                 <div class="col-md-12 text-center">
                     <h2 class="mb-2"></h2>
                     <p></p>
-                   
                 </div>
             </div>
         </div>

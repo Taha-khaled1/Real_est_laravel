@@ -62,7 +62,16 @@ class WebControlle extends Controller
 
     }
 
+    public function search($sea){
+        $property = Property::where('name',$sea)->get();
 
+
+        
+        return view('realest.more_view',['property'=>$property]);
+
+
+
+    }
 
     public function morepropertyCato($catogery){
         $property = Property::where('catogerie_id',$catogery)->get();

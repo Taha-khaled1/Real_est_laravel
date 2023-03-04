@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow-lg py-3" id="navbar">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="BLOSSOM.png" alt="" width="130"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -15,13 +14,25 @@
           <li class="nav-item me-2">
             <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='blogview') }}">مدونه</a>
           </li>
+          @auth
           <li class="nav-item me-2">
-            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='terms') }}">الشروط والأحكام</a>
+            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='blogview') }}">الإعدادات</a>
           </li>
+         
+          <li class="nav-item me-2">
+            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='blogview') }}">تسجيل الخروج</a>
+          </li> 
+          @endauth
+
+
+          {{-- <li class="nav-item me-2">
+            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='terms') }}">الشروط والأحكام</a>
+          </li> --}}
           {{-- <li class="nav-item me-2">
             <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='aboutpage') }}">معلومات عنا</a>
           </li> --}}
         </ul>
+         {{--
         <div class="d-flex">
             <!-- <a href="#" class="text-black text-decoration-none nav-link rounded text-dark">تسجيل دخول <i class="fa fa-user"></i></a> -->
 
@@ -41,9 +52,11 @@
                 </li>
               </ul>
             </div>
-          @endauth
+          @endauth 
 
         </div>
+        --}}
       </div>
+      <a class="navbar-brand" href="#"><img src="BLOSSOM.png" alt="" width="200"></a>
     </div>
 </nav>

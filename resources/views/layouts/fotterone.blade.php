@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row footer-top-style">
                 <div class="col-lg-4 mb-lg-0 mb-sm-5">
-                    <img src="assets/img/backgrounds/logo_light.svg" width="250" class="mb-3" alt="">
+                    <a class="navbar-brand" href="#"><img src="BLOSSOM.png" alt="" width="300"></a>
                     <p class="fs-5">إنجاز العقارية شركة اماراتيه تأسست بهدف تقديم خدمات عقارية فى مجالات متعددة تشمل السكني , التجارى والسياحي . كما قامت إنجاز العقارية بضم مجموعة من المطورين العقارين ذوي المصداقية لكي تتمكن من عرض أكثر عدد من المشاريع المتميزة التي يمتلكها هؤلاء المطورين تحت سقف واحد.</p>
                     <div class="social-links text-end d-flex">
                         <a href="#" class="text-light"><i class="fa fa-facebook"></i></a>
@@ -18,7 +18,7 @@
                     <h3>روابط سريعه </h3>
                     <span class="heading-divider"></span>
                     <ul class="links">
-                        <li class="mb-3"><a href="#" class="text-decoration-none text-light">الرابط الاول</a></li>
+                        <li class="mb-3"><a href="terms" class="text-decoration-none text-light" >الرابط الاول</a></li>
                         <li class="mb-3"><a href="#" class="text-decoration-none text-light">الرابط الثاني</a></li>
 
                         <li class="mb-3"><a href="#" class="text-decoration-none text-light">الرابط الثالث</a></li>

@@ -21,12 +21,21 @@ header{
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
-    height: 100vh;
+    height: 50vh;
     background-attachment: fixed;
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
   }
-  
+  .search-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .search-button button{
+   height:62px; 
+  }
   body {
   background-color: #000000;
 }
@@ -42,11 +51,46 @@ header{
     </head>
     <body>
         @include('layouts.nav')
-        <header class="pt-5 position-relative">
+        <header class="pt-5 px-3 position-relative">
             <div class="shadow position-absolute w-100 h-100 top-0 left-0 start-0 end-0"></div>
+            <form class="row position-relative search-container bg-dark shadow-sm p-4 w-100">
+                <div class="form-group col-xl-2 col-lg-2">
+                    <label for="منطقة" class="mb-2">منطقة</label>
+                    <input type="text" class="form-control p-3" placeholder="قم بكتابة أسم المنطقة أو أسم البناء">
+                </div>
+                <div class="form-group col-xl-2 col-lg-2">
+                    <label for="منطقة" class="mb-2">البلد</label>
+                    <select name="" id="" class="form-control p-3">
+                        <option value="">وحدة</option>
+                    </select>
+                </div>
+                <div class="form-group col-xl-2 col-lg-2">
+                    <label for="منطقة" class="mb-2">الحد الأقصي للسعر</label>
+                    <input type="text" class="form-control p-3" placeholder="الحد الأقصي للسعر">
+                </div>
+                <div class="form-group col-xl-2 col-lg-2">
+                    <label for="منطقة" class="mb-2">الحد الأدني للسعر</label>
+                    <input type="text" class="form-control p-3" placeholder="الحد الأدني للسعر">
+                </div>
+                <div class="form-group col-xl-2 col-lg-2">
+                    <label for="منطقة" class="mb-2">غرف النوم</label>
+                    <select name="" id="" class="form-control p-3">
+                        <option value="">وحدة</option>
+                    </select>
+                </div>
+                <div class="form-group col-xl-1 col-lg-2">
+                    <label for="منطقة" class="mb-2">عدد الحمامات</label>
+                    <select name="" id="" class="form-control p-3">
+                        <option value="">وحدة</option>
+                    </select>
+                </div>
+                <div class="form-group col-xl-1 col-lg-12 mt-3 mt-xl-0 search-button">
+                    <button class="btn w-100">بحث</button>
+                </div>
+            </form>
         </header>
 
-
+{{-- السعر / البلد/عدد الغرف /عدد الحمامات /اسم المبني // --}}
 
 
         <div class="3kares-most-visited p-sm-5 p-1">

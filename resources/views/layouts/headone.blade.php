@@ -12,10 +12,10 @@
                 </div>
             </div>
             <div class="col-lg-6 social-links text-end d-flex justify-content-end">
-                <a href="#" class="me-2"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="me-2"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="me-2"><i class="fa fa-google"></i></a>
-                <a href="#" class="me-2"><i class="fa fa-pinterest"></i></a>
+                <a href="#" class="me-2"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="me-2"><i class="fa fa-linkedin"></i></a>
+                <a href="#" class="me-2"><i class="fa fa-snapchat"></i></a>
+                <a href="#" class="me-2"><i class="fa fa-tiktok"></i></a>
             </div>
         </div>
     </div>

@@ -77,10 +77,14 @@ body{
 textarea{
   height: 250px;
 }
+.search-container{
+  margin-top: 50px;
+}
 @media(max-width:992px){
   header{
       height: auto;
   }
+ 
   .dropdown-menu{
       right: 0;
   }
