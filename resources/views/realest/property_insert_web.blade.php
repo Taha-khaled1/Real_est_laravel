@@ -14,18 +14,56 @@
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/owl.carousel.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/swiper-bundle.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/bootstrap.min.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+
       <style>           
        /* body{
         background-color: unset !important;
        }
     */
+    Add text-align: left; to your .select2-selection, you must have a text-align: center; in parent so add this to overwrite it:
+
+  text-align: left;
+Use this one should help, this is the wrapper of the selected option text.
+
+.select2-selection__rendered {
+  margin: 10px;
+}
+For the arrow down use:
+
+.select2-selection__arrow {
+  margin: 10px;
+}
+
+.select2-selection {
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+  color: #555555;
+  font-size: 14px;
+  outline: 0;
+  min-height: 48px;
+  text-align: left;
+}
+.select2-results__option{
+    color:#000 !important
+}
+.select2-selection__rendered {
+  margin: 10px;
+}
+
+.select2-selection__arrow {
+  margin: 10px;
+}
       </style>
     <title>اضافة عقار</title>
     </head>
     <body>
      @include('layouts.nav')
-     <h1>_ </h1>
-     <h1> _</h1>
+     <h1> </h1>
+      <p> </p>
      @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -165,7 +203,7 @@
 
                         <div class="mb-4">
                             <p class="mg-b-10">مميزات العقار</p>
-                            <select name="future[]" multiple="multiple" class="form-control select2">
+                            <select name="future[]" class="form-control select2 3kar-features." multiple>
                               <option selected value="سطح خاص">سطح خاص</option>
                               <option value="مدخل سيارة">مدخل سيارة</option>
                               <option value="مكيفات">مكيفات</option>
@@ -233,11 +271,10 @@
             // Initialize the Select2 dropdown
             $(document).ready(function() {
               $('.select2').select2({
-                theme: 'bootstrap4', // Use Bootstrap 4 styling
                 width: '100%', // Set the width of the dropdown
                 placeholder: 'اختر المميزات...', // Set a placeholder text
-                allowClear: true, // Allow clearing the selection
-                dir: 'rtl' // Set the direction of the dropdown to right-to-left
+                dir: 'rtl', // Set the direction of the dropdown to right-to-left
+                allowClear: true
               });
             });
           </script>
@@ -430,6 +467,7 @@
         $("#longitude").val(Lng);
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>‏
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANd3nsdL7bmOR-8UkZDrTNtjaX63JbjZs&libraries=places&callback=initAutocomplete&language=ar&region=EG
      async defer"></script>
     </body>
