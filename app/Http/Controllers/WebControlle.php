@@ -67,7 +67,8 @@ public function newProperty()
         if (!$property) {
             return response()->json(['error' => 'Property not found'], 404);
         }
-        return view('realest.detalis_view',['property' => $property,   ]);
+        $catogerys= Catogery::all();
+        return view('realest.detalis_view',['property' => $property,   'catogerys'=>  $catogerys   ]);
 
 
 

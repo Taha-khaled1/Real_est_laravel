@@ -1022,8 +1022,8 @@
                     <span class="absolute bottom-5 left-5 bg-[#FFFDFC] p-[5px] rounded-[2px] text-secondary leading-none text-[14px] font-normal capitalize">for Sale</span>
                   </div>
                   <div class="py-[20px] px-[20px]">
-                    <h3><a href="properties-details.html" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
-                    <h4><a href="properties-details.html" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
+                    <h3><a href="{{ route('detelisscreen', $item->id) }}" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
+                    <h4><a href=""{{ route('detelisscreen', $item->id) }}"" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
                     <span class="font-light text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
                     <div class="before:block before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-full before:z-[-1] before:bg-[#E0E0E0] relative">
                       <span class="font-recoleta text-base text-primary px-[15px] bg-white">{{$item->country}}</span>
@@ -1129,8 +1129,8 @@
                                 <span class="absolute bottom-5 left-5 bg-[#FFFDFC] p-[5px] rounded-[2px] text-secondary leading-none text-[14px] font-normal capitalize">for Sale</span>
                               </div>
                               <div class="py-[20px] px-[20px]">
-                                <h3><a href="properties-details.html" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
-                                <h4><a href="properties-details.html" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
+                                <h3><a href="detelisscreen" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
+                                <h4><a href="detelisscreen" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
                                 <span class="font-light text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
                                 <div class="before:block before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-full before:z-[-1] before:bg-[#E0E0E0] relative">
                                   <span class="font-recoleta text-base text-primary px-[15px] bg-white">{{$item->country}}</span>
