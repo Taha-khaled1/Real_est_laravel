@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Catogery;
 use App\Models\Enquiry;
 use App\Models\Property;
@@ -21,18 +22,19 @@ class WebControlle extends Controller
             ->orderBy('count', 'desc')
             ->limit(4)
             ->get();
-            $propertiesviews = Property::orderBy('views', 'desc')->take(10)->get();
-            $newProperties = Property::orderBy('created_at', 'desc')->where('status',1)->limit(10)->get();
+            $propertiesviews = Property::orderBy('views', 'desc')->take(6)->get();
+            $newProperties = Property::orderBy('created_at', 'desc')->where('status',1)->limit(6)->get();
             $propertiesRec = Property::where('recommended',1)->get();
+            $blogs = Blog::limit(2)->get();
             $catogerys= Catogery::all();
-            return view('realest.test',
+            return view('realest.home',
              [
                 'mostCountries' => $mostCountries,
                 'propertiesviews' => $propertiesviews, 
                 'newProperties' => $newProperties, 
                 'propertiesRec' => $propertiesRec->where('status',1),
-                'catogerys'=>  $catogerys
-                
+                'catogerys'=>  $catogerys,
+                'blogs'=>  $blogs
              ]);
     }
 

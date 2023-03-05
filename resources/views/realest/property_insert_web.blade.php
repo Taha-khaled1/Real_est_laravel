@@ -110,6 +110,7 @@ For the arrow down use:
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
+
 @endif
      <div class="page-content p-lg-5 p-sm-1">
             <div class="container">
@@ -231,7 +232,8 @@ For the arrow down use:
                         <label for="longitude" style="display: inline-block; margin-right: 10px;">خطوط الطول:</label>
                         <input class="form-control" type="text" id="longitude" name="longitude" readonly style="display: inline-block;">
                       </div>
-<P></P>
+
+                    <P> </P>
 
                       <div class="col-md-6 ">
                         <div class="form-group">

@@ -57,8 +57,8 @@ Route::get('/blogs/{id}', 'show')->name('showblog');
 
 Route::controller(WebControlle::class)->group(function () {     
 Route::get('/search', 'search')->name('search');
-Route::get('/','index')->name('test');
-Route::get('/test','index')->name('test');
+Route::get('/','index')->name('home');
+Route::get('/home','index')->name('home');
 Route::post('/addenqueris','addenqueris')->name('addenqueris');
 Route::post('/addreport', 'addreport')->name('addreport');
 Route::get('/detelisscreen/{id}', 'detalisscreen')->name('detelisscreen');

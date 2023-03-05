@@ -1,62 +1,194 @@
-<nav class="navbar navbar-expand-lg navbar-light shadow-lg py-3" id="navbar">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 p-xl-2 p-0">
-          <li class="nav-item me-2">
-            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='test') }}" @auth {{'style=display:block;'}} @endauth>الرئيسية</a>
-        </li>
-          <li class="nav-item me-2">
-            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='propertyinsertweb') }}">إضافة عقار</a>
-          </li>
-          <li class="nav-item me-2">
-            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='blogview') }}">مدونه</a>
-          </li>
-          @auth
-          <li class="nav-item me-2">
-            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='blogview') }}">الإعدادات</a>
-          </li>
-         
-          <li class="nav-item me-2">
-            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='blogview') }}">تسجيل الخروج</a>
-          </li> 
-          @endauth
+<div id="offcanvas-mobile-menu" class="offcanvas left-0 transform -translate-x-full fixed font-normal text-sm top-0 z-50 h-screen xs:w-[300px] lg:w-[380px] transition-all ease-in-out duration-300 bg-white">
 
+    <div class="py-12 pr-5 h-[100vh] overflow-y-auto">
+        <!-- close button start -->
+        <button class="offcanvas-close text-primary text-[25px] w-10 h-10 absolute right-0 top-0" aria-label="offcanvas">x</button>
+        <!-- close button end -->
 
-          {{-- <li class="nav-item me-2">
-            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='terms') }}">الشروط والأحكام</a>
-          </li> --}}
-          {{-- <li class="nav-item me-2">
-            <a class="nav-link text-light rounded p-3 active" aria-current="page" href="{{ url('/' . $page='aboutpage') }}">معلومات عنا</a>
-          </li> --}}
-        </ul>
-         {{--
-        <div class="d-flex">
-            <!-- <a href="#" class="text-black text-decoration-none nav-link rounded text-dark">تسجيل دخول <i class="fa fa-user"></i></a> -->
+        <!-- offcanvas-menu start -->
 
-            @auth
-            <div class="dropdown">
-              <img src="assets/img/backgrounds/icons8-user-48.png" width="40" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" />                          
-              <ul class="dropdown-menu border-top border-0 text-end" aria-labelledby="dropdownMenuButton1" dir="ltr">
-                <li class="dropdown-item" dir="rtl">مرحبا {{Getusername()}}!</li>
-                <li class="dropdown-item"><hr class="mb-1 mt-0"></li>                          
-                <li><a class="dropdown-item"  href="{{ url('/' . $page='profile') }}">الإعدادات <i class="fa fa-gear"></i></a></li>
-                <li><a class="dropdown-item" href="{{ route('logout') }}"
-                  onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i
-                  class="bx bx-log-out"></i>تسجيل خروج</a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                    </form>
+        <nav class="offcanvas-menu">
+            <ul>
+                <li class="relative block border-b-primary border-b first:border-t first:border-t-primary">
+                    <a href="#" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">Home</a>
+                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
+                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index.html">home 01</a></li>
+                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-2.html">home 02</a></li>
+                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-3.html">home 03</a></li>
+                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-4.html">home 04</a></li>
+                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-5.html">home 05</a></li>
+                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-6.html">home 06</a></li>
+                    </ul>
                 </li>
-              </ul>
-            </div>
-          @endauth 
+                <li class="relative block border-b-primary border-b">
+                    <a href="about.html" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">About</a>
+                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
+                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="about.html">About</a></li>
 
+                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="about-v2.html">About v2</a></li>
+                    </ul>
+
+                </li>
+                <li class="relative block border-b-primary border-b">
+                    <a href="#" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">Properties</a>
+                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
+                        <li>
+                            <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">Properties</a>
+                            <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
+
+
+
+                                <li>
+                                    <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="properties-v1.html"> properties v1</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="properties-v2.html"> properties v2</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="add-properties.html">add properties </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">Properties with sidebar</a>
+                            <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
+
+                                <li>
+                                    <a href="properties-left-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
+                                        left side bar</a>
+                                </li>
+                                <li>
+                                    <a href="properties-right-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
+                                        right side bar</a>
+                                </li>
+
+                                <li>
+                                    <a href="properties-list-left-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
+                                        list left side bar</a>
+                                </li>
+
+                                <li>
+                                    <a href="properties-list-right-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
+                                        list
+                                        right side bar</a>
+                                </li>
+                            </ul>
+
+
+                        </li>
+                        <li>
+                            <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">Property Details</a>
+
+                            <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
+
+                                <li>
+                                    <a href="add-properties.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">add
+                                        properties</a>
+                                </li>
+
+                                <li>
+                                    <a href="properties-details.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
+                                        details</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="relative block border-b-primary border-b"><a href="#" class="relative block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">Pages</a>
+
+                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
+                        <li>
+                            <a href="service.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">Service</a>
+                        </li>
+                        <li>
+                            <a href="single-service.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">single service</a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">contact
+                                us</a>
+                        </li>
+                        <li>
+                            <a href="create-agency.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">create
+                                agency</a>
+                        </li>
+                        <li>
+                            <a href="login.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">login</a>
+                        </li>
+                        <li>
+                            <a href="register.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">register</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="relative block border-b-primary border-b"><a href="#" class="relative block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">agency</a>
+
+                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
+                        <li>
+                            <a href="agency.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agency</a>
+                        </li>
+                        <li>
+                            <a href="create-agency.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">create
+                                agency</a>
+                        </li>
+
+                        <li>
+                            <a href="agent.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agent</a>
+                        </li>
+
+                        <li>
+                            <a href="agency-details.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agency
+                                details</a>
+                        </li>
+
+                        <li>
+                            <a href="agent-details.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agent
+                                details</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="relative block border-b-primary border-b"><a href="#" class="relative block capitalize text-black hover:text-secondary text-base my-2 py-1 px-5">Blog</a>
+
+
+
+
+                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
+                        <li>
+                            <a href="blog-grid.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
+                                grid</a>
+                        </li>
+                        <li>
+                            <a href="blog-grid-left-side-bar.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
+                                grid left side bar</a>
+                        </li>
+                        <li>
+                            <a href="blog-grid-right-side-bar.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
+                                grid right side bar</a>
+                        </li>
+                        <li>
+                            <a href="blog-details.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
+                                details</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="relative block border-b-primary border-b"><a href="contact.html" class="relative block capitalize text-black hover:text-secondary text-base my-2 py-1 px-5">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- offcanvas-menu end -->
+
+        <div class="px-5 flex flex-wrap mt-3 sm:hidden">
+            <a href="#" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">Add
+                Property</a>
         </div>
-        --}}
-      </div>
-      <a class="navbar-brand" href="#"><img src="BLOSSOM.png" alt="" width="200"></a>
+
+
+
     </div>
-</nav>
+</div>
