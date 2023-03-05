@@ -4,7 +4,7 @@
         <div class="grid grid-cols-12 gap-x-[30px] mb-[-30px]">
             <div class="col-span-12 sm:col-span-6 lg:col-span-4 mb-[30px]">
                 <a href="index.html" class="block mb-[25px]">
-                    <img  src="{{ URL::asset('BLOSSOM.png') }}"  width="200" height="200" >
+                    <img src="{{ URL::asset('BLOSSOM.png') }}" style="width: 300px; height:100%;">
                 </a>
                 <p class="mb-5 xl:mb-40 max-w-270">
                     ما هو دور شركة blossomblue
@@ -14,7 +14,7 @@
                     - الإشراف على عملية الاستثمار، وفق أحدث أساليب الإدارة والتنظيم المتبعة.
                   </p>
                   
-                <p class="text-sm hidden md:block">&copy; <a href="https://themeforest.net/user/hastech/portfolio" class="text-secondary">HasTech.</a> All Rights Reserved - Privacy Policy</p>
+                <p class="text-sm hidden md:block">&copy; <a href="https://www.nanots.ae/" class="text-secondary">NTS.</a> All Rights Reserved - Privacy Policy</p>
             </div>
             <div class="col-span-12 sm:col-span-6 lg:col-span-3 mb-[30px]">
                 <h3 class="font-recoleta font-normal text-[22px] leading-[1.222] text-primary mb-[20px] lg:mb-[30px]">المعلومات<span class="text-secondary">.</span></h3>
@@ -58,7 +58,10 @@
                             </svg>
                         </a></li>
                 </ul>
-                <p class="text-sm md:hidden mt-[20px]">&copy; <a href="https://themeforest.net/user/hastech/portfolio" class="text-secondary">Nts</a> All Rights Reserved - Privacy Policy</p>. 
+                
+                <p class="text-sm md:hidden mt-[20px]">&copy; <a href="https://www.nanots.ae/" class="text-secondary">NTS</a> All Rights Reserved - Privacy Policy</p>. 
+           
+           
             </div>
         </div>
     </div>

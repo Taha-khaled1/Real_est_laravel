@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-
+ 
          @include('layouts.sub_screen', ['title' => 'تفاصيل العقار'])
        <!-- Popular Properties start -->
        <section class="popular-properties py-[80px] lg:py-[120px]">
@@ -15,37 +15,41 @@
 
             <div class="grid grid-cols-12 mb-[-30px] gap-[30px] xl:gap-[50px]">
                 <div class="col-span-12 md:col-span-6 lg:col-span-8 mb-[30px]">
-                    <img src="{{ URL::asset($p) }}" class="w-auto h-auto" loading="lazy" alt="Elite Garden Resedence." width="770" height="465">
+                    <img src="{{ URL::asset($property->picture) }}" class="w-auto h-auto" loading="lazy" alt="Elite Garden Resedence." width="770" height="465">
                     <div class="mt-[45px] mb-[35px]">
                         <h2 class="font-recoleta leading-tight text-[22px] md:text-[28px] lg:text-[36px] text-primary mb-[5px]">
-                            Ruposibangla de Parlosia.</h2>
-                        <h3 class="font-light text-[18px] text-secondary underline mb-[20px]">2265 Paul Wayne
-                            Haggerty Road, New Orleans</h3>
-                        <p>Huge number of propreties availabe here for buy, sell and Rent. Also you find here
-                            co-living property, lots
-                            opportunity you have to choose here and enjoy huge discount you can get. These cases are
-                            perfectly simpl
-                            and easy to distinguish. In a free hour, when our power of choice is untrammelled and
-                            when nothing prev
-                            ents our being able to do what we like best, every pleasure is to be welcomed and every
-                            pain avoided are
-                            cases are perfectly simple and easy to distinguish. In a free hour, when our power of
-                            choice</p>
+                            {{ $property->name}} </h2>
+                        <h3 class="font-light text-[18px] text-secondary underline mb-[20px]">
+                       {{$property->address}}    </h3>
+                        <p>
+                         
+                           {{ $property->property_details->description}}
+                        </p>
                     </div>
 
                     <div class="grid grid-cols-12 xl:flex xl:flex-wrap xl:justify-between gap-y-[30px] gap-x-[15px] xl:gap-x-[0px] mb-[30px]">
+
+                        {{-- @foreach ($property->images as $item)
+
                         <div class="col-span-5">
                             <a href="assets/images/properties-details/01.png" class="gallery-image">
-                                <img class="object-cover w-full h-full rounded-[8px]" src="assets/images/properties-details/01.png" alt="gallery image" loading="lazy" width="270" height="187">
+                                <img class="object-cover w-full h-full rounded-[8px]" src="{{ URL::asset($property->picture) }}" alt="gallery image" loading="lazy" width="270" height="187">
                             </a>
 
                         </div>
+
+    
+                     @endforeach --}}
+
+
                         <div class="col-span-5">
                             <a href="assets/images/properties-details/02.png" class="gallery-image">
                                 <img class="object-cover w-full h-full rounded-[8px]" src="assets/images/properties-details/02.png" alt="gallery image" loading="lazy" width="270" height="187">
                             </a>
 
                         </div>
+
+
                         <div class="col-span-2">
                             <a href="assets/images/properties-details/03.png" class="gallery-image">
                                 <img class="object-cover w-full h-full rounded-[8px]" src="assets/images/properties-details/03.png" alt="gallery image" loading="lazy" width="170" height="187">
@@ -53,99 +57,108 @@
 
                         </div>
 
+
                         <div class="col-span-2">
                             <a href="assets/images/properties-details/06.png" class="gallery-image">
                                 <img class="object-cover w-full h-full rounded-[8px]" src="assets/images/properties-details/06.png" alt="gallery image" loading="lazy" width="270" height="187">
                             </a>
 
                         </div>
+
+
                         <div class="col-span-5">
                             <a href="assets/images/properties-details/05.png" class="gallery-image">
                                 <img class="object-cover w-full h-full rounded-[8px]" src="assets/images/properties-details/05.png" alt="gallery image" loading="lazy" width="270" height="187">
                             </a>
 
                         </div>
+
+
                         <div class="col-span-5">
                             <a href="assets/images/properties-details/04.png" class="gallery-image">
                                 <img class="object-cover w-full h-full rounded-[8px]" src="assets/images/properties-details/04.png" alt="gallery image" loading="lazy" width="170" height="187">
                             </a>
 
                         </div>
+
+
+
+
                     </div>
 
-                    <p>Huge number of propreties availabe here for buy, sell and Rent. Also you find here co-living
-                        property, lots
-                        opportunity you have to choose here and enjoy huge discount you can get. These cases are
-                        perfectly simpl
-                        and easy to distinguish. In a free hour, when our power of choice is untrammelled </p>
-
-
+                    <p>عدد هائل من البروبات المتوفرة هنا للشراء والبيع والإيجار. كما تجد هنا عقارًا مشتركًا  </p>
+                    <p>وفرصة الكثير التي يجب أن تختارها هنا والاستمتاع بخصم ضخم يمكنك الحصول عليه. هذه الحالات بسيطة تمامًا</p>
+                    <p>  وسهلة التمييز. في ساعة مجانية ، عندما يتم عدم تحصيل قوتنا المفضل</p>
+                    
                     <h4 class="font-recoleta text-primary text-[24px] leading-[1.277] sm:text-[28px] capitalize mt-[50px] mb-[40px]">
-                        Property Amenities<span class="text-secondary">.</span>
+                        تفاصيل العقار <span class="text-secondary">.</span>
                     </h4>
 
                     <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 px-[15px] mx-[-15px] mt-[40px]">
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>7 Beedrooms</span>
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                            <span>7 عدد الغرف</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>Gym for all</span>
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                            <span>7 عدد الحمامات</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>Air Conditioning</span>
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                            <span>7 عدد المشاهدات</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>CC Camera</span>
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                            <span>مدة الايجار</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>3 Garaze</span>
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                            <span>3 اتجاه العقار</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>Cable TV</span>
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                            <span>هاتف مالك العقار</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>10 Nearby Restaurant</span>
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                            <span>10 مساحة العقار لكل متر</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>Internet</span>
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                            <span>اسم مالك العقار </span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>Security System</span>
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                            <span>نوع المبني </span>
                         </li>
-                        <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
-                            <span>10 Nearby Restaurant</span>
-                        </li>
+                     @foreach ($property->facilities as $item)
+                     <li class="flex flex-wrap items-center mb-[25px]">
+                        <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
+                        <span>{{$item->facility}}</span>
+                    </li>
+                     @endforeach
+                     
 
-                        <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
+                        {{-- <li class="flex flex-wrap items-center mb-[25px]">
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
                             <span>6 Nearby Schools</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
                             <span>Gym for all</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
                             <span>Dishwasher</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
                             <span>5 Balcony</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
-                            <img class="mr-[15px]" src="assets/images/about/check.png" loading="lazy" alt="icon" width="20" height="20">
+                            <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
                             <span>Swimming Pool</span>
-                        </li>
+                        </li> --}}
                     </ul>
                     <h5 class="font-recoleta text-primary text-[24px] sm:text-[28px] leading-[1.277] capitalize lg:mt-[25px] mb-[40px]">
 
@@ -816,29 +829,29 @@
                             </ul>
 
                             <h2 class="font-recoleta text-primary text-[24px] sm:text-[28px] capitalize nt-[80px] lg:mt-[90px]">
-                                Leave a Message<span class="text-secondary">.</span>
+                                الاستعلام عن هذه العقار <span class="text-secondary">.</span>
                             </h2>
                             <div class="mt-[60px]">
                                 <form action="#" class="grid grid-cols-12 gap-x-[20px] gap-y-[30px]">
 
                                     <div class="col-span-12 md:col-span-6">
-                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="First Name">
+                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="الاسم الاول">
                                     </div>
 
                                     <div class="col-span-12 md:col-span-6">
-                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="Last Name">
+                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="الاسم الاخير">
                                     </div>
 
                                     <div class="col-span-12 md:col-span-6">
-                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="Phone number">
+                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="رقم الهاتف">
                                     </div>
 
                                     <div class="col-span-12 md:col-span-6">
-                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="email" placeholder="Email Address">
+                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="email" placeholder="بريدك الاكتروني">
                                     </div>
 
                                     <div class="col-span-12">
-                                        <textarea class="h-[196px] font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] resize-none" name="textarea" id="textarea" cols="30" rows="10" placeholder="Message"></textarea>
+                                        <textarea class="h-[196px] font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] resize-none" name="textarea" id="textarea" cols="30" rows="10" placeholder="وصف"></textarea>
                                     </div>
 
                                     <div class="col-span-12">
@@ -855,6 +868,27 @@
                     </div>
 
                 </div>
+
+
+
+
+
+
+
+{{-- ييظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظظ --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <div class="col-span-12 md:col-span-6 lg:col-span-4 mb-[30px]">
                     <aside class="mb-[-40px] asidebar">

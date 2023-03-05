@@ -1,11 +1,11 @@
 
-<header id="sticky-header" class="relative bg-[#ECFAF7] lg:py-[30px] z-[25] secondary-sticky">
-    <div class="container">
+<header id="sticky-header"  class="relative bg-[#ECFAF7] lg:py-[30px] z-[25] secondary-sticky">
+    <div class="container"  >
         <div class="grid grid-cols-12">
             <div class="col-span-12">
                 <div class="flex flex-wrap items-center justify-between">
                     <a href="index.html" class="block">
-                        <img  src="{{ URL::asset('BLOSSOM.png') }}"  width="200" height="200" >
+                        <img src="{{ URL::asset('BLOSSOM.png') }}" style="width: 250px; height:100%;">
                     </a>
                     <nav class="flex flex-wrap items-center">
                         <ul class="hidden lg:flex flex-wrap items-center font-recoleta text-[16px] xl:text-[18px] leading-none text-black">
@@ -113,7 +113,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="add-properties.html" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white hidden sm:block text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">اضافة عقار</a>
+                                <a href="pager.add-properties.html" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white hidden sm:block text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">اضافة عقار</a>
                             </li>
                             <li class="ml-2 sm:ml-5 lg:hidden">
                                 <a href="#offcanvas-mobile-menu" class="offcanvas-toggle flex text-[#016450] hover:text-secondary">
