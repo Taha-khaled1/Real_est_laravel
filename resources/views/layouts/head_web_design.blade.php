@@ -5,14 +5,14 @@
             <div class="col-span-12">
                 <div class="flex flex-wrap items-center justify-between">
                     <a href="index.html" class="block">
-                        <img class="w-full h-full" src="assets/images/logo/logo.svg" loading="lazy" width="99" height="46" alt="brand logo">
+                        <img class="w-full h-full" src="{{ URL::asset('assets/images/logo/logo.svg') }}" loading="lazy" width="99" height="46" alt="brand logo">
                     </a>
                     <nav class="flex flex-wrap items-center">
                         <ul class="hidden lg:flex flex-wrap items-center font-recoleta text-[16px] xl:text-[18px] leading-none text-black">
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="home" class="transition-all hover:text-secondary">الصفحه الرئيسيه</a>
+                                <a href="{{ route('home') }}" class="transition-all hover:text-secondary">الصفحه الرئيسيه</a>
                             </li>
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
@@ -36,7 +36,7 @@
 
                                             @foreach ($catogerys as $item)
                                             <li class="mb-[25px] last:mb-0">
-                                                <a href="properties-v1.html" class="font-recoleta text-[14px] hover:text-secondary">{{$item->name}}</a>
+                                                <a href="{{ route('morepropertyCato', $item->id) }}" class="font-recoleta text-[14px] hover:text-secondary">{{$item->name}}</a>
                                             </li>
                                             @endforeach
                                             
@@ -51,11 +51,11 @@
                                         <ul>
                                             <li class="text-primary underline font-recoleta mb-[30px]">اقتراحات</li>
                                             <li class="mb-[25px] last:mb-0">
-                                                <a href="add-properties.html" class="font-recoleta text-[14px] hover:text-secondary">عقارات اضيفت حديثا</a>
+                                                <a href="{{ route('newProperty') }}" class="font-recoleta text-[14px] hover:text-secondary">عقارات اضيفت حديثا</a>
                                             </li>
 
                                             <li class="mb-[25px] last:mb-0">
-                                                <a href="properties-details.html" class="font-recoleta text-[14px] hover:text-secondary">عقارات مميزه</a>
+                                                <a href="{{ route('topView') }}" class="font-recoleta text-[14px] hover:text-secondary">عقارات مميزه</a>
                                             </li>
 
                                         </ul>
@@ -71,7 +71,7 @@
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="setting" class="transition-all hover:text-secondary">الاعدادات</a>
+                                <a href="{{ route('setting') }}" class="transition-all hover:text-secondary">الاعدادات</a>
                      
 
 
@@ -79,7 +79,7 @@
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="blogview" class="transition-all hover:text-secondary">المدونه</a>
+                                <a href="{{ route('blogview') }}" class="transition-all hover:text-secondary">المدونه</a>
                   
 
                             </li>
@@ -102,11 +102,11 @@
         
         ">
                                     <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="login.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-t-[12px]">تسجيل الدخول</a>
+                                        <a href="{{ route('blogview') }}" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-t-[12px]">تسجيل الدخول</a>
                                     </li>
 
                                     <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="register.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-b-[12px]">تسجيل الخروج</a>
+                                        <a href="{{ route('blogview') }}" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-b-[12px]">تسجيل الخروج</a>
                                     </li>
 
 

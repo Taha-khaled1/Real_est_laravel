@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master_web')
 @section('css')
 
 @section('title')

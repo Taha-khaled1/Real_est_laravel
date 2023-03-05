@@ -1,163 +1,186 @@
-<!DOCTYPE html>
-    <html lang="en" dir="rtl">
-    <head>
-      <link rel="icon" href="/public/BLOSSOM.png">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
-        <link rel="stylesheet" href="{{ asset('assets/css-rtl/styeltweb.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/swiper-bundle.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/owl.carousel.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/owl.carousel.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/swiper-bundle.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css-rtl/libraries/bootstrap.min.css') }}">
+@extends('layouts.master_web')
+@section('css')
+<style>
+    .property-image {
+      width: 370px;
+      height: 266px;
+    }h1 {
+      font-size: 16px;
+      color: #333;
+    }
+    .fixed-size-image {
+      width: 370px;
+      height: 266px;
+      object-fit: cover;
+    }p {
+      font-size: 14px;
+      color: #666;
+    }div.text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .property-image {
+      width: 370px;
+      height: 266px;
+    }
+    .image-size {
+        width: 370px;
+        height: 266px;
+    }</style>
+@section('title')
+    عقارات
+@stop
+@endsection
 
-        <style>
-            swiper-container {
-              width: 100%;
-              height: 100%;
-            }
-        
-            swiper-slide {
-              text-align: center;
-              font-size: 18px;
-              background: #fff;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-        
-            swiper-slide img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-        
-        
-            swiper-container {
-              width: 100%;
-              height: 300px;
-              margin-left: auto;
-              margin-right: auto;
-            }
-        
-            swiper-slide {
-              background-size: cover;
-              background-position: center;
-            }
-        
-            .mySwiper {
-              height: 500px;
-              width: 100%;
-            }
-        
-            .mySwiper2 {
-              height: 20%;
-              box-sizing: border-box;
-              padding: 10px 0;
-            }
-        
-            .mySwiper2 swiper-slide {
-              width: 25%;
-              height: auto;
-              opacity: 0.4;
-            }
-        
-            .mySwiper2 .swiper-slide-thumb-active {
-              opacity: 1;
-            }
-        
-            .mySwiper2 swiper-slide img, swiper-slide a {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-            .property-features {
-                display: block;
-                columns: 3;
-                -webkit-columns: 3;
-                -moz-columns: 3;
-            }
-        </style>
-        <title>العقارات</title>
-    </head>
-    <body>
-       
-        @include('layouts.nav')
-       
-       <p></p> 
-      
-        <div class="page-content p-lg-5 p-sm-1 mt-5">
-            <div class="container">
-                <div class="3kares-most-visited p-sm-2 p-1 mb-4">
-                    <div class="container">
-                        <div class="row">
+@section('content')
+<section class="bg-no-repeat bg-center bg-cover bg-[#FFF6F0] h-[350px] lg:h-[513px] xl:h-[650px] flex flex-wrap items-center relative before:absolute before:inset-0 before:content-[''] before:bg-[#000000] before:opacity-[70%]" style="background-image: url('{{ URL::asset('united.jpg') }}');">
+    <div class="container">
+        <div class="grid grid-cols-12">
+            <div class="col-span-12">
+                <div class="max-w-[600px]  mx-auto text-center text-white relative z-[1]">
+                    <div class="mb-5"><span class="text-base block">ممتلكاتنا</span></div>
+                    <h1 class="font-recoleta text-[36px] sm:text-[50px] md:text-[68px] lg:text-[50px] leading-tight xl:text-2xl">
+                        ملكيات
 
-                         
+                    </h1>
+
+                    <p class="text-base mt-5 max-w-[500px] mx-auto text-center">
+                        يتوفر هنا عدد ضخم من العقارات للبيع والشراء ، كما يمكنك أن تجد هنا عقارات مشتركة كما تريد
 
 
-                          
-                            @foreach ($property as $item)
-                                
-                          
-                           
-                            <div class="col-xl-4 col-lg-6 col-md-12 item mb-3">
-                                <div class="card" dir="rtl">
-                                    <div class="position-relative p-1">
-                                        <div class="item position-relative">
-                                            <img src="/public/{{$item->picture}}" class="card-img-top" height="270" alt="...">
-                                            <p class="status position-absolute text-light bg-danger text-white px-3 py-1 rounded fw-bold"><span class="english-font">اعلي تقييم</p>   
-                                        </div>                                
-                                    </div>
-                                    <div class="card-body mt-2 p-0">
-                                        <div class="px-4">
-                                            <p class="text-danger fw-bold">حصري</p>
-                                            <a href="details.html" class="text-decoration-none"><h5 class="card-title mt-3 fw-bold gray-color">{{$item->name}}</h5></a>
-                                            <p class="mt-3 fw-light d-flex align-items-center gray-color"><img src="/assets/img/backgrounds/location-sign-svgrepo-com.svg" class="location ms-2" width="15" height="15" alt=""> {{$item->country}}</p>
-                                            <!-- <ul class="p-0 d-flex justify-content-between">
-                                                <li class="list-inline-item m-0">رقم العقار: <span class="english-text">4</span></li>
-                                                <li class="list-inline-item m-0">رقم العقار: <span class="english-text">4</span></li>
-                                                <li class="list-inline-item m-0">رقم العقار: <span class="english-text">4</span></li>
-                                            </ul> -->
-                                        </div>
-                                        <hr class="m-0 mb-1">
-                                        <div class="publisher d-flex align-items-center justify-content-between p-4">
-                                           
-                                            <div class="info gray-color">
-                                                {{$item->created_at}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> 
-                            
-                           
-                                
-                            @endforeach
-                                
-                           
-
-
-                            
-                        </div>
-
-                    </div>
+                    </p>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
 
 
-        <script src="{{ asset('assets/js/libraries/jquery-3.6.0.min.js') }}"></script>
-        <script src="{{ asset('assets/js/libraries/owl.carousel.min.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js" integrity="sha512-dSI4QnNeaXiNEjX2N8bkb16B7aMu/8SI5/rE6NIa3Hr/HnWUO+EAZpizN2JQJrXuvU7z0HTgpBVk/sfGd0oW+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="{{ asset('assets/js/app.js') }}"></script>
-        <script src="{{ asset('assets/js/libraries/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('assets/js/libraries/a1a75d5546.js') }}"></script>
-        <script src="{{ asset('assets/s/libraries/swiper-bundle.min.js') }}"></script>
-     
-    </body>
-</html>
+
+
+
+
+
+
+
+<section class="popular-properties py-[80px] lg:py-[120px]">
+    <div class="container">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+
+
+
+@foreach ($property as $item)
+<div class="overflow-hidden rounded-md drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] bg-[#FFFDFC] text-center transition-all duration-300 hover:-translate-y-[10px]">
+    <div class="relative property-image">
+        <img src="{{ URL::asset($item->picture) }}" class="w-full h-full object-cover" loading="lazy" alt="Orchid Casel de Paradise.">
+        <span class="absolute bottom-5 left-5 bg-[#FFFDFC] p-[5px] rounded-[2px] text-secondary leading-none text-[14px] font-normal capitalize">for Sale</span>
+      </div>
+      <div class="py-[20px] px-[20px]">
+        <h3><a href="properties-details.html" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
+        <h4><a href="properties-details.html" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
+        <span class="font-light text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
+        <div class="before:block before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-full before:z-[-1] before:bg-[#E0E0E0] relative">
+          <span class="font-recoleta text-base text-primary px-[15px] bg-white">{{$item->country}}</span>
+        </div>
+        <div class="text" style="display: flex; flex-direction: row;">
+            <h1 style="font-size: 16px; color: #333;">عدد مشاهدات العقار</h1>
+            <p style="font-size: 14px; color: #666;" class="font-light">{{$item->views}}</p>
+          </div>
+      </div>
+    </div> 
+
+
+@endforeach
+
+
+
+
+
+
+
+
+         
+       
+
+
+        </div>
+
+
+        <div class="grid grid-cols-12 mt-[50px] gap-[30px]">
+            <div class="col-span-12">
+                <ul class="pagination flex flex-wrap items-center justify-center">
+
+                    <li class="mx-2">
+                        <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] bg-primary rounded-full text-orange leading-none transition-all hover:bg-secondary text-white text-[12px]" href="#">
+                            <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(.clip0_876_580)">
+                                    <path d="M5.8853 10.0592C5.7326 10.212 5.48474 10.212 5.33204 10.0592L0.636322 5.36134C0.48362 5.20856 0.48362 4.96059 0.636322 4.80782L5.33204 0.109909C5.48749 -0.0403413 5.73535 -0.0359829 5.8853 0.119544C6.03181 0.271171 6.03181 0.511801 5.8853 0.663428L1.46633 5.08446L5.8853 9.50573C6.03823 9.65873 6.03823 9.90648 5.8853 10.0592Z" fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath class="clip0_876_580">
+                                        <rect width="5.47826" height="10.1739" fill="white" transform="matrix(-1 0 0 1 6 0)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="mx-2">
+                        <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">1</a>
+                    </li>
+
+                    <li class="mx-2">
+                        <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">2</a>
+                    </li>
+
+                    <li class="mx-2">
+                        <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">3</a>
+                    </li>
+
+                    <li class="mx-2">
+                        <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">4</a>
+                    </li>
+
+                    <li class="mx-2">
+                        <span>---</span>
+                    </li>
+
+                    <li class="mx-2">
+                        <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">25</a>
+                    </li>
+
+                    <li class="mx-2">
+                        <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] bg-primary rounded-full text-orange leading-none transition-all hover:bg-secondary text-white text-[12px]" href="#">
+                            <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(.clip0_876_576)">
+                                    <path d="M0.114699 10.0592C0.267401 10.212 0.515257 10.212 0.667959 10.0592L5.36368 5.36134C5.51638 5.20856 5.51638 4.96059 5.36368 4.80782L0.667959 0.109909C0.512505 -0.0403413 0.26465 -0.0359829 0.114699 0.119544C-0.031813 0.271171 -0.031813 0.511801 0.114699 0.663428L4.53367 5.08446L0.114699 9.50573C-0.038233 9.65873 -0.038233 9.90648 0.114699 10.0592Z" fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath class="clip0_876_576">
+                                        <rect width="5.47826" height="10.1739" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+</section>
+@endsection
+@section('js')
+
+@endsection

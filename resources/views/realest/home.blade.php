@@ -7,7 +7,7 @@
 
 @section('css')
 <style>
-    .property-image {
+.property-image {
   width: 370px;
   height: 266px;
 }h1 {
@@ -886,7 +886,7 @@
                                 @foreach ($mostCountries as $item)
                                     <div class="swiper-slide text-center">
                                         <div class="relative group">
-                                            <a href="agency-details.html" class="block">
+                                            <a href="moreproperty/{{$item->country}}" class="block">
                                                 <img src="{{ URL::asset($imageLinks[$counter]) }}" style="object-fit: cover; height: 290px;"
                                                     class="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
                                                     loading="lazy" width="270" height="290" alt="New York">

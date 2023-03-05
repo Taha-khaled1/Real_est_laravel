@@ -69,6 +69,8 @@ Route::controller(WebControlle::class)->group(function () {
 Route::get('/search', 'search')->name('search');
 Route::get('/','index')->name('home');
 Route::get('/home','index')->name('home');
+Route::get('/newProperty','newProperty')->name('newProperty');
+Route::get('/topView','topView')->name('topView');
 Route::post('/addenqueris','addenqueris')->name('addenqueris');
 Route::post('/addreport', 'addreport')->name('addreport');
 Route::get('/detelisscreen/{id}', 'detalisscreen')->name('detelisscreen');

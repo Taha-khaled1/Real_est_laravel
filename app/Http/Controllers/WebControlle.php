@@ -23,7 +23,7 @@ class WebControlle extends Controller
             ->limit(4)
             ->get();
             $propertiesviews = Property::orderBy('views', 'desc')->take(6)->get();
-            $newProperties = Property::orderBy('created_at', 'desc')->where('status',1)->limit(6)->get();
+           
             $propertiesRec = Property::where('recommended',1)->get();
             $blogs = Blog::limit(2)->get();
             $catogerys= Catogery::all();
@@ -31,15 +31,35 @@ class WebControlle extends Controller
              [
                 'mostCountries' => $mostCountries,
                 'propertiesviews' => $propertiesviews, 
-                'newProperties' => $newProperties, 
+             
                 'propertiesRec' => $propertiesRec->where('status',1),
                 'catogerys'=>  $catogerys,
                 'blogs'=>  $blogs
              ]);
     }
+    public function topView()
+    {
+        $propertiesviews = Property::orderBy('views', 'desc')->get();
+        $catogerys= Catogery::all();
+        return view('realest.more_view',
+        [
+     
+           'property' => $propertiesviews,  'catogerys'=>  $catogerys
+          
+        ]);
+    }
 
-
-
+public function newProperty()
+{
+    $newProperties = Property::orderBy('created_at', 'desc')->where('status',1)->get();
+    $catogerys= Catogery::all();
+    return view('realest.more_view',
+    [
+ 
+       'property' => $newProperties,     'catogerys'=>  $catogerys
+      
+    ]);
+}
     public function detalisscreen($id){
 
         $property = Property::with('property_details', 'images', 'facilities','user','catogery')->find($id);
@@ -47,7 +67,7 @@ class WebControlle extends Controller
         if (!$property) {
             return response()->json(['error' => 'Property not found'], 404);
         }
-        return view('realest.detalis_view',['property' => $property]);
+        return view('realest.detalis_view',['property' => $property,   ]);
 
 
 
@@ -55,10 +75,15 @@ class WebControlle extends Controller
 
     public function moreproperty($country){
         $property = Property::where('country',$country)->get();
-
+        $catogerys= Catogery::all();
 
         
-        return view('realest.more_view',['property'=>$property]);
+        return view(
+        'realest.more_view',
+        [
+        'property'=>$property,
+        'catogerys'=>  $catogerys
+        ]);
 
 
 
@@ -67,9 +92,10 @@ class WebControlle extends Controller
     public function search($sea){
         $property = Property::where('name',$sea)->get();
 
-
+        $catogerys= Catogery::all();
         
-        return view('realest.more_view',['property'=>$property]);
+        return view('realest.more_view',['property'=>$property,
+        'catogerys'=>  $catogerys]);
 
 
 
@@ -78,9 +104,10 @@ class WebControlle extends Controller
     public function morepropertyCato($catogery){
         $property = Property::where('catogerie_id',$catogery)->get();
 
-
+        $catogerys= Catogery::all();
         
-        return view('realest.more_view',['property'=>$property]);
+        return view('realest.more_view',['property'=>$property,
+        'catogerys'=>  $catogerys]);
 
 
 
