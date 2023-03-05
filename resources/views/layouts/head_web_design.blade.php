@@ -12,12 +12,12 @@
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="#" class="transition-all hover:text-secondary">الصفحه الرئيسيه</a>
+                                <a href="home" class="transition-all hover:text-secondary">الصفحه الرئيسيه</a>
                             </li>
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="about.html" class="transition-all hover:text-secondary">معلومات عنا</a>
+                                <a href="about" class="transition-all hover:text-secondary">معلومات عنا</a>
 
                             </li>
 
@@ -71,7 +71,7 @@
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="agency.html" class="transition-all hover:text-secondary">الاعدادت</a>
+                                <a href="setting" class="transition-all hover:text-secondary">الاعدادات</a>
                      
 
 
@@ -79,14 +79,14 @@
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="#" class="transition-all hover:text-secondary">المدونه</a>
+                                <a href="blogview" class="transition-all hover:text-secondary">المدونه</a>
                   
 
                             </li>
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="contact-us.html" class="transition-all hover:text-secondary">تواصل معنا</a>
+                                <a href="conactUs" class="transition-all hover:text-secondary">تواصل معنا</a>
 
                             </li>
 

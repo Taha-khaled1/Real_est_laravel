@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Catogery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,8 @@ class BlogController extends Controller
      */
     public function index()
     {    $blogs = Blog::all();
-        return view('realest.blog',['blogs'=>$blogs]);
+        $catogerys= Catogery::all();
+        return view('realest.blog',['blogs'=>$blogs, 'catogerys'=>  $catogerys,]);
     }
 
     /**

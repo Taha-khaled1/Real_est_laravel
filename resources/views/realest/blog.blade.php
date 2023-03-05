@@ -1,185 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="icon" href="BLOSSOM.png">
-    <!--
-     - Roxy: Bootstrap template by GettTemplates.com
-     - https://gettemplates.co/roxy
-    -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>المدونه</title>
-    <meta name="description" content="Roxy">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/select2/select2.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/owlcarousel/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/lightcase/lightcase.css') }}">
-     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+@extends('layouts.master_web')
+@section('css')
+@endsection
+@section('title')
+    المدونه
+@stop
 
 
-     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css-rtl/styelblog.css?v=123') }}">
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    
-</head>
-<body data-spy="scroll" data-target="#navbar" class="static-layout">
-	<div id="side-nav" class="sidenav">
-	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
-	
-	<div class="sidenav-content">
-		<p>
-			Kuncen WB1, Wirobrajan 10010, DIY
-		</p>
-		<p>
-			<span class="fs-16 primary-color">(+68) 120034509</span>
-		</p>
-		<p>info@yourdomain.com</p>
-	</div>
-</div>	<div id="side-search" class="sidenav">
-	<a href="javascript:void(0)" id="side-search-close">&times;</a>
-	<div class="sidenav-content">
-		<form action="">
-
-			<div class="input-group md-form form-sm form-2 pl-0">
-			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-			  <div class="input-group-append">
-			    <button class="input-group-text red lighten-3" id="basic-text1">
-			    	<span class="lnr lnr-magnifier"></span>
-			    </button>
-			  </div>
-			</div>
-
-		</form>
-	</div>
-	
-</div>	
+@section('content')
 
 
-<div id="side-nav" class="sidenav">
-	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
-	
-	<div class="sidenav-content">
-		<p>
-			Kuncen WB1, Wirobrajan 10010, DIY
-		</p>
-		<p>
-			<span class="fs-16 primary-color">(+68) 120034509</span>
-		</p>
-		<p>https://blossomblue.realestate</p>
-	</div>
-</div><div id="side-search" class="sidenav">
-	<a href="javascript:void(0)" id="side-search-close">&times;</a>
-	<div class="sidenav-content">
-		<form action="">
-            <img src="" alt="">
+ 
 
-			<div class="input-group md-form form-sm form-2 pl-0">
-			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-			  <div class="input-group-append">
-			    <button class="input-group-text red lighten-3" id="basic-text1">
-			    	<span class="lnr lnr-magnifier"></span>
-			    </button>
-			  </div>
-			</div>
 
-		</form>
-	</div>
-	
-</div>
-</div>	<!-- Blog Section -->
-<section id="blog" class="bg-grey">
-    <div class="container">
-        <div class="section-content">
-            <div class="title-wrap mb-5" data-aos="fade-up">
-                <h2 class="section-title">اخر <b>الاخبار</b></h2>
-                <p class="section-sub-title">افضل الاخبار المختص في العقارات.</p>
-            </div>
-            <div class="row">
-                <!-- Blog -->
-                <div class="col-md-12 blog-holder">
-                    <div class="row">
-                       
-                     
-                                
-                          @foreach ($blogs as $item)
-                              
-                          
-                      
-                        <!-- Blog Item -->
-                        <div class="col-md-4 blog-item-wrapper" data-aos="fade-up">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="{{ route('showblog', $item->id) }}"><img src="{{$item->image}}" alt=""></a>
-                                </div>
-                                <div class="blog-text">
-                                    <div class="blog-tag">
-                                        <a href="{{ route('showblog', $item->id) }}"><h6><small>CODE</small></h6></a>
-                                    </div>
-                                    <div class="blog-title">
-                                        <a href="{{ route('showblog', $item->id) }}"><h4>{{$item->title}}</h4></a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <p class="blog-date">{{$item->created_at}}</p> 
-                                      
-                                    </div>
-                                    <div class="blog-desc">
-                                        <p>{{ substr($item->content, 0, 300) . (strlen($item->content) > 300 ? "..." : "") }}</p>
-                                        @if (strlen($item->content) > 300)
-                                            <a href={{ route('showblog', $item->id) }}>Read more</a>
-                                        @endif
-                                    </div>
-                                   
-                                    {{-- {{ route('articles.show', $item->id) }} --}}
-                                    <div class="blog-share-wrapper">
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-facebook-square"></i>
-                                        </a>
-                                        <a class="blog-share" href="google.com">
-                                            <i class="fab fa-twitter-square"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End of Blog Item -->
-                        @endforeach
-                        <!-- End of Blog Item -->
+    <section class="bg-no-repeat bg-center bg-cover bg-[#FFF6F0] h-[350px] lg:h-[513px] xl:h-[650px] flex flex-wrap items-center relative before:absolute before:inset-0 before:content-[''] before:bg-[#000000] before:opacity-[70%]" style="background-image: url('{{ URL::asset('united.jpg') }}');">
+        <div class="container">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12">
+                    <div class="max-w-[700px]  mx-auto text-center text-white relative z-[1]">
+                        <div class="mb-5"><span class="text-base block">المدونه</span></div>
+                        <h1 class="font-recoleta text-[32px] sm:text-[50px] md:text-[68px] lg:text-[50px] leading-tight xl:text-2xl">
+                            كل ما عليك معرفته عن تجارة العقارات في الامارات
+                        </h1>
+
+                        <p class="text-base mt-5 max-w-[500px] mx-auto text-center">
+                            تَعِد الامارات المقيمين فيها ببحر غني بالفرص الذهبية على كافة الأصعدة، ولا سيما العقارية منها، إذ تقدم العديد من التسهيلات التي تساعدهم في ازدهار أعمالهم واقتناص الفرص المناسبة. هذا وتحتل الامارات مكانةً متقدمة بين أفضل دول العالم للاستثمار العقاري، ويُعزى ذلك للظروف المناسبة للاستثمار والقوانين المعمول بها التي من شأنها الحد من العقبات والصعوبات التي قد تواجه أي مستثمر أو وكيل عقاري يفكر في تجارة العقارات في الامارات
+                        </p>
                     </div>
                 </div>
-                <!-- End of Blog -->
             </div>
         </div>
-    </div>
-</section>
-<!-- End of Blog Section -->	<!-- Features Section-->
-<!-- End of Features Section--></div>
+    </section>
 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script src="{{ asset('vendor/bootstrap/bootstrap.min.css') }}"></script>
-    <script src="{{ asset('vendor/bootstrap/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('vendor/select2/select2.min.js') }}"></script>
-    <script src="{{ asset('vendor/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('vendor/stellar/jquery.stellar.js') }}" type="text/javascript" charset="utf-8"></script>
-    <script src="{{ asset('vendor/isotope/isotope.min.js') }}"></script>
-    <script src="{{ asset('vendor/lightcase/lightcase.js') }}"></script>
-    <script src="{{ asset('vendor/waypoints/waypoint.min.js') }}"></script>
-	 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-     <script src="{{ asset('vendor/waypoints/waypoint.min.js') }}"></script>
-	<!-- Main JS -->
-	<script> !function(n,t,e){console.log("init");var o={init:function(e){o.select2(),o.stellar(),o.carousel(),o.portfolio(),o.lightCase(),o.sideNav(),o.counter(),o.skills(),o.aos(),o.navbarChange()},select2:function(){n(e).ready(function(){n("select").select2()})},stellar:function(){var e=n(t).width();767<=e&&(n(".bg-fixed").attr("data-stellar-background-ratio","0.8"),n.stellar({horizontalScrolling:!1,responsive:!0,parallaxBackgrounds:!0,scrollProperty:"scroll"}))},carousel:function(){n(".testi-carousel").owlCarousel({loop:!0,margin:10,autoplay:!0,nav:!1,dots:!0,dotSpeed:1e3,autoplay:!0,autoplaySpeed:1e3,items:1}),n(".client-slider").owlCarousel({loop:!0,margin:10,nav:!0,navSpeed:1e3,dots:!1,autoplay:!0,autoplaySpeed:1e3,navText:['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],responsive:{0:{items:1},600:{items:3},1e3:{items:6}}})},portfolio:function(){var t=n(".grid-portfolio").isotope({itemSelector:".grid-item",masonry:{gutter:".gutter-sizer",columnWidth:".grid-sizer"},percentPosition:!0});return n(".filter-button-group").on("click","a",function(){var e=n(this).attr("data-filter");t.isotope({filter:e})}),n(".btn-filter a.is-checked").addClass("active"),n(".btn-filter a").on("click",function(){n(".btn-filter a").removeClass("active"),n(this).addClass("active")}),!1},lightCase:function(){jQuery(e).ready(function(e){e("a[data-rel^=lightcase]").lightcase()})},sideNav:function(){n("#side-nav-open").click(function(){n("#side-nav").css("width","300"),setTimeout(function(){n("body").addClass("sidenav-open")},200),setTimeout(function(){n("body").addClass("in")},400)}),n("#side-nav-close, #canvas-overlay").click(function(){setTimeout(function(){n("body").removeClass("in")},200),setTimeout(function(){n("body").removeClass("sidenav-open"),n("#side-nav").css("width","0")},400)}),n("#side-search-open").click(function(){n("#side-search").css("width","300"),setTimeout(function(){n("body").addClass("sidesearch-open")},200),setTimeout(function(){n("body").addClass("in")},300)}),n("#side-search-close, #canvas-overlay").click(function(){setTimeout(function(){n("body").removeClass("in")},200),setTimeout(function(){n("body").removeClass("sidesearch-open"),n("#side-search").css("width","0")},300)})},counter:function(){n("#counter").each(function(){n(this).waypoint({handler:function(e){n(".number").countTo({speed:1e3}),this.destroy()},offset:"80%"})})},skills:function(){n("#skills").each(function(){return n(this).waypoint({handler:function(e){n(".progress").each(function(){console.log(n(this).attr("data-percent")),n(this).find(".progress-bar").delay(1e4).css({width:n(this).attr("data-percent")})})},offset:"80%"}),!1})},aos:function(){AOS.init({once:!0})},navbarChange:function(){n(t).scroll(function(){var e=n(t).scrollTop();return 150<e?(n("#header-navbar").removeClass("navbar-transparent"),n("body").addClass("not-on-top")):(n("body").removeClass("not-on-top"),n("#header-navbar").addClass("navbar-transparent")),!1})}};n(e).ready(function(){o.init(n)})}(window.jQuery,window,document);  </script>
-	<script src="//localhost:35729/livereload.js"></script>
-</body>
-</html>
+    <!-- Hero section end -->
+
+    <!-- Blog Section Start  -->
+
+    <section class="blog-section pt-[80px] lg:pt-[120px]">
+        <div class="container">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[40px]">
+
+
+
+@foreach ($blogs as $item)
+    
+<div class="post-item">
+    <a href="blog-details.html" class="block overflow-hidden rounded-[6px] mb-[35px]">
+        <img class="w-full h-full" src="{{ URL::asset($item->image) }}" width="370" height="270" loading="lazy" alt="Tip’s about Real Estate Recent Conditions from Agent.">
+    </a>
+    <div>
+        <span class="block leading-none font-normal text-[14px] text-secondary mb-[5px] relative before:absolute before:left-0 before:top-1/2 -translate-y-1/2 before:bg-secondary before:content-[''] before:w-[3px] before:h-[3px] before:rounded-full pl-[10px]"> {{ $item->created_at->locale('ar')->diffForHumans() }}</span>
+        <h3><a href="blog-details.html" class="font-recoleta text-[22px] xl:text-[27px] leading-[1.285] text-primary block mb-[10px] hover:text-secondary transition-all">{{ $item->title}}</a></h3>
+        <p class="font-light text-[#494949] text-[16px] leading-[1.75]">{{ \Illuminate\Support\Str::limit($item->content, 100, '...') }}</p>
+    </div>
+</div>
+
+
+
+@endforeach
+
+
+
+
+
+
+
+
+            </div>
+            <div class="grid grid-cols-12 mt-[50px] gap-x-[30px]">
+                <div class="col-span-12">
+                    <ul class="pagination flex flex-wrap items-center justify-center">
+
+                        <li class="mx-2">
+                            <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] bg-primary rounded-full text-orange leading-none transition-all hover:bg-secondary text-white text-[12px]" href="#">
+                                <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(.clip0_876_580)">
+                                        <path d="M5.8853 10.0592C5.7326 10.212 5.48474 10.212 5.33204 10.0592L0.636322 5.36134C0.48362 5.20856 0.48362 4.96059 0.636322 4.80782L5.33204 0.109909C5.48749 -0.0403413 5.73535 -0.0359829 5.8853 0.119544C6.03181 0.271171 6.03181 0.511801 5.8853 0.663428L1.46633 5.08446L5.8853 9.50573C6.03823 9.65873 6.03823 9.90648 5.8853 10.0592Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath class="clip0_876_580">
+                                            <rect width="5.47826" height="10.1739" fill="white" transform="matrix(-1 0 0 1 6 0)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="mx-2">
+                            <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">1</a>
+                        </li>
+
+                        <li class="mx-2">
+                            <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">2</a>
+                        </li>
+
+                        <li class="mx-2">
+                            <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">3</a>
+                        </li>
+
+                        <li class="mx-2">
+                            <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">4</a>
+                        </li>
+
+                        <li class="mx-2">
+                            <span>---</span>
+                        </li>
+
+                        <li class="mx-2">
+                            <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] leading-none hover:text-secondary" href="#">25</a>
+                        </li>
+
+                        <li class="mx-2">
+                            <a class="flex flex-wrap items-center justify-center  w-[26px] h-[26px] bg-primary rounded-full text-orange leading-none transition-all hover:bg-secondary text-white text-[12px]" href="#">
+                                <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(.clip0_876_576)">
+                                        <path d="M0.114699 10.0592C0.267401 10.212 0.515257 10.212 0.667959 10.0592L5.36368 5.36134C5.51638 5.20856 5.51638 4.96059 5.36368 4.80782L0.667959 0.109909C0.512505 -0.0403413 0.26465 -0.0359829 0.114699 0.119544C-0.031813 0.271171 -0.031813 0.511801 0.114699 0.663428L4.53367 5.08446L0.114699 9.50573C-0.038233 9.65873 -0.038233 9.90648 0.114699 10.0592Z" fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath class="clip0_876_576">
+                                            <rect width="5.47826" height="10.1739" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Blog Section End  -->
+
+
+   
+    <!-- News Letter section End -->
+
+
+@endsection
+
+@section('js')
+
+@endsection

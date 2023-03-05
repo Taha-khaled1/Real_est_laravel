@@ -11,6 +11,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebControlle;
 use App\Mail\Testmail;
+use App\Models\Catogery;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
@@ -37,7 +38,16 @@ Route::get('/send',function () {
 // Route::get('/dashboard', function () {
 //     return view('realest.dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::get('/about', function () {
+    $catogerys = Catogery::all();
+ 
+    return view('realest.about',['catogerys' => $catogerys]);
+})->name('about');
+Route::get('/conactUs', function () {
+    $catogerys = Catogery::all();
+ 
+    return view('realest.conactUs',['catogerys' => $catogerys]);
+})->name('conactUs');
 
 
 Route::controller(BlogController::class)->group(function () {

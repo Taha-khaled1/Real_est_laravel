@@ -1,3 +1,4 @@
+@include('layouts.email_section')
 <footer class="footer bg-[#ECFAF7] pt-[80px] lg:pt-[200px] pb-[80px] lg:pb-[110px] font-light bg-no-repeat" style="background-image: url('assets/images/footer/pattern.png');">
     <div class="container">
         <div class="grid grid-cols-12 gap-x-[30px] mb-[-30px]">
@@ -18,10 +19,10 @@
             <div class="col-span-12 sm:col-span-6 lg:col-span-3 mb-[30px]">
                 <h3 class="font-recoleta font-normal text-[22px] leading-[1.222] text-primary mb-[20px] lg:mb-[30px]">المعلومات<span class="text-secondary">.</span></h3>
                 <ul class="text-[16px] leading-none mb-[-20px]">
-                    <li class="mb-[20px]"><a class="inline-block transition-all hover:text-secondary" href="about.html">معلومات عنا</a></li>
-                    <li class="mb-[20px]"><a class="inline-block transition-all hover:text-secondary" href="properties-v2.html">الشروط و الاحكام</a></li>
+                    <li class="mb-[20px]"><a class="inline-block transition-all hover:text-secondary" href="about">معلومات عنا</a></li>
+                    <li class="mb-[20px]"><a class="inline-block transition-all hover:text-secondary" href="terms">الشروط و الاحكام</a></li>
                     <li class="mb-[20px]"><a class="inline-block transition-all hover:text-secondary" href="#">وسائل الدفع التي نوفرها</a></li>
-                    <li class="mb-[20px]"><a class="inline-block transition-all hover:text-secondary" href="blog-grid.html">المدونه</a></li>
+                    <li class="mb-[20px]"><a class="inline-block transition-all hover:text-secondary" href="blogview">المدونه</a></li>
                 </ul>
             </div>
             <div class="col-span-12 sm:col-span-6 lg:col-span-3 mb-[30px]">
@@ -36,8 +37,7 @@
             </div>
             <div class="col-span-12 sm:col-span-6 lg:col-span-2 mb-[30px]">
                 <h3 class="font-recoleta font-normal text-[22px] leading-[1.222] text-primary mb-[20px] lg:mb-[30px]">العنوان<span class="text-secondary">.</span></h3>
-                <p>2104 Charmaine Lane
-                    Amarillo, New York</p>
+                <p>الامارات بجوار برج خليفه</p>
                 <ul class="inline-flex items-center justify-center mt-[20px]">
                     <li class="first:ml-0 ml-[15px]"><a href="https://www.facebook.com/" class="w-[26px] h-[26px] transition-all rounded-full bg-primary flex items-center justify-center hover:drop-shadow-[0px_4px_10px_rgba(0,0,0,0.25)] text-white hover:bg-secondary">
                             <svg width="7" height="12" viewBox="0 0 7 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

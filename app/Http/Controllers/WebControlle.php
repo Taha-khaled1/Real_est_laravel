@@ -99,10 +99,11 @@ class WebControlle extends Controller
     }
     public function terms(){
       
-        
+        $catogerys= Catogery::all();
 
         
-        return view('realest.terms');
+        return view('realest.terms',
+        ['catogerys'=>  $catogerys]);
 
 
 
