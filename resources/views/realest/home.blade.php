@@ -2,7 +2,7 @@
 
 
 @section('title')
-    empty
+    الصفحه الرئيسيه
 @stop
 
 @section('css')
