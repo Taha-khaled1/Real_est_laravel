@@ -5,7 +5,7 @@
             <div class="col-span-12">
                 <div class="flex flex-wrap items-center justify-between">
                     <a href="index.html" class="block">
-                        <img class="w-full h-full" src="{{ URL::asset('assets/images/logo/logo.svg') }}" loading="lazy" width="99" height="46" alt="brand logo">
+                        <img  src="{{ URL::asset('BLOSSOM.png') }}"  width="200" height="200" >
                     </a>
                     <nav class="flex flex-wrap items-center">
                         <ul class="hidden lg:flex flex-wrap items-center font-recoleta text-[16px] xl:text-[18px] leading-none text-black">

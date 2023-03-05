@@ -15,7 +15,7 @@
 
             <div class="grid grid-cols-12 mb-[-30px] gap-[30px] xl:gap-[50px]">
                 <div class="col-span-12 md:col-span-6 lg:col-span-8 mb-[30px]">
-                    <img src="assets/images/properties-details/post1.png" class="w-auto h-auto" loading="lazy" alt="Elite Garden Resedence." width="770" height="465">
+                    <img src="{{ URL::asset($p) }}" class="w-auto h-auto" loading="lazy" alt="Elite Garden Resedence." width="770" height="465">
                     <div class="mt-[45px] mb-[35px]">
                         <h2 class="font-recoleta leading-tight text-[22px] md:text-[28px] lg:text-[36px] text-primary mb-[5px]">
                             Ruposibangla de Parlosia.</h2>

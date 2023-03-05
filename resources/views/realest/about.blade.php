@@ -9,7 +9,7 @@
 
   
 
-    <section class="bg-no-repeat bg-left-bottom xl:bg-right-bottom bg-contain xl:bg-cover bg-[#FFF6F0] h-[560px] xl:h-[650px] flex flex-wrap items-center relative" style="background-image:  url('{{ URL::asset('united.jpg') }}');">
+    <section class="bg-no-repeat bg-left-bottom xl:bg-right-bottom bg-contain xl:bg-cover bg-[#FFF6F0] h-[560px] xl:h-[650px] flex flex-wrap items-center relative" style="background-image:  url('{{ URL::asset('sub_screen.jpg') }}');">
         <div class="container">
             <div class="grid grid-cols-12">
                 <div class="col-span-12">
@@ -29,7 +29,7 @@
         </div>
         {{-- <img class="absolute left-0 bottom-0" src="{{ URL::asset('build.jpg') }}" alt="icon" width="112" height="138"> --}}
     </section>
-
+    @include('layouts.sub_screen', ['title' => 'تفاصيل العقار'])
     <!-- Hero section end -->
 
     <section class="relative z-[1] mt-[80px] xl:mt-0">

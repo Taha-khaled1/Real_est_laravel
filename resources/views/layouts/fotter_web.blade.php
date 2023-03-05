@@ -4,7 +4,7 @@
         <div class="grid grid-cols-12 gap-x-[30px] mb-[-30px]">
             <div class="col-span-12 sm:col-span-6 lg:col-span-4 mb-[30px]">
                 <a href="index.html" class="block mb-[25px]">
-                    <img src="{{ URL::asset('assets/images/logo/logo.svg') }} "width="99" height="46" loading=lazy alt="footer logo">
+                    <img  src="{{ URL::asset('BLOSSOM.png') }}"  width="200" height="200" >
                 </a>
                 <p class="mb-5 xl:mb-40 max-w-270">
                     ما هو دور شركة blossomblue
