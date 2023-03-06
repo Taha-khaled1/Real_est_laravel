@@ -38,8 +38,8 @@
                     <div class="text-center">
                         <span class="text-secondary text-tiny inline-block mb-2">اتصل بنا
                             .</span>
-                        <h2 class="font-recoleta text-primary text-[24px] sm:text-[30px] leading-[1.277] xl:text-xl capitalize mb-[5px]">تواصل معنا <span class="text-secondary">.</span></h2>
-                        <p class="mx-auto max-w-[465px]">
+                        <h2 class="font-recoleta text-white text-[24px] sm:text-[30px] leading-[1.277] xl:text-xl capitalize mb-[5px]">تواصل معنا <span class="text-secondary">.</span></h2>
+                        <p class="mx-auto max-w-[465px] text-white">
                             يتوفر هنا عدد ضخم من العقارات للبيع والشراء والإيجار. كما تجد هنا ممتلكات للعيش المشترك ، وفرص كثيرة.
 
 
@@ -55,27 +55,27 @@
             <div class="flex flex-wrap hover: drop-shadow-[0px_16px_10px_rgba(0,0,0,0.1)] hover:bg-[#F5F9F8] transition-all p-[20px] xl:p-[35px] rounded-[8px] mb-[30px]">
                 <img class="self-center mr-[20px] sm:mr-[40px] lg:mr-[20px] xl:mr-[40px] sm:mb-[15px] lg:mb-0" src="assets/images/icon/map.png" width="40" height="55" loading="lazy" alt="image icon">
                 <div class="flex-1">
-                    <h4 class="font-recoleta leading-none text-[28px] text-primary mb-[10px]">العنوان . <span
+                    <h4 class="font-recoleta leading-none text-[28px] text-white mb-[10px]">العنوان . <span
                             class="text-secondary">.</span></h4>
-                    <p class="font-light text-[18px] lg:max-w-[230px]">الامارات بجوار برج خليفه</p>
+                    <p class="font-light text-[18px] lg:max-w-[230px] text-white">الامارات بجوار برج خليفه</p>
                 </div>
             </div>
 
             <div class="flex flex-wrap hover: drop-shadow-[0px_16px_10px_rgba(0,0,0,0.1)] hover:bg-[#F5F9F8] transition-all p-[20px] xl:p-[35px] rounded-[8px] mb-[30px]">
                 <img class="self-center mr-[20px] sm:mr-[40px] lg:mr-[20px] xl:mr-[40px] sm:mb-[15px] lg:mb-0" src="assets/images/icon/phone.png" width="46" height="46" loading="lazy" alt="image icon">
                 <div class="flex-1">
-                    <h4 class="font-recoleta leading-none text-[28px] text-primary mb-[10px]">اتصل بنا . <span
+                    <h4 class="font-recoleta leading-none text-[28px] text-white mb-[10px]">اتصل بنا . <span
                             class="text-secondary">.</span></h4>
-                    <p class="font-light text-[18px] lg:max-w-[230px]">الامارات بجوار برج خليفه</p>
+                    <p class="font-light text-[18px] lg:max-w-[230px] text-white">الامارات بجوار برج خليفه</p>
                 </div>
             </div>
 
             <div class="flex flex-wrap hover: drop-shadow-[0px_16px_10px_rgba(0,0,0,0.1)] hover:bg-[#F5F9F8] transition-all p-[20px] xl:p-[35px] rounded-[8px] mb-[30px] xl:pl-[65px]">
                 <img class="self-center mr-[20px] sm:mr-[40px] lg:mr-[20px] xl:mr-[40px] sm:mb-[15px] lg:mb-0" src="assets/images/icon/mail.png" width="46" height="52" loading="lazy" alt="image icon">
                 <div class="flex-1">
-                    <h4 class="font-recoleta leading-none text-[28px] text-primary mb-[10px]">راسلنا عبر البريد الإلكتروني<span
+                    <h4 class="font-recoleta leading-none text-[28px] text-white mb-[10px]">راسلنا عبر البريد الإلكتروني<span
                             class="text-secondary">.</span></h4>
-                    <p class="font-light text-[18px] lg:max-w-[230px]">
+                    <p class="font-light text-[18px] lg:max-w-[230px] text-white">
                         <a href="mailto:admin@examples.com" class="hover:text-secondary"> Nts@examples.com</a>
                     </p>
                 </div>
@@ -92,11 +92,11 @@
             <div class="grid grid-cols-12 gap-x-[30px] mb-[-30px] items-end">
                 <div class="col-span-12 lg:col-span-7 mb-[30px]">
                     <div>
-                        <h2 class="font-recoleta text-primary text-[24px] sm:text-[28px] leading-[1.277] capitalize mb-[10px]">
+                        <h2 class="font-recoleta text-white text-[24px] sm:text-[28px] leading-[1.277] capitalize mb-[10px]">
                             أرسل رسالة
 
                         </h2>
-                        <p class="max-w-[465px] mb-[40px]">
+                        <p class="max-w-[465px] mb-[40px] text-white">
                             يتوفر هنا عدد ضخم من العقارات للبيع والشراء والإيجار. كما تجد هنا ممتلكات للعيش المشترك ، وفرص كثيرة
 
 

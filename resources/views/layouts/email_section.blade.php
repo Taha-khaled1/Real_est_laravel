@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="grid grid-cols-1">
                     <div class="col-span">
-                        <div class="flex flex-wrap items-center justify-between py-[30px] xl:py-[40px] px-[30px] xl:px-[55px] shadow-[0px_10px_20px_rgba(196,196,196,0.5)] rounded-[15px] border border-[rgba(1,100,80,0.25)] bg-white mb-[80px] lg:mb-[-75px]">
+                        <div class="flex flex-wrap items-center justify-between py-[30px] xl:py-[40px] px-[30px] xl:px-[55px] shadow-[0px_10px_20px_rgba(196,196,196,0.5)] rounded-[15px] border border-[rgba(1,100,80,0.25)] form-field-color mb-[80px] lg:mb-[-75px]">
                             <div class="w-full lg:w-auto">
                                 <h3 class="font-recoleta text-primary text-[24px] sm:text-[30px] xl:text-[36px] leading-[1.277] mb-[10px]">Are you a Home Owner?</h3>
                                 <p class="text-secondary leading-[1.5] tracking-[0.03em]">Put your email address and get listed.</p>

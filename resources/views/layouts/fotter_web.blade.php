@@ -6,7 +6,7 @@
                 <a href="index.html" class="block mb-[25px]">
                     <img src="{{ URL::asset('BLOSSOM.png') }}" style="width: 300px; height:100%;">
                 </a>
-                <p class="mb-5 xl:mb-40 max-w-270">
+                <p class="mb-5 xl:mb-40 max-w-270 text-white">
                     ما هو دور شركة blossomblue
                     تأمين سير عملية شراء العقار بكل سلاسة، مع جميع المعاملات المترتبة.
                     - ا، ووضع اللمسات الفنية على العقار.
@@ -14,7 +14,7 @@
                     - الإشراف على عملية الاستثمار، وفق أحدث أساليب الإدارة والتنظيم المتبعة.
                   </p>
                   
-                <p class="text-sm hidden md:block">&copy; <a href="https://www.nanots.ae/" class="text-secondary">NTS.</a> All Rights Reserved - Privacy Policy</p>
+                <p class="text-sm hidden md:block text-white">&copy; <a href="https://www.nanots.ae/" class="text-secondary">NTS.</a> All Rights Reserved - Privacy Policy</p>
             </div>
             <div class="col-span-12 sm:col-span-6 lg:col-span-3 mb-[30px]">
                 <h3 class="font-recoleta font-normal text-[22px] leading-[1.222] text-primary mb-[20px] lg:mb-[30px]">المعلومات<span class="text-secondary">.</span></h3>

@@ -44,7 +44,7 @@
 
 
 @foreach ($property as $item)
-<div class="overflow-hidden rounded-md drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] bg-[#FFFDFC] text-center transition-all duration-300 hover:-translate-y-[10px]">
+<div class="overflow-hidden rounded-md drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] form-field-color text-center transition-all duration-300 hover:-translate-y-[10px]">
     <div class="relative property-image">
         <img src="{{ URL::asset($item->picture) }}" class="w-full h-full object-cover" loading="lazy" alt="Orchid Casel de Paradise.">
         <span class="absolute bottom-5 left-5 bg-[#FFFDFC] p-[5px] rounded-[2px] text-secondary leading-none text-[14px] font-normal capitalize">for Sale</span>
@@ -53,12 +53,12 @@
         <h3><a href="properties-details.html" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
         <h4><a href="properties-details.html" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
         <span class="font-light text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
-        <div class="before:block before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-full before:z-[-1] before:bg-[#E0E0E0] relative">
-          <span class="font-recoleta text-base text-primary px-[15px] bg-white">{{$item->country}}</span>
+        <div class="before:block before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-full before:z-[-1] relative">
+          <span class="font-recoleta text-primary px-[15px]">{{$item->country}}</span>
         </div>
         <div class="text" style="display: flex; flex-direction: row;">
-            <h1 style="font-size: 16px; color: #333;">عدد مشاهدات العقار</h1>
-            <p style="font-size: 14px; color: #666;" class="font-light">{{$item->views}}</p>
+            <h1 style="font-size: 16px; color: #fff;">عدد مشاهدات العقار</h1>
+            <p style="font-size: 14px; color: #fff;" class="font-light">{{$item->views}}</p>
           </div>
       </div>
     </div> 

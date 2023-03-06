@@ -1,5 +1,5 @@
 
-<header id="sticky-header"  class="relative bg-[#ECFAF7] lg:py-[30px] z-[25] secondary-sticky">
+<header id="sticky-header"  class="relative lg:py-[30px] z-[25] secondary-sticky">
     <div class="container"  >
         <div class="grid grid-cols-12">
             <div class="col-span-12">
@@ -17,16 +17,10 @@
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="about" class="transition-all hover:text-secondary">معلومات عنا</a>
-
-                            </li>
-
-                            <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
-
                                 <a href="#" class="transition-all hover:text-secondary">عقارات</a>
-                                <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap w-[890px] absolute top-[120%] left-1/2 translate-x-[-40%] xl:translate-x-[-45%] transition-all
+                                <ul class="list-none main-button-color drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap w-[890px] absolute top-[120%] left-1/2 translate-x-[-40%] xl:translate-x-[-45%] transition-all
                                     group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100 px-[40px] py-[45px]
-                                    bg-contain bg-right-top bg-no-repeat
+                                    bg-contain bg-left-top bg-no-repeat
                                     " style="background-image: url('unar.png');">
 
 
@@ -113,7 +107,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="pager.add-properties.html" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white hidden sm:block text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">اضافة عقار</a>
+                                <a href="pager.add-properties.html" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white hidden sm:block text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] main-button-color after:bg-primary after:rounded-md after:transition-all">اضافة عقار</a>
                             </li>
                             <li class="ml-2 sm:ml-5 lg:hidden">
                                 <a href="#offcanvas-mobile-menu" class="offcanvas-toggle flex text-[#016450] hover:text-secondary">

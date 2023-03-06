@@ -78,16 +78,16 @@
                         <ul
                             class="tab-nav search-tab inline-flex px-[15px] sm:px-[30px] py-[22px] border-t border-l border-r border-solid border-[#016450] rounded-tl-[15px] rounded-tr-[15px] bg-[rgb(236,250,247,0.8)]">
                             <li data-tab="buy" class="mr-[5px] sm:mr-[10px] md:mr-[46px] my-1 active"><button
-                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-primary transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out">للبيع</button>
+                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-dark transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out">للبيع</button>
                             </li>
                             <li data-tab="sell" class="mr-[5px] sm:mr-[10px] md:mr-[46px] my-1"><button
-                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-primary transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out">للشراء</button>
+                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-dark transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out">للشراء</button>
                             </li>
                             <li data-tab="rent" class="mr-[5px] sm:mr-[10px] md:mr-[46px] my-1"><button
-                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-primary transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out">للتاجير</button>
+                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-dark transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out">للتاجير</button>
                             </li>
                             <li data-tab="co-living" class="md:mr-[0px] my-1"><button
-                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-primary transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out">اخر</button>
+                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-dark transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out">اخر</button>
                             </li>
                         </ul>
 
@@ -131,7 +131,7 @@
                                         </div>
                                         <div class="flex-1">
                                             <label for="location"
-                                                class="font-recoleta block capitalize text-primary text-[18px] xl:text-[25px] leading-none mb-1">المكان</label>
+                                                class="font-recoleta block capitalize text-dark text-[18px] xl:text-[25px] leading-none mb-1">المكان</label>
                                             <input id="location" type="text" placeholder="Choose location"
                                                 class="text-tiny placeholder:text-body leading-none font-light pr-3 focus:outline-none w-full bg-transparent">
                                         </div>
@@ -145,7 +145,7 @@
                                         </div>
                                         <div class="flex-1">
                                             <label for="property"
-                                                class="font-recoleta block capitalize text-primary text-[18px] xl:text-[25px] leading-none mb-1">نوع العقار</label>
+                                                class="font-recoleta block capitalize text-dark text-[18px] xl:text-[25px] leading-none mb-1">نوع العقار</label>
                                             <select name="property" id="property"
                                                 class="nice-select appearance-none bg-transparent text-tiny font-light cursor-pointer">
                                                 <option selected value="0">القسم</option>
@@ -164,7 +164,7 @@
                                         </div>
                                         <div class="flex-1">
                                             <label for="price"
-                                                class="font-recoleta block capitalize text-primary text-[18px] xl:text-[25px] leading-none mb-1">حدد السعر</label>
+                                                class="font-recoleta block capitalize text-dark text-[18px] xl:text-[25px] leading-none mb-1">حدد السعر</label>
                                             <select name="price" id="price"
                                                 class="nice-select appearance-none bg-transparent text-tiny font-light cursor-pointer">
                                                 <option selected value="0">3500 USD</option>
@@ -186,7 +186,7 @@
 
                                         <div class="flex-1">
                                             <label for="property-size"
-                                                class="font-recoleta block capitalize text-primary text-[18px] xl:text-[25px] leading-none mb-1">مساحة العقار للمتر</label>
+                                                class="font-recoleta block capitalize text-dark text-[18px] xl:text-[25px] leading-none mb-1">مساحة العقار للمتر</label>
                                             <select name="property-size" id="property-size"
                                                 class="nice-select appearance-none bg-transparent text-tiny font-light cursor-pointer">
                                                 <option selected value="0">1500 Sqft</option>
@@ -195,7 +195,7 @@
                                                 <option value="3">1800 Sqft</option>
                                             </select>
                                         </div>
-                                        <button class="search-btn absolute right-0 lg:right-[-60px] xl:right-[-70px]">
+                                        <button class="search-btn absolute left-0 lg:left-[-60px] xl:left-[-70px]">
                                             <img src="assets/images/icon/search-outline.svg"
                                                 class="max-w-[30px] xl:w-auto" width="40" height="40"
                                                 alt="svg icon">
@@ -360,7 +360,7 @@
                                                 <option value="3">2800 Sqft</option>
                                             </select>
                                         </div>
-                                        <button class="search-btn absolute right-0 lg:right-[-60px] xl:right-[-70px]">
+                                        <button class="search-btn absolute left-0 lg:left-[-60px] xl:left-[-70px]">
                                             <img src="assets/images/icon/search-outline.svg"
                                                 class="max-w-[30px] xl:w-auto" width="40" height="40"
                                                 alt="svg icon">
@@ -525,7 +525,7 @@
                                                 <option value="3">7800 Sqft</option>
                                             </select>
                                         </div>
-                                        <button class="search-btn absolute right-0 lg:right-[-60px] xl:right-[-70px]">
+                                        <button class="search-btn absolute left-0 lg:left-[-60px] xl:left-[-70px]">
                                             <img src="assets/images/icon/search-outline.svg"
                                                 class="max-w-[30px] xl:w-auto" width="40" height="40"
                                                 alt="svg icon">
@@ -690,7 +690,7 @@
                                                 <option value="3">2800 Sqft</option>
                                             </select>
                                         </div>
-                                        <button class="search-btn absolute right-0 lg:right-[-60px] xl:right-[-70px]">
+                                        <button class="search-btn absolute left-0 lg:left-[-60px] xl:left-[-70px]">
                                             <img src="assets/images/icon/search-outline.svg"
                                                 class="max-w-[30px] xl:w-auto" width="40" height="40"
                                                 alt="svg icon">
@@ -891,7 +891,7 @@
                                                     class="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
                                                     loading="lazy" width="270" height="290" alt="New York">
                                                 <div
-                                                    class="cities-shadow bg-[#FFFDFC] rounded-[0px_0px_6px_6px] px-[15px] py-[20px]">
+                                                    class="cities-shadow form-field-color rounded-[0px_0px_6px_6px] px-[15px] py-[20px]">
                                                     <span
                                                         class="font-recoleta font-normal text-[24px] xl:text-lg text-primary group-hover:text-secondary transition-all">{{ $item->country }}</span>
                                                     <p
@@ -1016,21 +1016,21 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
                 @foreach ($propertiesviews as $item)
            
-               <div class="overflow-hidden rounded-md drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] bg-[#FFFDFC] text-center transition-all duration-300 hover:-translate-y-[10px]">
+               <div class="overflow-hidden rounded-md  form-field-color text-center transition-all duration-300 hover:-translate-y-[10px]">
                 <div class="relative property-image">
                     <img src="{{ URL::asset($item->picture) }}" class="w-full h-full object-cover" loading="lazy" alt="Orchid Casel de Paradise.">
                     <span class="absolute bottom-5 left-5 bg-[#FFFDFC] p-[5px] rounded-[2px] text-secondary leading-none text-[14px] font-normal capitalize">for Sale</span>
                   </div>
                   <div class="py-[20px] px-[20px]">
-                    <h3><a href="{{ route('detelisscreen', $item->id) }}" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
-                    <h4><a href=""{{ route('detelisscreen', $item->id) }}"" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
+                    <h3><a href="{{ route('detelisscreen', $item->id) }}" class="font-recoleta leading-tight text-[22px] xl:text-lg text-white">{{$item->name}}</a></h3>
+                    <h4><a href="{{ route('detelisscreen', $item->id) }}" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
                     <span class="font-light text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
                     <div class="before:block before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-full before:z-[-1] before:bg-[#E0E0E0] relative">
-                      <span class="font-recoleta text-base text-primary px-[15px] bg-white">{{$item->country}}</span>
+                      <span class="font-recoleta text-primary px-[15px]">{{$item->country}}</span>
                     </div>
                     <div class="text" style="display: flex; flex-direction: row;">
-                        <h1 style="font-size: 16px; color: #333;">عدد مشاهدات العقار</h1>
-                        <p style="font-size: 14px; color: #666;" class="font-light">{{$item->views}}</p>
+                        <h1 style="font-size: 16px; color: #fff;">عدد مشاهدات العقار</h1>
+                        <p style="font-size: 14px; color: #fff;" class="font-light">{{$item->views}}</p>
                       </div>
                   </div>
                 </div>
@@ -1045,60 +1045,7 @@
 
 
 
-    <!-- Video Section Start -->
-    <section class="video-section">
-        <div class="container">
-            <div class="grid grid-cols-12 gap-[30px] items-center">
-                <div class="col-span-12 lg:col-span-6 relative">
-                    <div class="mb-5 lg:mb-0 max-w-[450px]">
-                        <span class="text-secondary text-tiny inline-block mb-2">Take a video tour</span>
-                        <h2
-                            class="font-recoleta text-primary text-[24px] sm:text-[30px] leading-[1.277] xl:text-xl mb-[10px]">
-                            Watch the video for taking your decision easily <span class="text-secondary">.</span></h2>
-                        <p>Huge number of propreties availabe here for buy, sell and
-                            Rent. Also you find here co-living property so lots opportunity
-                            you have to choose here and enjoy huge discount. </p>
-                        <a href="#" class="flex flex-wrap items-center text-secondary text-tiny mt-[20px]">View all
-                            <svg class="ml-[10px]" width="26" height="11" viewBox="0 0 26 11"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M20.0877 0.69303L24.2075 5.00849H0V5.99151H24.2075L20.0877 10.307L20.7493 11L26 5.5L20.7493 0L20.0877 0.69303Z"
-                                    fill="currentColor"></path>
-                            </svg>
-                        </a>
-                        <img class="absolute bottom-[-18px] right-[5px]" src="assets/images/video/star.png"
-                            loading="lazy" width="65" height="73" alt="image">
 
-                    </div>
-                </div>
-                <div class="col-span-12 lg:col-span-6 text-center">
-                    <div class="relative p-[20px] lg:p-[30px] bg-[#ECFAF7] inline-block rounded-[24px]">
-                        <div class="scene drop-shadow-[0px_10px_20px_rgba(0,0,0,0.25)]" data-relative-input="true">
-                            <img data-depth="0.1" src="assets/images/video/video.png" class="rounded-[24px]"
-                                loading="lazy" width="507" height="349" alt="video image">
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=mSC6GwizOag"
-                            class="play-button bg-white text-white hover:text-primary absolute left-0 right-0 mx-auto top-1/2 -translate-y-1/2 hover:scale-105 hover:bg-primary w-[55px] h-[55px] flex 
-    flex-wrap z-[1] items-center justify-center opacity-80 shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)] transition-all rounded-full group
-    
-    before:block before:absolute  before:bg-white before:opacity-80 before:shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)] hover:before:bg-primary hover:before:opacity-80 before:w-[70px] before:h-[70px] before:rounded-full before:z-[-1]
-    "
-                            aria-label="play button">
-                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path class="stroke-secondary group-hover:stroke-white"
-                                    d="M1.63861 10.764V6.70324C1.63861 1.66145 5.20893 -0.403178 9.57772 2.11772L13.1024 4.14812L16.6271 6.17853C20.9959 8.69942 20.9959 12.8287 16.6271 15.3496L13.1024 17.38L9.57772 19.4104C5.20893 21.9313 1.63861 19.8666 1.63861 14.8249V10.764Z"
-                                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Video Section End -->
 
 
     <!-- Featured Properties Start -->
@@ -1155,8 +1102,8 @@
 
     <!-- Testimonial carousel Start -->
 
-    <section class="testimonial-section pb-[80px] lg:pb-[120px] bg-center bg-no-repeat bg-white relative z-10"
-        style="background-image: url(assets/images/testimonial/pattern.png);">
+    <section class="testimonial-section pb-[80px] lg:pb-[120px] bg-center bg-no-repeat relative z-10"
+        style="">
         <div class="container testimonial-carousel-one">
             <div class="grid items-center grid-cols-12 gap-x-[30px] mb-[-30px]">
                 <div class="col-span-12 lg:col-span-7 mb-[30px]">
@@ -1189,7 +1136,7 @@
                                                     fill="#016450" />
                                             </svg>
                                         </span>
-                                        <p class="text-primary">من السهل جدًا على كل شخص شراء أو بيع أو استئجار عقار
+                                        <p class="text-dark">من السهل جدًا على كل شخص شراء أو بيع أو استئجار عقار
                                              نحن نظن أنهم يواصلون خدمتهم العظيمة.</p>
                                         <ul>
                                             <li class="flex flex-wrap items-center justify-between mt-4">
@@ -1274,7 +1221,7 @@
                                                     fill="#016450" />
                                             </svg>
                                         </span>
-                                        <p class="text-primary">
+                                        <p class="text-dark">
                                             لقد كنت خائف جدا من الشركات الغير موثقه ولاكن عندما تعاملت مع هذه الشركه العقريه لقد تمكنت من العثور علي منزل احلامي
                                         </p>
                                         <ul>
@@ -1352,7 +1299,7 @@
                                                     fill="#016450" />
                                             </svg>
                                         </span>
-                                        <p class="text-primary">فعلا شركه قويه جدا جدا لقد تمكنت من العثور علي منزل بسرعه رهيبه .</p>
+                                        <p class="text-dark">فعلا شركه قويه جدا جدا لقد تمكنت من العثور علي منزل بسرعه رهيبه .</p>
                                         <ul>
                                             <li class="flex flex-wrap items-center justify-between mt-4">
                                                 <span

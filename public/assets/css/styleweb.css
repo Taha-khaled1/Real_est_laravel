@@ -106,7 +106,7 @@ h6 {
 Reset links to optimize for opt-in styling instead of opt-out.
 */
 a {
-  color: inherit;
+  color: #fff;
   text-decoration: inherit;
 }
 
@@ -2472,7 +2472,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(1 100 80/var(--tw-text-opacity));
+  color: #fff;
 }
 
 .text-\[\#494949\] {
@@ -2801,6 +2801,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .is-sticky {
   position: fixed;
   left: 0px;
+  background: #1c252c;
   right: 0px;
   width: 100%;
 }
@@ -2825,11 +2826,13 @@ Ensure the default browser behavior of the `hidden` attribute.
     transform: none;
   }
 }
+.main-button-color{
+  background-color: #2697FF !important;
+}
 .is-sticky {
   -webkit-animation: fadeInDown 0.7s ease-in-out 0s normal none 1 running;
   animation: fadeInDown 0.7s ease-in-out 0s normal none 1 running;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255/var(--tw-bg-opacity));
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -3032,21 +3035,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: var(--tw-transform);
   transition-delay: 500ms;
 }
-
-.testimonial-section::after {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255/var(--tw-bg-opacity));
-  opacity: 60%;
-  --tw-content: "";
-  content: var(--tw-content);
+.form-field-color{
+  background-color: #8c8c8c;
 }
-
+header,footer{
+  background-color: #223f5d !important;
+}
+input{}
 .search-btn {
   border-radius: 15px;
   --tw-bg-opacity: 1;
@@ -5599,19 +5594,21 @@ input:focus {
   }
 
   .\32 xl\:left-\[-40px\] {
-    left: -40px;
+    right: -40px;
   }
 
   .\32 xl\:left-\[50px\] {
-    left: 50px;
+    right: 50px;
   }
-
+.search-btn{
+  left:-70px
+}
   .\32 xl\:bottom-\[150px\] {
     bottom: 150px;
   }
 
   .\32 xl\:right-\[120px\] {
-    right: 120px;
+    left: 120px;
   }
 
   .\32 xl\:ml-\[55px\] {
@@ -5619,11 +5616,11 @@ input:focus {
   }
 
   .\32 xl\:ml-\[-160px\] {
-    margin-left: -160px;
+    margin-right: -160px;
   }
 
   .\32 xl\:ml-\[-130px\] {
-    margin-left: -130px;
+    margin-right: -130px;
   }
 
   .\32 xl\:w-auto {

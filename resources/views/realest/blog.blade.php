@@ -50,7 +50,7 @@
     <div>
         <span class="block leading-none font-normal text-[14px] text-secondary mb-[5px] relative before:absolute before:left-0 before:top-1/2 -translate-y-1/2 before:bg-secondary before:content-[''] before:w-[3px] before:h-[3px] before:rounded-full pl-[10px]"> {{ $item->created_at->locale('ar')->diffForHumans() }}</span>
         <h3><a href="blog-details.html" class="font-recoleta text-[22px] xl:text-[27px] leading-[1.285] text-primary block mb-[10px] hover:text-secondary transition-all">{{ $item->title}}</a></h3>
-        <p class="font-light text-[#494949] text-[16px] leading-[1.75]">{{ \Illuminate\Support\Str::limit($item->content, 100, '...') }}</p>
+        <p class="font-light text-white text-[16px] leading-[1.75]">{{ \Illuminate\Support\Str::limit($item->content, 100, '...') }}</p>
     </div>
 </div>
 

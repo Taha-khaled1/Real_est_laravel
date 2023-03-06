@@ -7,7 +7,11 @@
 @endsection
 
 @section('content')
- 
+        <style>
+            .popular-properties a{
+                color:#000 !important;
+            }
+        </style>
          @include('layouts.sub_screen', ['title' => 'تفاصيل العقار'])
        <!-- Popular Properties start -->
        <section class="popular-properties py-[80px] lg:py-[120px]">
@@ -19,9 +23,9 @@
                     <div class="mt-[45px] mb-[35px]">
                         <h2 class="font-recoleta leading-tight text-[22px] md:text-[28px] lg:text-[36px] text-primary mb-[5px]">
                             {{ $property->name}} </h2>
-                        <h3 class="font-light text-[18px] text-secondary underline mb-[20px]">
+                        <h3 class="font-light text-[18px] text-white underline mb-[20px]">
                        {{$property->address}}    </h3>
-                        <p>
+                        <p class="text-white">
                          
                            {{ $property->property_details->description}}
                         </p>
@@ -86,94 +90,94 @@
 
                     </div>
 
-                    <p>عدد هائل من البروبات المتوفرة هنا للشراء والبيع والإيجار. كما تجد هنا عقارًا مشتركًا  </p>
-                    <p>وفرصة الكثير التي يجب أن تختارها هنا والاستمتاع بخصم ضخم يمكنك الحصول عليه. هذه الحالات بسيطة تمامًا</p>
-                    <p>  وسهلة التمييز. في ساعة مجانية ، عندما يتم عدم تحصيل قوتنا المفضل</p>
+                    <p class="text-white">عدد هائل من البروبات المتوفرة هنا للشراء والبيع والإيجار. كما تجد هنا عقارًا مشتركًا  </p>
+                    <p class="text-white">وفرصة الكثير التي يجب أن تختارها هنا والاستمتاع بخصم ضخم يمكنك الحصول عليه. هذه الحالات بسيطة تمامًا</p>
+                    <p class="text-white">  وسهلة التمييز. في ساعة مجانية ، عندما يتم عدم تحصيل قوتنا المفضل</p>
                     
                     <h4 class="font-recoleta text-primary text-[24px] leading-[1.277] sm:text-[28px] capitalize mt-[50px] mb-[40px]">
-                        تفاصيل العقار <span class="text-secondary">.</span>
+                        تفاصيل العقار <span class="text-white">.</span>
                     </h4>
 
                     <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 px-[15px] mx-[-15px] mt-[40px]">
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>7 عدد الغرف</span>
+                            <span class="text-white">7 عدد الغرف</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>7 عدد الحمامات</span>
+                            <span class="text-white">7 عدد الحمامات</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>7 عدد المشاهدات</span>
+                            <span class="text-white">7 عدد المشاهدات</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>مدة الايجار</span>
+                            <span class="text-white">مدة الايجار</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>3 اتجاه العقار</span>
+                            <span class="text-white">3 اتجاه العقار</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>هاتف مالك العقار</span>
+                            <span class="text-white">هاتف مالك العقار</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>10 مساحة العقار لكل متر</span>
+                            <span class="text-white">10 مساحة العقار لكل متر</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>اسم مالك العقار </span>
+                            <span class="text-white">اسم مالك العقار </span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>نوع المبني </span>
+                            <span class="text-white">نوع المبني </span>
                         </li>
                      @foreach ($property->facilities as $item)
                      <li class="flex flex-wrap items-center mb-[25px]">
                         <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                        <span>{{$item->facility}}</span>
+                        <span class="text-white">{{$item->facility}}</span>
                     </li>
                      @endforeach
                      
 
                         {{-- <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>6 Nearby Schools</span>
+                            <span class="text-white">6 Nearby Schools</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>Gym for all</span>
+                            <span class="text-white">Gym for all</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>Dishwasher</span>
+                            <span class="text-white">Dishwasher</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>5 Balcony</span>
+                            <span class="text-white">5 Balcony</span>
                         </li>
                         <li class="flex flex-wrap items-center mb-[25px]">
                             <img class="mr-[15px]" src="{{ URL::asset('assets/images/about/check.png') }}" loading="lazy" alt="icon" width="20" height="20">
-                            <span>Swimming Pool</span>
+                            <span class="text-white">Swimming Pool</span>
                         </li> --}}
                     </ul>
                     <h5 class="font-recoleta text-primary text-[24px] sm:text-[28px] leading-[1.277] capitalize lg:mt-[25px] mb-[40px]">
 
-                        Floor Plan<span class="text-secondary">.</span>
+                        Floor Plan<span class="text-white">.</span>
                     </h5>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-[30px]">
                         <div class="text-center">
                             <img src="assets/images/floor-plan/floor1.png" alt="Floor Plan">
-                            <p>Ground floor</p>
+                            <p class="text-white">Ground floor</p>
                         </div>
 
                         <div class="text-center">
                             <img src="assets/images/floor-plan/floor3.png" alt="Floor Plan">
-                            <p>1st Floor</p>
+                            <p class="text-white">1st Floor</p>
                         </div>
                     </div>
 
@@ -181,20 +185,20 @@
                         <div class="col-span-12 flex flex-wrap flex-col md:flex-row md:items-center justify-between mb-[50px] lg:mb-[70px]">
                             <div class="mb-5 xl:mb-0">
                                 <h2 class="font-recoleta text-primary text-[24px] sm:text-[28px] capitalize">
-                                    Nearby Places<span class="text-secondary">.</span></h2>
+                                    Nearby Places<span class="text-white">.</span></h2>
                             </div>
                             <ul class="all-properties flex flex-wrap lg:pt-[10px]">
-                                <li data-tab="ForBuy" class="mr-[30px] md:mr-[35px] mb-4 lg:mb-0 leading-none active"><button class="leading-none capitalize text-primary hover:text-secondary transition-all text-[16px] ease-out">Health
+                                <li data-tab="ForBuy" class="mr-[30px] md:mr-[35px] mb-4 lg:mb-0 leading-none active"><button class="leading-none capitalize text-primary hover:text-white transition-all text-[16px] ease-out">Health
                                         & Medical</button></li>
                                 <li data-tab="ForSale" class="mr-[30px] md:mr-[35px] mb-4 lg:mb-0 leading-none">
-                                    <button class="leading-none capitalize text-primary hover:text-secondary transition-all text-[16px] ease-out">Shopping
+                                    <button class="leading-none capitalize text-primary hover:text-white transition-all text-[16px] ease-out">Shopping
                                         mall</button>
                                 </li>
                                 <li data-tab="ForRent" class="mr-[30px] md:mr-[35px] mb-4 lg:mb-0 leading-none">
-                                    <button class="leading-none capitalize text-primary hover:text-secondary transition-all text-[16px] ease-out">School
+                                    <button class="leading-none capitalize text-primary hover:text-white transition-all text-[16px] ease-out">School
                                         & College</button>
                                 </li>
-                                <li data-tab="co-living" class="md:mr-[0px] mb-4 lg:mb-0 leading-none"><button class="leading-none capitalize text-primary hover:text-secondary transition-all text-[16px] ease-out">Gym</button>
+                                <li data-tab="co-living" class="md:mr-[0px] mb-4 lg:mb-0 leading-none"><button class="leading-none capitalize text-primary hover:text-white transition-all text-[16px] ease-out">Gym</button>
                                 </li>
                             </ul>
                         </div>
@@ -783,7 +787,7 @@
 
                         <div class="col-span-12">
                             <h2 class="font-recoleta text-primary text-[24px] sm:text-[28px] capitalize">
-                                Feedback<span class="text-secondary">.</span>
+                                Feedback<span class="text-white">.</span>
                             </h2>
 
                             <ul class="mt-[50px] lg:mt-[70px]">
@@ -791,46 +795,83 @@
                                     <img class="self-start mr-[35px] border border-primary rounded-[26px]" src="assets/images/commentor/01.png" width="78" height="80" loading="lazy" alt="image">
                                     <div class="flex-1">
                                         <h4 class="text-primary font-recoleta text-[18px] leading-none mb-[5px]">
-                                            Stela Flemming, <span class="text-[14px] text-[#494949]">20 Jan,
+                                            Stela Flemming, <span class="text-[14px] text-white">20 Jan,
                                                 2022</span> </h4>
-                                        <p>Bary do a great job to find the perfect home. It’s very easy for every
+                                        <p class="text-white">Bary do a great job to find the perfect home. It’s very easy for every
                                             one to buy, sell
                                             or rent property we belive they continure their great service and
                                             appriciat.</p>
-                                        <p class="mt-[8px]"> <a href="#" class="inline-block mr-[10px] hover:text-secondary">Like</a> <a class="inline-block hover:text-secondary" href="#">Reply</a></p>
+                                        <p class="mt-[8px]"> <a href="#" class="inline-block mr-[10px] hover:text-white">Like</a> <a class="inline-block hover:text-white" href="#">Reply</a></p>
                                     </div>
                                 </li>
                                 <li class="flex flex-wrap mb-[55px] sm:even:ml-[110px] md:even:ml-[0px] lg:even:ml-[110px] last:mb-0">
                                     <img class="self-start mr-[35px] border border-primary rounded-[26px]" src="assets/images/commentor/02.png" width="78" height="80" loading="lazy" alt="image">
                                     <div class="flex-1">
                                         <h4 class="text-primary font-recoleta text-[18px] leading-none mb-[5px]">
-                                            Shane Williamson, <span class="text-[14px] text-[#494949]">20 Jan,
+                                            Shane Williamson, <span class="text-[14px] text-white">20 Jan,
                                                 2022</span> </h4>
-                                        <p>Bary do a great job to find the perfect home. It’s very easy for every
+                                        <p class="text-white">Bary do a great job to find the perfect home. It’s very easy for every
                                             one to buy, sell
                                             or rent property we belive they continure their great service and
                                             appriciat.</p>
-                                        <p class="mt-[8px]"> <a href="#" class="inline-block mr-[10px] hover:text-secondary">Like</a> <a class="inline-block hover:text-secondary" href="#">Reply</a></p>
+                                        <p class="mt-[8px]"> <a href="#" class="inline-block mr-[10px] hover:text-white">Like</a> <a class="inline-block hover:text-white" href="#">Reply</a></p>
                                     </div>
                                 </li>
                                 <li class="flex flex-wrap mb-[55px] sm:even:ml-[110px] md:even:ml-[0px] lg:even:ml-[110px] last:mb-0">
                                     <img class="self-start mr-[35px] border border-primary rounded-[26px]" src="assets/images/commentor/03.png" width="78" height="80" loading="lazy" alt="image">
                                     <div class="flex-1">
                                         <h4 class="text-primary font-recoleta text-[18px] leading-none mb-[5px]">
-                                            Shohel Buddy, <span class="text-[14px] text-[#494949]">20 Jan,
+                                            Shohel Buddy, <span class="text-[14px] text-white">20 Jan,
                                                 2022</span> </h4>
-                                        <p>Bary do a great job to find the perfect home. It’s very easy for every
+                                        <p class="text-white">Bary do a great job to find the perfect home. It’s very easy for every
                                             one to buy, sell
                                             or rent property we belive they continure their great service and
                                             appriciat.</p>
-                                        <p class="mt-[8px]"> <a href="#" class="inline-block mr-[10px] hover:text-secondary">Like</a> <a class="inline-block hover:text-secondary" href="#">Reply</a></p>
+                                        <p class="mt-[8px]"> <a href="#" class="inline-block mr-[10px] hover:text-white">Like</a> <a class="inline-block hover:text-white" href="#">Reply</a></p>
                                     </div>
                                 </li>
                             </ul>
 
                             <h2 class="font-recoleta text-primary text-[24px] sm:text-[28px] capitalize nt-[80px] lg:mt-[90px]">
-                                الاستعلام عن هذه العقار <span class="text-secondary">.</span>
+                                الاستعلام عن هذه العقار <span class="text-white">.</span>
                             </h2>
+                            <div class="mt-[60px]">
+                                <form action="#" class="grid grid-cols-12 gap-x-[20px] gap-y-[30px]">
+
+                                    <div class="col-span-12 md:col-span-6">
+                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="الاسم الاول">
+                                    </div>
+
+                                    <div class="col-span-12 md:col-span-6">
+                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="الاسم الاخير">
+                                    </div>
+
+                                    <div class="col-span-12 md:col-span-6">
+                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="رقم الهاتف">
+                                    </div>
+
+                                    <div class="col-span-12 md:col-span-6">
+                                        <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="email" placeholder="بريدك الاكتروني">
+                                    </div>
+
+                                    <div class="col-span-12">
+                                        <textarea class="h-[196px] font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] resize-none" name="textarea" id="textarea" cols="30" rows="10" placeholder="وصف"></textarea>
+                                    </div>
+
+                                    <div class="col-span-12">
+                                        <button type="submit" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[30px] py-[15px] capitalize font-medium text-white block text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">Contact us</button>
+                                    </div>
+
+                                </form>
+
+
+
+                            </div>
+                            <h2 class="font-recoleta text-primary text-[24px] sm:text-[28px] capitalize nt-[80px] lg:mt-[90px]">
+                                الإبلاغ عن هذه العقار <span class="text-white">.</span>
+                            </h2>
+                            <nav>
+
                             <div class="mt-[60px]">
                                 <form action="#" class="grid grid-cols-12 gap-x-[20px] gap-y-[30px]">
 
@@ -894,7 +935,7 @@
                     <aside class="mb-[-40px] asidebar">
                         <div class="bg-[#F5F9F8] px-[20px] lg:px-[15px] xl:px-[35px] py-[50px] rounded-[8px] mb-[40px]">
                             <h3 class="text-primary leading-none text-[24px] font-recoleta underline mb-[30px]">Property Search <span
-            class="text-secondary">.</span></h3>
+            class="text-white">.</span></h3>
 
                             <form action="#" class="relative">
                                 <div class="relative mb-[25px] bg-white">
@@ -981,7 +1022,7 @@
 
                         <div class="bg-[#f5f9f8] px-[20px] lg:px-[15px] xl:px-[35px] py-[50px] rounded-[8px] mb-[40px]">
                             <h3 class="text-primary leading-none text-[24px] font-recoleta underline mb-[30px]">Featured Property<span
-        class="text-secondary">.</span></h3>
+        class="text-white">.</span></h3>
                             <div class="sidebar-carousel relative">
                                 <div class="swiper">
                                     <!-- Additional required wrapper -->
@@ -1002,19 +1043,19 @@
                                                 </div>
 
                                                 <div class="pt-[15px] pb-[20px] px-[20px] text-left">
-                                                    <h3><a href="properties-details.html" class="font-recoleta leading-tight text-[16px] text-primary">Orchid
+                                                    <h3 class="text-dark"><a href="properties-details.html" class="font-recoleta leading-tight text-[16px] text-dark">Orchid
                                                             Casel de
                                                             Paradise.</a></h3>
-                                                    <h4><a href="properties-details.html" class="font-light text-[14px] text-secondary underline">18B Central
+                                                    <h4 class="text-dark"><a href="properties-details.html" class="font-light text-[14px] text-white underline">18B Central
                                                             Street,
                                                             San Francisco</a></h4>
                                                     <ul class="mt-[10px]">
                                                         <li class="flex flex-wrap items-center justify-between">
-                                                            <span class="font-recoleta text-[14px] text-primary leading-none">Price:
+                                                            <span class="font-recoleta text-[14px] text-dark leading-none">Price:
                                         $255300</span>
 
                                                             <span class="flex flex-wrap items-center">
-                                        <button class="mr-[15px] text-[#B1AEAE] hover:text-secondary">
+                                        <button class="mr-[15px] text-[#B1AEAE] hover:text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -1028,7 +1069,7 @@
                                                     fill="currentColor" />
                                             </svg>
                                         </button>
-                                        <button class="text-[#B1AEAE] hover:text-secondary">
+                                        <button class="text-[#B1AEAE] hover:text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(.clip0_656_640)">
@@ -1064,18 +1105,18 @@
                                                 </div>
 
                                                 <div class="pt-[15px] pb-[20px] px-[20px] text-left">
-                                                    <h3><a href="properties-details.html" class="font-recoleta leading-tight text-[16px] text-primary">Sindrela
+                                                    <h3 class="text-dark"><a href="properties-details.html" class="font-recoleta leading-tight text-[16px] text-dark">Sindrela
                                                             Resort Villa.</a></h3>
-                                                    <h4><a href="properties-details.html" class="font-light text-[14px] text-secondary underline">18B Central
+                                                    <h4 class="text-dark"><a href="properties-details.html" class="font-light text-[14px] text-white underline">18B Central
                                                             Street,
                                                             San Francisco</a></h4>
                                                     <ul class="mt-[10px]">
                                                         <li class="flex flex-wrap items-center justify-between">
                                                             <span
-                                        class="font-recoleta text-[14px] text-primary leading-none">Price:$185300</span>
+                                        class="font-recoleta text-[14px] text-dark leading-none">Price:$185300</span>
 
                                                             <span class="flex flex-wrap items-center">
-                                        <button class="mr-[15px] text-[#B1AEAE] hover:text-secondary">
+                                        <button class="mr-[15px] text-[#B1AEAE] hover:text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -1089,7 +1130,7 @@
                                                     fill="currentColor" />
                                             </svg>
                                         </button>
-                                        <button class="text-[#B1AEAE] hover:text-secondary">
+                                        <button class="text-[#B1AEAE] hover:text-white">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(.clip0_656_640)">
@@ -1128,84 +1169,7 @@
 
                         </div>
 
-                        <div class="bg-[#f5f9f8] px-[20px] lg:px-[15px] xl:px-[35px] py-[50px] rounded-[8px] mb-[40px]">
-                            <h3 class="text-primary leading-none text-[24px] font-recoleta underline mb-[30px]">Our Agents<span
-        class="text-secondary">.</span></h3>
-
-                            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-x-[20px] mb-[-20px]">
-                                <!-- single team start -->
-                                <div class="text-center group mb-[30px]">
-                                    <div class="relative z-[1] rounded-[6px_6px_0px_0px]">
-                                        <a href="agent-details.html" class="block relative before:absolute before:content-[''] before:inset-x-0 before:bottom-0 before:bg-[#016450] before:w-full before:h-[calc(100%_-_30px)] before:z-[-1] before:rounded-[6px_6px_0px_0px]">
-                                            <img src="assets/images/team/sm/person1.png" class="max-w-[130px] max-h-[154px] object-contain block mx-auto" loading="lazy" width="130" height="154" alt="Albert S. Smith">
-                                        </a>
-                                    </div>
-
-                                    <div class="bg-[#FFFDFC] drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] rounded-[0px_0px_6px_6px] px-[15px] pt-[5px] pb-[15px] border-b-[6px] border-primary transition-all duration-700 group-hover:border-secondary">
-                                        <h3><a href="agent-details.html" class="font-recoleta text-[14px] text-primary hover:text-secondary">Albert S. Smith</a></h3>
-                                        <p class="font-light text-[12px] leading-none capitalize mt-[5px]">Real Estate Agent</p>
-                                    </div>
-                                </div>
-                                <div class="text-center group mb-[30px]">
-                                    <div class="relative z-[1] rounded-[6px_6px_0px_0px]">
-                                        <a href="agent-details.html" class="block relative before:absolute before:content-[''] before:inset-x-0 before:bottom-0 before:bg-[#016450] before:w-full before:h-[calc(100%_-_30px)] before:z-[-1] before:rounded-[6px_6px_0px_0px]">
-                                            <img src="assets/images/team/sm/person2.png" class="max-w-[130px] max-h-[154px] object-contain block mx-auto" loading="lazy" width="130" height="154" alt="Amelia Margaret">
-                                        </a>
-                                    </div>
-
-                                    <div class="bg-[#FFFDFC] drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] rounded-[0px_0px_6px_6px] px-[15px] pt-[5px] pb-[15px] border-b-[6px] border-primary transition-all duration-700 group-hover:border-secondary">
-                                        <h3><a href="agent-details.html" class="font-recoleta text-[14px] text-primary hover:text-secondary">Amelia Margaret</a></h3>
-                                        <p class="font-light text-[12px] leading-none capitalize mt-[5px]">Real Estate Broker</p>
-                                    </div>
-                                </div>
-                                <div class="text-center group mb-[30px]">
-                                    <div class="relative z-[1] rounded-[6px_6px_0px_0px]">
-                                        <a href="agent-details.html" class="block relative before:absolute before:content-[''] before:inset-x-0 before:bottom-0 before:bg-[#016450] before:w-full before:h-[calc(100%_-_30px)] before:z-[-1] before:rounded-[6px_6px_0px_0px]">
-                                            <img src="assets/images/team/sm/person3.png" class="max-w-[130px] max-h-[154px] object-contain block mx-auto" loading="lazy" width="130" height="154" alt="Stephen Kelvin">
-                                        </a>
-                                    </div>
-
-                                    <div class="bg-[#FFFDFC] drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] rounded-[0px_0px_6px_6px] px-[15px] pt-[5px] pb-[15px] border-b-[6px] border-primary transition-all duration-700 group-hover:border-secondary">
-                                        <h3><a href="agent-details.html" class="font-recoleta text-[14px] text-primary hover:text-secondary">Stephen Kelvin</a></h3>
-                                        <p class="font-light text-[12px] leading-none capitalize mt-[5px]">Real Estate Agent</p>
-                                    </div>
-                                </div>
-                                <div class="text-center group mb-[30px]">
-                                    <div class="relative z-[1] rounded-[6px_6px_0px_0px]">
-                                        <a href="agent-details.html" class="block relative before:absolute before:content-[''] before:inset-x-0 before:bottom-0 before:bg-[#016450] before:w-full before:h-[calc(100%_-_30px)] before:z-[-1] before:rounded-[6px_6px_0px_0px]">
-                                            <img src="assets/images/team/sm/person4.png" class="max-w-[130px] max-h-[154px] object-contain block mx-auto" loading="lazy" width="130" height="154" alt=" Michael Richard">
-                                        </a>
-                                    </div>
-
-                                    <div class="bg-[#FFFDFC] drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] rounded-[0px_0px_6px_6px] px-[15px] pt-[5px] pb-[15px] border-b-[6px] border-primary transition-all duration-700 group-hover:border-secondary">
-                                        <h3><a href="agent-details.html" class="font-recoleta text-[14px] text-primary hover:text-secondary"> Michael Richard</a></h3>
-                                        <p class="font-light text-[12px] leading-none capitalize mt-[5px]">Real Estate Broker</p>
-                                    </div>
-                                </div>
-
-                                <!-- single team end-->
-                            </div>
-                        </div>
-
-                        <div class="bg-[#f5f9f8] px-[20px] lg:px-[15px] xl:px-[35px] py-[50px] rounded-[8px] mb-[40px]">
-                            <h3 class="text-primary leading-none text-[24px] font-recoleta underline mb-[30px]">Tags<span
-                            class="text-secondary">.</span></h3>
-                            <ul class="flex flex-wrap my-[-7px] mx-[-5px] font-light text-[12px]">
-                                <li class="my-[7px] mx-[5px]"><a href="#" class="leading-none border border-[#E0E0E0] py-[8px] px-[10px] block rounded-[4px] hover:text-secondary">Real Estate</a>
-                                </li>
-                                <li class="my-[7px] mx-[5px]"><a href="#" class="leading-none border border-[#E0E0E0] py-[8px] px-[10px] block rounded-[4px] hover:text-secondary">Appartment</a>
-                                </li>
-                                <li class="my-[7px] mx-[5px]"><a href="#" class="leading-none border border-[#E0E0E0] py-[8px] px-[10px] block rounded-[4px] hover:text-secondary">Sale Property</a>
-                                </li>
-                                <li class="my-[7px] mx-[5px]"><a href="#" class="leading-none border border-[#E0E0E0] py-[8px] px-[10px] block rounded-[4px] hover:text-secondary">Duplex</a>
-                                </li>
-                                <li class="my-[7px] mx-[5px]"><a href="#" class="leading-none border border-[#E0E0E0] py-[8px] px-[10px] block rounded-[4px] hover:text-secondary">Buy Property</a>
-                                </li>
-                                <li class="my-[7px] mx-[5px]"><a href="#" class="leading-none border border-[#E0E0E0] py-[8px] px-[10px] block rounded-[4px] hover:text-secondary">Houses</a>
-                                </li>
-
-                            </ul>
-                        </div>
+            
                     </aside>
                 </div>
             </div>
