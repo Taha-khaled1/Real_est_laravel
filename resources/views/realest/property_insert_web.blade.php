@@ -44,19 +44,16 @@
                     <div class="grid grid-cols-12 gap-x-[30px]">
 
                         <div class="mb-[45px] col-span-12 md:col-span-8">
-                            <label class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary" for="property-title"> Property
+                            <label class="text-white" class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary" for="property-title"> Property
                                 Title</label>
-                            <input id="property-title" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" placeholder="Agency Title">
+                            <input id="property-title" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="Agency Title">
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-4">
                             <label class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary" for="Price">Price</label>
                             <div class="relative">
-                                <select class="nice-select form-select" id="Price">
-                                    <option selected value="0">Price $</option>
-                                    <option value="1">$5000</option>
-                                    <option value="2">$7000</option>
-                                </select>
+                            <input id="property-title"  class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="numbe requiredr" placeholder="Agency Title">
+                             
                             </div>
                         </div>
 
@@ -77,19 +74,19 @@
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input id="Location" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" placeholder="Address line 1">
+                            <input id="Location" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="Address line 1">
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" placeholder="Address line 2">
+                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="Address line 2">
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" placeholder="City">
+                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="City">
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" placeholder="Zip code">
+                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="Zip code">
                         </div>
 
                     </div>
@@ -139,19 +136,19 @@
 
                     <div class="grid grid-cols-12 gap-x-[30px]">
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input id="Propertyinfo1" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" placeholder="Area(sqft)">
+                            <input id="Propertyinfo1" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="Area(sqft)">
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" placeholder="Number of  Bedroom">
+                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="Number of  Bedroom">
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" placeholder="Number of Bathroom">
+                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="Number of Bathroom">
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" placeholder="Number of Garage">
+                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="Number of Garage">
                         </div>
 
                     </div>
@@ -193,17 +190,7 @@
 
                     </div>
 
-
-
-                </form>
-            </div>
-        </div>
-
-
-
-
-
-<section>
+                    <section>
     <div class="container">
         <div class="grid grid-cols-12 gap-x-[30px] mb-[-45px]">
 
@@ -214,66 +201,66 @@
                     <ul class="mb-[-30px] list-none text-[15px] lg:text-[16px] flex flex-wrap">
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox" name="checkbox">
-                            <label for="checkbox">Air Conditioning</label>
+                            <label class="text-white" for="checkbox">Air Conditioning</label>
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox2" name="checkbox2">
-                            <label for="checkbox2">Bedding</label>
+                            <label class="text-white" for="checkbox2">Bedding</label>
 
 
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox3" name="checkbox3">
-                            <label for="checkbox3">Balcony</label>
+                            <label class="text-white" for="checkbox3">Balcony</label>
 
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox4" name="checkbox4">
-                            <label for="checkbox4"> ACable TV</label>
+                            <label class="text-white" for="checkbox4"> ACable TV</label>
 
 
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox5" name="checkbox5">
-                            <label for="checkbox5">Oven</label>
+                            <label class="text-white" for="checkbox5">Oven</label>
 
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox6" name="checkbox6">
-                            <label for="checkbox6">Internet</label>
+                            <label class="text-white" for="checkbox6">Internet</label>
                         </li>
 
                         <li class="mb-[30px] capitalize w-1/2">
 
                             <input type="checkbox" id="checkbox7" name="checkbox7">
-                            <label for="checkbox7">Parking</label>
+                            <label class="text-white" for="checkbox7">Parking</label>
 
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox8" name="checkbox8">
-                            <label for="checkbox8">Lift</label>
+                            <label class="text-white" for="checkbox8">Lift</label>
 
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox9" name="checkbox9">
-                            <label for="checkbox9">Pool</label>
+                            <label class="text-white" for="checkbox9">Pool</label>
 
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox10" name="checkbox10">
-                            <label for="checkbox10">Dishwasher</label>
+                            <label class="text-white" for="checkbox10">Dishwasher</label>
 
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
 
                             <input type="checkbox" id="checkbox11" name="checkbox11">
-                            <label for="checkbox11"> Washing Machine</label>
+                            <label class="text-white" for="checkbox11"> Washing Machine</label>
 
 
                         </li>
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox12" name="checkbox12">
-                            <label for="checkbox12">Toaster</label>
+                            <label class="text-white" for="checkbox12">Toaster</label>
 
                         </li>
 
@@ -298,6 +285,16 @@
         </div>
     </div>
 </section>
+
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
 
 
 @endsection

@@ -933,7 +933,7 @@
 
                 <div class="col-span-12 md:col-span-6 lg:col-span-4 mb-[30px]">
                     <aside class="mb-[-40px] asidebar">
-                        <div class="bg-[#F5F9F8] px-[20px] lg:px-[15px] xl:px-[35px] py-[50px] rounded-[8px] mb-[40px]">
+                        <div class="px-[20px] lg:px-[15px] xl:px-[35px] py-[50px] rounded-[8px] mb-[40px]" style="background-color:#1817b3">
                             <h3 class="text-primary leading-none text-[24px] font-recoleta underline mb-[30px]">Property Search <span
             class="text-white">.</span></h3>
 
@@ -1020,7 +1020,7 @@
                             </form>
                         </div>
 
-                        <div class="bg-[#f5f9f8] px-[20px] lg:px-[15px] xl:px-[35px] py-[50px] rounded-[8px] mb-[40px]">
+                        <div class=" px-[20px] lg:px-[15px] xl:px-[35px] py-[50px] rounded-[8px] mb-[40px]" style="background-color:#1817b3">
                             <h3 class="text-primary leading-none text-[24px] font-recoleta underline mb-[30px]">Featured Property<span
         class="text-white">.</span></h3>
                             <div class="sidebar-carousel relative">

@@ -37,7 +37,7 @@
             </div>
             <div class="col-span-12 sm:col-span-6 lg:col-span-2 mb-[30px]">
                 <h3 class="font-recoleta font-normal text-[22px] leading-[1.222] text-primary mb-[20px] lg:mb-[30px]">العنوان<span class="text-secondary">.</span></h3>
-                <p>الامارات بجوار برج خليفه</p>
+                <p class="text-white">الامارات بجوار برج خليفه</p>
                 <ul class="inline-flex items-center justify-center mt-[20px]">
                     <li class="first:ml-0 ml-[15px]"><a href="https://www.facebook.com/" class="w-[26px] h-[26px] transition-all rounded-full bg-primary flex items-center justify-center hover:drop-shadow-[0px_4px_10px_rgba(0,0,0,0.25)] text-white hover:bg-secondary">
                             <svg width="7" height="12" viewBox="0 0 7 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

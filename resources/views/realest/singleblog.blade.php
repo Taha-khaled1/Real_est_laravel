@@ -56,7 +56,7 @@
                         class="font-recoleta leading-tight text-[22px] md:text-[28px] lg:text-[34px] text-primary mb-[10px]">
                         {{ $blogs->title }}.</h2>
 
-                    <p class="max-w-[767px]">{{ $blogs->content }}</p>
+                    <p class="max-w-[767px] text-white">{{ $blogs->content }}</p>
                 </div>
 
                 <div

@@ -177,6 +177,10 @@ table {
 2. Remove the margin in Firefox and Safari.
 3. Remove default padding in all browsers.
 */
+input::placeholder,textarea::placeholder{
+  color:#fff !important;
+  opacity: .5;
+}
 button,
 input,
 optgroup,
@@ -184,6 +188,9 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+  border: 1px solid #fff !important;
+  background-color: transparent;
+  color: #fff !important;
   font-size: 100%;
   /* 1 */
   line-height: inherit;
@@ -3552,6 +3559,7 @@ input:focus {
 .selectric .label {
   font-size: inherit;
   line-height: 1;
+  color: #fff;
   height: auto;
   margin: 0;
   display: inline-block;
@@ -3668,7 +3676,7 @@ input:focus {
   padding: 15px;
   font-weight: 300;
   line-height: 1.75;
-  border: 1px solid rgba(1, 100, 80, 0.5);
+  border: 2px solid #fff;
   height: 60px;
   border-radius: 8px;
   transition: all 0.3s;
@@ -3694,7 +3702,7 @@ input:focus {
 .custom-check [type=checkbox]:checked,
 .custom-check [type=checkbox]:not(:checked) {
   position: absolute;
-  left: -9999px;
+  display: none;
 }
 .custom-check [type=checkbox]:checked + label,
 .custom-check [type=checkbox]:not(:checked) + label {

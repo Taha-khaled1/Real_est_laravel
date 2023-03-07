@@ -34,21 +34,13 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            // 'country' => ['required', 'string', 'max:255'],
-            // 'phone' => ['required', 'string', 'max:255'],
         ]);
-    
-        
-  
 
-        $user = new User(); // اسم المودل
-        $user->name = $request->name; // اسم الجدول في الداتا بيز \ثم القيمه اللي هدخلهالو سواء هتكتبها ثبته او هتخدها من الريكوست
-        $user->email = $request->email;
-        $user->password = bcrypt($request->password);
-        $user->country = $request->country;
-        $user->phone = $request->phone;
-        $user->save();
-  
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
 
         event(new Registered($user));
 

@@ -24,7 +24,7 @@
                                     " style="background-image: url('unar.png');">
 
 
-                                    <li class="mr-[70px]">
+                                    <li>
                                         <ul>
                                             <li class="text-primary underline font-recoleta mb-[30px]">عقارات</li>
 
@@ -41,7 +41,7 @@
 
 
 
-                                    <li>
+                                    <li class="mr-[70px]">
                                         <ul>
                                             <li class="text-primary underline font-recoleta mb-[30px]">اقتراحات</li>
                                             <li class="mb-[25px] last:mb-0">
@@ -65,7 +65,7 @@
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="{{ route('setting') }}" class="transition-all hover:text-secondary">الاعدادات</a>
+                                <a href="{{ route('profile.edit') }}" class="transition-all hover:text-secondary">الاعدادات</a>
                      
 
 
@@ -92,15 +92,15 @@
                                 </a>
 
                                 <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[180px] absolute top-[120%] sm:left-1/2 sm:-translate-x-1/2 transition-all
-        group-hover:top-[60px] invisible group-hover:visible opacity-0 group-hover:opacity-100 right-0
+        group-hover:top-[60px] invisible group-hover:visible opacity-0 group-hover:opacity-100 left-0
         
         ">
                                     <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="{{ route('blogview') }}" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-t-[12px]">تسجيل الدخول</a>
+                                        <a href="{{ route('login') }}" class="font-recoleta leading-[1.571] text-[14px] text-black p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-t-[12px]">تسجيل الدخول</a>
                                     </li>
 
                                     <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="{{ route('blogview') }}" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-b-[12px]">تسجيل الخروج</a>
+                                        <a href="{{ route('logout') }}" class="font-recoleta leading-[1.571] text-[14px] text-black p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-b-[12px]">تسجيل الخروج</a>
                                     </li>
 
 

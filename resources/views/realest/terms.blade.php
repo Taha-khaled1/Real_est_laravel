@@ -8,13 +8,13 @@
 
   /* Style for strong element */
   strong {
-    color: #000000; /* change color as needed */
+    color: #fff; /* change color as needed */
     font-size: 18px; /* adjust font size as needed */
   }
 
   /* Style for h3 element */
   h3 {
-    color: #000000; /* change color as needed */
+    color: #fff; /* change color as needed */
     font-size: 24px; /* adjust font size as needed */
     font-weight: bold;
   }
@@ -29,7 +29,7 @@
 <!-- row -->
                 <div class="page-content p-lg-5 p-sm-1">
                     <div class="container">
-                      <p class="fs-5">
+                      <p class="fs-5 mt-5">
                         <strong> شروط وأحكام الاستخدام </ strong>
                         </p>
                         <ol>
