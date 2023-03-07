@@ -1028,8 +1028,9 @@
                     <h3><a href="{{ route('detelisscreen', $item->id) }}" class="font-recoleta leading-tight text-[22px] xl:text-lg text-white">{{$item->name}}</a></h3>
                     <h4><a href="{{ route('detelisscreen', $item->id) }}" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
                     <span class="font-light text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
-                    <div class="before:block before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-full before:z-[-1] before:bg-[#E0E0E0] relative">
+                    <div class=" relative">
                       <span class="font-recoleta text-primary px-[15px]">{{$item->country}}</span>
+                      <hr class="my-2">
                     </div>
                     <div class="text" style="display: flex; flex-direction: row;">
                         <h1 style="font-size: 16px; color: #fff;">عدد مشاهدات العقار</h1>
@@ -1082,8 +1083,9 @@
                                 <h3><a href="detelisscreen" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
                                 <h4><a href="detelisscreen" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
                                 <span class="font-light text-sm text-white">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
-                                <div class="before:block before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-full before:z-[-1] before:bg-[#E0E0E0] relative">
-                                  <span class="font-recoleta text-base text-primary px-[15px]">{{$item->country}}</span>
+                                <div>
+                                <span class="font-recoleta text-primary px-[15px]">{{$item->country}}</span>
+                                <hr class="my-2">
                                 </div>
                                 <div class="text" style="display: flex; flex-direction: row;">
                                     <h1 style="font-size: 16px; color: #fff;">عدد مشاهدات العقار</h1>

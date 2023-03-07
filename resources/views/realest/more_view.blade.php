@@ -53,8 +53,9 @@
         <h3><a href="properties-details.html" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
         <h4><a href="properties-details.html" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
         <span class="font-light text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
-        <div class="before:block before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[1px] before:w-full before:z-[-1] relative">
-          <span class="font-recoleta text-primary px-[15px]">{{$item->country}}</span>
+        <div>
+        <span class="font-recoleta text-primary px-[15px]">{{$item->country}}</span>
+        <hr class="my-2">
         </div>
         <div class="text" style="display: flex; flex-direction: row;">
             <h1 style="font-size: 16px; color: #fff;">عدد مشاهدات العقار</h1>
