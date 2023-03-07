@@ -63,12 +63,12 @@ public function newProperty()
     public function detalisscreen($id){
 
         $property = Property::with('property_details', 'images', 'facilities','user','catogery')->find($id);
-
+        $propertiesviews = Property::orderBy('views', 'desc')->take(3)->get();
         if (!$property) {
             return response()->json(['error' => 'Property not found'], 404);
         }
         $catogerys= Catogery::all();
-        return view('realest.detalis_view',['property' => $property,   'catogerys'=>  $catogerys   ]);
+        return view('realest.detalis_view',['property' => $property,   'catogerys'=>  $catogerys   ,'propertiesviews' => $propertiesviews, ]);
 
 
 

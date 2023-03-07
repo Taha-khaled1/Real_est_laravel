@@ -63,13 +63,19 @@
 
 
 
+                            @auth
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
-
                                 <a href="{{ route('profile.edit') }}" class="transition-all hover:text-secondary">الاعدادات</a>
-                     
-
-
                             </li>
+                        @endauth
+                        
+                        @guest
+                            <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
+                                <a href="{{ route('login') }}" class="transition-all hover:text-secondary">الاعدادات</a>
+                            </li>
+                        @endguest
+                        
+
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
@@ -106,9 +112,24 @@
 
                                 </ul>
                             </li>
+
+
+
+                            @auth
                             <li>
                                 <a href="{{ route('propertyinsertweb') }}" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white hidden sm:block text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] main-button-color after:bg-primary after:rounded-md after:transition-all">اضافة عقار</a>
                             </li>
+                        @endauth
+                        
+                        @guest
+
+                        <li>
+                            <a href="{{ route('login') }}" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white hidden sm:block text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] main-button-color after:bg-primary after:rounded-md after:transition-all">اضافة عقار</a>
+                        </li>
+                          
+                        @endguest
+                        
+                            
                             <li class="ml-2 sm:ml-5 lg:hidden">
                                 <a href="#offcanvas-mobile-menu" class="offcanvas-toggle flex text-[#016450] hover:text-secondary">
                                     <svg width="24" height="24" class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

@@ -7,6 +7,7 @@
 
 @section('css')
 <style>
+
 .property-image {
   width: 370px;
   height: 266px;
@@ -271,7 +272,7 @@
                                     </div>
 
                                     <div
-                                        class="advanced-searrch-list flex items-center lg:border-r lg:boprimaryborder-primaryD4D4] lg:mr-[40px] xl:mr-[50px] last:mr-0 last:border-r-0 mb-[45px] search-list">
+                                        class="advanced-searrch-list flex items-center lg:border-r lg:boprimaryborder-primaryD4D4] lg:mr-[40px] xl:mr-[50px] last:mr-0 last:border-r-0 mb-[45px] search-list " >
                                         <button class="search-properties-btn">
                                             البحث عن عقارك
                                         </button>
@@ -889,7 +890,7 @@
                                 @foreach ($mostCountries as $item)
                                     <div class="swiper-slide text-center">
                                         <div class="relative group">
-                                            <a href="moreproperty/{{$item->country}}" class="block">
+                                            <a href="{{ route('moreproperty',$item->country) }}" class="block">
                                                 <img src="{{ URL::asset($imageLinks[$counter]) }}" style="object-fit: cover; height: 290px;"
                                                     class="w-full h-full block mx-auto rounded-[6px_6px_0px_0px]"
                                                     loading="lazy" width="270" height="290" alt="New York">
@@ -898,7 +899,7 @@
                                                     <span
                                                         class="font-recoleta font-normal text-[24px] xl:text-lg text-primary group-hover:text-secondary transition-all">{{ $item->country }}</span>
                                                     <p
-                                                        class="font-light text-tiny capitalize text-secondary group-hover:text-primary transition-all">
+                                                        class="font-light text-tiny capitalize text-secondary group-hover:text-primary transition-all" style="color: blue !important;">
                                                         {{ $item->count }}</p>
                                                 </div>
                                             </a>
@@ -1026,7 +1027,7 @@
                   </div>
                   <div class="py-[20px] px-[20px]">
                     <h3><a href="{{ route('detelisscreen', $item->id) }}" class="font-recoleta leading-tight text-[22px] xl:text-lg text-white">{{$item->name}}</a></h3>
-                    <h4><a href="{{ route('detelisscreen', $item->id) }}" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
+                    <h4><a href="{{ route('detelisscreen', $item->id) }}" style="color: blue !important;">جمهورية الامارات العربية المتحدة</a></h4>
                     <span class="font-light text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
                     <div class=" relative">
                       <span class="font-recoleta text-primary px-[15px]">{{$item->country}}</span>
@@ -1080,8 +1081,11 @@
                                 <span class="absolute bottom-5 left-5 form-field-color p-[5px] rounded-[2px] text-secondary leading-none text-[14px] font-normal capitalize">for Sale</span>
                               </div>
                               <div class="py-[20px] px-[20px]">
-                                <h3><a href="detelisscreen" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
-                                <h4><a href="detelisscreen" class="font-light text-tiny text-secondary underline">جمهورية الامارات العربية المتحدة</a></h4>
+                                <h3><a href="{{ route('detelisscreen', $item->id) }}" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
+                                
+                                <h4><a href="{{ route('detelisscreen', $item->id) }}" style="color: blue !important;">جمهورية الامارات العربية المتحدة</a></h4>
+
+
                                 <span class="font-light text-sm text-white">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
                                 <div>
                                 <span class="font-recoleta text-primary px-[15px]">{{$item->country}}</span>

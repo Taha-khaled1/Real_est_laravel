@@ -3077,7 +3077,7 @@ input{}
 .search-properties-btn {
   border-radius: 10px;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 246 240/var(--tw-bg-opacity));
+  background-color: #00bfff;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
