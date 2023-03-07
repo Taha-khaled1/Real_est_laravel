@@ -16,7 +16,6 @@
   color: #333;
 }
 .leading-none,.label{
-    color:#000 !important
 }
 .fixed-size-image {
   width: 370px;
@@ -38,7 +37,36 @@
 .image-size {
     width: 370px;
     height: 266px;
-}</style>
+}
+button, input, optgroup, select, textarea{
+    border:unset !important;
+}
+.search-input::placeholder{
+    color: #000 !important;
+}
+.search-input{
+    padding:14px !important;
+}
+.selectricc-border-none .selectric,.search-input {
+  background: #fff;
+  color: #000 !important;
+  padding: 10px;
+  border-radius: 16px;
+  position: relative;
+  margin-top: 15px;
+}
+.selectricc-border-none .selectric::after{
+    content:"🡫";
+    position: absolute;
+    left:15px;
+}
+.selectricc-border-none .selectric:hover:after{
+    content:"🡩";
+}
+.selectric .label{
+    color: #000 !important;
+}
+</style>
 @endsection
 
 
@@ -71,58 +99,6 @@
             </div>
         </section>
         <!-- Hero section end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- Addvanced search tab start -->
 
         <div
@@ -134,11 +110,11 @@
                     <div class="relative text-center">
                         
                         <ul
-                            class="tab-nav search-tab inline-flex px-[15px] sm:px-[30px] py-[22px] border-t border-l border-r border-solid border-[#016450] rounded-tl-[15px] rounded-tr-[15px] bg-[rgb(236,250,247,0.8)]">
+                            class="tab-nav search-tab inline-flex px-[15px] sm:px-[30px] py-[22px] border-t border-l border-r border-solid border-[#016450] rounded-tl-[15px] rounded-tr-[15px]">
                            
                            
                             <li data-tab="buy"><button
-                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-dark transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out">ابحث عن عقارك المفضل</button>
+                                    class="font-recoleta leading-none px-[5px] sm:px-[10px] capitalize text-white transition-all text-base xl:text-[22px] before:absolute before:left-auto before:right-0 before:bottom-[-31px] before:z-10 before:rounded-full before:w-0 before:h-[3px] before:content-[''] before:bg-secondary relative before:transition-all ease-out" style="border:unset !important">ابحث عن عقارك المفضل</button>
                            
                            </li>
 
@@ -148,7 +124,7 @@
                     </div>
 
                     <div class="relative selectricc-border-none">
-                        
+                        <!--
                         <button
                             class="tab-toggle-btn px-[10px] py-[15px] absolute top-[0px] left-[-45px] border-l border-t border-b border-solid border-[#016450] bg-[rgb(236,250,247,0.8)] text-primary rounded-tl-[10px] rounded-bl-[10px]"
                             aria-label="svg icon">
@@ -174,10 +150,9 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
-
-
+-->
                         <div id="buy"
-                            class="tab-content bg-[rgb(236,250,247,0.8)] border border-solid border-[#016450] rounded-bl-[15px] rounded-br-[15px] rounded-tr-[15px] px-[15px] sm:px-[30px] py-[40px] active">
+                            class="tab-content search-box border border-solid border-[#016450] rounded-bl-[15px] rounded-br-[15px] rounded-tr-[15px] px-[15px] sm:px-[30px] py-[40px] active">
                             <form action="{{ route('filterweb') }}">
                                 <div class="advanced-searrch flex flex-wrap -mb-[45px]">
 
@@ -186,14 +161,12 @@
                                     <div
                                         class="advanced-searrch-list flex lg:border-r lg:border-primary lg:mr-[40px] xl:mr-[50px] last:mr-0 last:border-r-0 mb-[45px]">
                                         <div class="mr-4 self-start shrink-0">
-                                            <img src="assets/images/icon/property.svg" width="24" height="24"
-                                                alt="svg icon">
                                         </div>
 
                                         <div class="flex-1">
                                             <label for="property"
-                                                class="font-recoleta block capitalize text-dark text-[18px] xl:text-[25px] leading-none mb-1">نوع العقار</label>
-                                            <select name="property" id="property"
+                                                class="font-recoleta block capitalize text-white text-[18px] leading-none">نوع العقار</label>
+                                                <select name="property" id="property"
                                                 class="nice-select appearance-none bg-transparent text-tiny font-light cursor-pointer">
                                                 @foreach ($catogerys as $item)
                                                 <option   value="{{$item->id}}">{{$item->name}}</option>
@@ -208,14 +181,12 @@
                                 <div
                                     class="advanced-searrch-list flex lg:border-r lg:border-primary lg:mr-[40px] xl:mr-[50px] last:mr-0 last:border-r-0 mb-[45px]">
                                     <div class="mr-4 self-start shrink-0">
-                                        <img src="assets/images/icon/location.svg" width="24" height="24"
-                                            alt="svg icon">
                                     </div>
                                     <div class="flex-1">
                                         <label for="location"
-                                            class="font-recoleta block capitalize text-dark text-[18px] xl:text-[25px] leading-none mb-1">مساحة العقار للمتر</label>
-                                        <input id="location" type="text" placeholder="Choose location"
-                                            class="text-tiny placeholder:text-body leading-none font-light pr-3 focus:outline-none w-full bg-transparent">
+                                            class="font-recoleta block capitalize text-white text-[18px] leading-none mb-1">مساحة العقار للمتر</label>
+                                        <input id="location" type="text" placeholder="Choose location" style="border:unset !important"
+                                            class="text-black placeholder:text-black search-input leading-none font-light pr-3 focus:outline-none w-full">
                                     </div>
                                 </div>
 
@@ -224,12 +195,10 @@
                                     <div
                                         class="advanced-searrch-list flex lg:border-r lg:border-primary lg:mr-[40px] xl:mr-[50px] last:mr-0 last:border-r-0 mb-[45px]">
                                         <div class="mr-4 self-start shrink-0">
-                                            <img src="assets/images/icon/dollar-circle.svg" width="24" height="24"
-                                                alt="svg icon">
                                         </div>
                                         <div class="flex-1">
                                             <label for="price"
-                                                class="font-recoleta block capitalize text-dark text-[18px] xl:text-[25px] leading-none mb-1">حدد السعر العمله AED</label>
+                                                class="font-recoleta block capitalize text-white text-[18px] leading-none mb-1">حدد السعر العمله AED</label>
                                             <select name="price" id="price"
                                                 class="nice-select appearance-none bg-transparent text-tiny font-light cursor-pointer">
                                                 <option value="0">1000 الي 1</option>
@@ -245,16 +214,14 @@
 
 
                                     <div
-                                        class="advanced-searrch-list flex items-center lg:border-r lg:boprimaryborder-primaryD4D4] lg:mr-[40px] xl:mr-[50px] last:mr-0 last:border-r-0 mb-[45px] relative">
+                                        class="advanced-searrch-list flex lg:border-r lg:border-primary lg:mr-[40px] xl:mr-[50px]  mb-[45px] relative">
 
                                         <div class="mr-4 self-start shrink-0">
-                                            <img src="assets/images/icon/area.svg" width="24" height="24"
-                                                alt="svg icon">
                                         </div>
 
                                         <div class="flex-1">
                                             <label for="property-size"
-                                                class="font-recoleta block capitalize text-dark text-[18px] xl:text-[25px] leading-none mb-1">اختار  المكان</label>
+                                                class="font-recoleta block capitalize text-white text-[18px] leading-none mb-1">اختار  المكان</label>
                                             <select name="property-size" id="property-size"
                                                 class="nice-select appearance-none bg-transparent text-tiny font-light cursor-pointer">
 
@@ -266,7 +233,7 @@
                                             </select>
                                         </div>
 
-                                        <button class="search-btn absolute left-0 lg:left-[-60px] xl:left-[-70px]">
+                                        <button class="search-btn absolute left-0 lg:left-[-60px] xl:left-[-70px] ">
                                             <img src="assets/images/icon/search-outline.svg"
                                                 class="max-w-[30px] xl:w-auto" width="40" height="40"
                                                 alt="svg icon">
@@ -285,14 +252,12 @@
                                 </div>
 
 
-
+<!--
                                 <div class="advanced-searrch-hidden flex flex-wrap items-center mt-[45px] -mb-[45px]">
 
                                     <div
                                         class="advanced-searrch-list flex lg:border-r lg:border-primary lg:mr-[40px] xl:mr-[50px] last:mr-0 last:border-r-0 mb-[45px] search-list">
                                         <div class="mr-4 self-start shrink-0">
-                                            <img src="assets/images/icon/location.svg" width="24" height="24"
-                                                alt="svg icon">
                                         </div>
                                         <div class="flex-1">
                                             <label for="bedrooms10"
@@ -316,8 +281,6 @@
                                     <div
                                         class="advanced-searrch-list flex lg:border-r lg:border-primary lg:mr-[40px] xl:mr-[50px] last:mr-0 last:border-r-0 mb-[45px] search-list">
                                         <div class="mr-4 self-start shrink-0">
-                                            <img src="assets/images/icon/property.svg" width="24" height="24"
-                                                alt="svg icon">
                                         </div>
                                         <div class="flex-1">
                                             <label for="property9"
@@ -348,6 +311,7 @@
                                     </div>
 
                                 </div>
+-->
                             </form>
 
 
