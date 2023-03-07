@@ -14,6 +14,9 @@
   font-size: 16px;
   color: #333;
 }
+.leading-none,.label{
+    color:#000 !important
+}
 .fixed-size-image {
   width: 370px;
   height: 266px;
@@ -1362,7 +1365,7 @@
                         <h2
                             class="font-recoleta text-primary text-[24px] sm:text-[30px] xl:text-xl mb-[20px] max-w-[375px]">
                             تعليقات من عملائنا السعداء .<span class="text-secondary">.</span></h2>
-                        <p>يتوفر هنا عدد ضخم من العقارات للبيع والشراء والإيجار. يمكنك أيضًا العثور هنا على عقار للعيش المشترك ، لذا عليك أن تختار هنا وتستمتع به. </p>
+                        <p class="text-white">يتوفر هنا عدد ضخم من العقارات للبيع والشراء والإيجار. يمكنك أيضًا العثور هنا على عقار للعيش المشترك ، لذا عليك أن تختار هنا وتستمتع به. </p>
 
                         <!-- If we need navigation buttons -->
                         <div class="testimonial-pagination hidden sm:block">
