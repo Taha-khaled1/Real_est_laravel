@@ -87,7 +87,7 @@ Route::get('/morepropertyCato/{catogery}', 'morepropertyCato')->name('moreproper
 
 
 
-Route::middleware('auth')->group(function () {
+// Route::middleware()->group(function () {
 
   Route::controller(PropertyController::class)->group(function () {
         Route::get('/dashboard', 'dashboarddata')->name('dashboard')->middleware(['auth']);
@@ -144,7 +144,7 @@ Route::middleware('auth')->group(function () {
 
 
     
-});
+// });
 
 //Route::get('/{page}', ntroller@index');
 require __DIR__.'/auth.php';

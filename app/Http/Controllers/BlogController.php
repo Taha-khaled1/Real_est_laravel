@@ -70,7 +70,8 @@ class BlogController extends Controller
     public function show($id)
     {
         $blog = Blog::find($id);
-        return view('realest.singleblog', ['blogs'=>$blog]);
+        $catogerys= Catogery::all();
+        return view('realest.singleblog', ['blogs'=>$blog, 'catogerys'=>  $catogerys]);
     }
 
     /**

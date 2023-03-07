@@ -137,11 +137,19 @@ class PropertyController extends Controller
     }
 
 
+
+
     public function indexinsertweb()
     {
         $dataCatogery = Catogery::all();
-        return view('realest.property_insert_web',['catogery' => $dataCatogery]);
+        return view('realest.property_insert_web',['catogerys' => $dataCatogery]);
     }
+
+
+
+
+
+
     public function indexinsert()
     {
         $dataCatogery = Catogery::all();
