@@ -317,7 +317,7 @@ class PropertyController extends Controller
 
 
     public function filterweb(Request $request)
-     {return $request;
+     {
          $query = Property::query();
  
          // Apply filter by country

@@ -80,7 +80,7 @@
 
         </div>
 
-
+{{-- 
         <div class="grid grid-cols-12 mt-[50px] gap-[30px]">
             <div class="col-span-12">
                 <ul class="pagination flex flex-wrap items-center justify-center">
@@ -142,7 +142,7 @@
 
 
             </div>
-        </div>
+        </div> --}}
 
 
 
