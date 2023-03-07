@@ -12,6 +12,10 @@
 @endsection
 
 @section('content')
+
+
+@include('layouts.sub_screen', ['title' => 'تفاصيل العقار'])
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -61,9 +65,6 @@
 @endif
 
 
-
-
-@include('layouts.sub_screen', ['title' => 'تفاصيل العقار'])
 <!-- Popular Properties start -->
 <section class="popular-properties py-[80px] lg:py-[120px]">
     <div class="container">
