@@ -3043,7 +3043,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-delay: 500ms;
 }
 .form-field-color{
-  background-color: #8c8c8c;
+  background-color: #12159a;
 }
 header,footer{
   background-color: #223f5d !important;
@@ -3612,12 +3612,12 @@ input:focus {
 }
 
 .selectric-items li.highlighted {
-  background: #01614e;
+  background: #050414;
   color: #fff;
 }
 
 .selectric-items li:hover {
-  background: #01614e;
+  background: #050414;
   color: #fff;
 }
 

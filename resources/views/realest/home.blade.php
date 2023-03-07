@@ -501,7 +501,7 @@
                                                     <span
                                                         class="font-recoleta font-normal text-[24px] xl:text-lg text-primary group-hover:text-secondary transition-all">{{ $item->country }}</span>
                                                     <p
-                                                        class="font-light text-tiny capitalize text-secondary group-hover:text-primary transition-all" style="color: blue !important;">
+                                                        class="font-light text-tiny capitalize text-secondary group-hover:text-primary transition-all" style="color: white !important;">
                                                         {{ $item->count }}</p>
                                                 </div>
                                             </a>
@@ -548,8 +548,7 @@
                         class="font-recoleta text-primary text-[24px] sm:text-[30px] leading-[1.277] xl:text-xl capitalize mb-3">
                         نحن نقدم الاختيار الصحيح للممتلكات التي تحتاجها .
                         <span class="text-secondary">.</span></h2>
-                    <p
-                    >يتوفر هنا عدد ضخم من العقارات للبيع والشراء والإيجار. يمكنك أيضًا العثور هنا على عقار للعيش المشترك ، لذا يجب عليك اختيار الكثير من هنا والاستمتاع بخصم كبير.
+                    <p class="text-white">يتوفر هنا عدد ضخم من العقارات للبيع والشراء والإيجار. يمكنك أيضًا العثور هنا على عقار للعيش المشترك ، لذا يجب عليك اختيار الكثير من هنا والاستمتاع بخصم كبير.
 
                     </p>
 
@@ -559,7 +558,7 @@
                                 width="50" height="50" alt="about Image">
                             <div class="flex-1">
                                 <h3 class="font-recoleta text-primary text-[22px] xl:text-lg capitalize mb-2">صديقة للميزانية</h3>
-                                <p class="max-w-[315px]">العقارات صديقة للميزانية ، لذا لديك فرصة للعثور على أفضلها</p>
+                                <p class="max-w-[315px] text-white">العقارات صديقة للميزانية ، لذا لديك فرصة للعثور على أفضلها</p>
                             </div>
 
                         </div>
@@ -569,7 +568,7 @@
                             <div class="flex-1">
                                 <h3 class="font-recoleta text-primary text-[22px] xl:text-lg capitalize mb-2">موقع رئيسي
                                 </h3>
-                                <p class="max-w-[315px]">العقارات صديقة للميزانية ، لذا لديك فرصة للعثور على أفضلها</p>
+                                <p class="max-w-[315px] text-white">العقارات صديقة للميزانية ، لذا لديك فرصة للعثور على أفضلها</p>
                             </div>
 
                         </div>
@@ -579,7 +578,7 @@
                             <div class="flex-1">
                                 <h3 class="font-recoleta text-primary text-[22px] xl:text-lg capitalize mb-2">
                                     موثوق به من قبل ألف</h3>
-                                <p class="max-w-[315px]">العقارات صديقة للميزانية ، لذا لديك فرصة للعثور على أفضلها</p>
+                                <p class="max-w-[315px] text-white">العقارات صديقة للميزانية ، لذا لديك فرصة للعثور على أفضلها</p>
                             </div>
 
                         </div>
@@ -629,8 +628,8 @@
                   </div>
                   <div class="py-[20px] px-[20px]">
                     <h3><a href="{{ route('detelisscreen', $item->id) }}" class="font-recoleta leading-tight text-[22px] xl:text-lg text-white">{{$item->name}}</a></h3>
-                    <h4><a href="{{ route('detelisscreen', $item->id) }}" style="color: blue !important;">جمهورية الامارات العربية المتحدة</a></h4>
-                    <span class="font-light text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
+                    <h4><a href="{{ route('detelisscreen', $item->id) }}" style="color: white !important;">جمهورية الامارات العربية المتحدة</a></h4>
+                    <span class="font-light text-white text-sm">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
                     <div class=" relative">
                       <span class="font-recoleta text-primary px-[15px]">{{$item->country}}</span>
                       <hr class="my-2">
@@ -680,12 +679,12 @@
                            <div class="overflow-hidden rounded-md drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] form-field-color text-center transition-all duration-300 hover:-translate-y-[10px]">
                             <div class="relative property-image">
                                 <img src="{{ URL::asset($item->picture) }}" class="w-full h-full object-cover" loading="lazy" alt="Orchid Casel de Paradise.">
-                                <span class="absolute bottom-5 left-5 form-field-color p-[5px] rounded-[2px] text-secondary leading-none text-[14px] font-normal capitalize">for Sale</span>
+                                <span class="absolute bottom-5 left-5 form-field-color p-[5px] rounded-[2px] text-white leading-none text-[14px] font-normal capitalize">for Sale</span>
                               </div>
                               <div class="py-[20px] px-[20px]">
                                 <h3><a href="{{ route('detelisscreen', $item->id) }}" class="font-recoleta leading-tight text-[22px] xl:text-lg text-primary">{{$item->name}}</a></h3>
                                 
-                                <h4><a href="{{ route('detelisscreen', $item->id) }}" style="color: blue !important;">جمهورية الامارات العربية المتحدة</a></h4>
+                                <h4><a href="{{ route('detelisscreen', $item->id) }}" style="color: white !important;">جمهورية الامارات العربية المتحدة</a></h4>
 
 
                                 <span class="font-light text-sm text-white">{{$item->created_at->format('Y-m-d H:i:s')}}</span>
@@ -1006,7 +1005,7 @@
                             class="font-recoleta text-primary text-[24px] sm:text-[30px] leading-[1.277] xl:text-xl capitalize mb-[15px]">
                             تحقق دائمًا من أحدث منشور في المدونة .<span class="text-secondary">.</span></h2>
 
-                        <p>يتوفر هنا عدد ضخم من العقارات للبيع والشراء والإيجار. يمكنك أيضًا العثور هنا على عقار للعيش المشترك ، لذلك هناك الكثير من الفرص التي يمكنك اختيارها والاستمتاع بخصم كبير. </p>
+                        <p class="text-white">يتوفر هنا عدد ضخم من العقارات للبيع والشراء والإيجار. يمكنك أيضًا العثور هنا على عقار للعيش المشترك ، لذلك هناك الكثير من الفرص التي يمكنك اختيارها والاستمتاع بخصم كبير. </p>
                         <a href="blog-grid.html"
                             class="flex flex-wrap items-center text-secondary text-tiny mt-[20px]">مشاهدة الكل منشور
                             <svg class="ml-[10px]" width="26" height="11" viewBox="0 0 26 11"
@@ -1036,9 +1035,9 @@
                                     class="block leading-none font-normal text-[14px] text-secondary mb-[10px] relative before:absolute before:left-0 before:top-1/2 -translate-y-1/2 before:bg-secondary before:content-[''] before:w-[3px] before:h-[3px] before:rounded-full pl-[10px]">
                                     {{ $item->created_at->locale('ar')->diffForHumans() }}</span>
                                 <h3><a href="blog-details.html"
-                                        class="font-recoleta text-[22px] xl:text-[28px] leading-[1.285] text-primary block mb-[10px] hover:text-secondary transition-all">Tip’s
+                                        class="font-recoleta text-[22px] xl:text-[28px] leading-[1.285] text-white block mb-[10px] hover:text-secondary transition-all">Tip’s
                                         {{ $item->title}}</a></h3>
-                                        <p class="font-light text-overflow-ellipsis whitespace-nowrap max-w-[200px]">{{ \Illuminate\Support\Str::limit($item->content, 100, '...') }}</p>
+                                        <p class="font-light text-overflow-ellipsis whitespace-nowrap max-w-[200px] text-white">{{ \Illuminate\Support\Str::limit($item->content, 100, '...') }}</p>
                             </div>
                         </div>
 
