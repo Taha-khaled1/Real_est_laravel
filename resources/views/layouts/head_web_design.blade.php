@@ -21,7 +21,7 @@
                                 <ul class="list-none main-button-color drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap w-[890px] absolute top-[120%] left-1/2 translate-x-[-40%] xl:translate-x-[-45%] transition-all
                                     group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100 px-[40px] py-[45px]
                                     bg-contain bg-left-top bg-no-repeat
-                                    " style="background-image: url('unar.png');">
+                                    " style="background-image: url({{ URL::asset('unar.png') }});">
 
 
                                     <li>
