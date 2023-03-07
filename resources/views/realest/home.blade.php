@@ -178,7 +178,7 @@
 
                         <div id="buy"
                             class="tab-content bg-[rgb(236,250,247,0.8)] border border-solid border-[#016450] rounded-bl-[15px] rounded-br-[15px] rounded-tr-[15px] px-[15px] sm:px-[30px] py-[40px] active">
-                            <form action="#">
+                            <form action="{{ route('filterweb') }}">
                                 <div class="advanced-searrch flex flex-wrap -mb-[45px]">
 
                                  
@@ -196,7 +196,7 @@
                                             <select name="property" id="property"
                                                 class="nice-select appearance-none bg-transparent text-tiny font-light cursor-pointer">
                                                 @foreach ($catogerys as $item)
-                                                <option  value="{{$item->id}}">{{$item->name}}</option>
+                                                <option   value="{{$item->id}}">{{$item->name}}</option>
                                                 @endforeach
                                                
                                              

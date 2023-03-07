@@ -313,6 +313,78 @@ class PropertyController extends Controller
         return back();
         
     }
+
+
+
+    public function filterweb(Request $request)
+     {return $request;
+         $query = Property::query();
+ 
+         // Apply filter by country
+         if ($request->has('country')) {
+             $query->where('country', $request->input('country'));
+         }
+ 
+         // Apply filter by status
+         if ($request->has('status')) {
+             $query->where('status', $request->input('status'));
+         }
+ 
+         // Apply filter by category
+         if ($request->has('category_id')) {
+             $query->where('category_id', $request->input('category_id'));
+         }
+ 
+         // Apply filter by rental term
+         if ($request->has('rental_term')) {
+             $query->whereHas('property_details', function ($q) use ($request) {
+                 $q->where('rental_term', $request->input('rental_term'));
+             });
+         }
+ 
+         // Apply filter by building type
+         if ($request->has('building_type')) {
+             $query->whereHas('property_details', function ($q) use ($request) {
+                 $q->where('building_type', $request->input('building_type'));
+             });
+         }
+ 
+         // Apply filter by property direction
+         if ($request->has('property_direction')) {
+             $query->whereHas('property_details', function ($q) use ($request) {
+                 $q->where('property_direction', $request->input('property_direction'));
+             });
+         }
+ 
+         // Apply filter by number of rooms
+         if ($request->has('numbeer_room')) {
+             $query->whereHas('property_details', function ($q) use ($request) {
+                 $q->where('numbeer_room', $request->input('numbeer_room'));
+             });
+         }
+ 
+         // Apply filter by number of toilets
+         if ($request->has('numbeer_room')) {
+             $query->whereHas('property_details', function ($q) use ($request) {
+                 $q->where('numbeer_room', $request->input('numbeer_room'));
+             });
+         }
+     // Apply filter by price range
+        if ($request->has('price_min') && $request->has('price_max')) {
+            $query->whereHas('property_details', function ($q) use ($request) {
+                $q->whereBetween('price', [$request->input('price_min'), $request->input('price_max')]);
+            });
+        }
+            $properties = $query->where('status',1)->paginate(10);
+            $catogery = Catogery::all();
+            return view('realest.more_view',['property' => $properties,'catogerys' => $catogery]);  
+        }
+    
+
+
+
+
+
     public function recommended(Request $request)
     {
         $user =  Property::findorFail($request->id);

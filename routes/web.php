@@ -91,7 +91,8 @@ Route::get('/morepropertyCato/{catogery}', 'morepropertyCato')->name('moreproper
 
   Route::controller(PropertyController::class)->group(function () {
         Route::get('/dashboard', 'dashboarddata')->name('dashboard')->middleware(['auth']);
-
+        Route::get('/filterweb', 'filterweb')->name('filterweb');
+        Route::get('/showparoperty', 'show')->name('showparoperty')->middleware(['auth']);
         Route::get('/showparoperty', 'show')->name('showparoperty')->middleware(['auth']);
         Route::get('/propertys', 'index')->name('propertys')->middleware(['auth']);
         Route::get('/propertyinsertview', 'indexinsert')->name('propertyinsertview');
