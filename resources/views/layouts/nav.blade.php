@@ -10,183 +10,69 @@
         <nav class="offcanvas-menu">
             <ul>
                 <li class="relative block border-b-primary border-b first:border-t first:border-t-primary">
-                    <a href="#" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">Home</a>
-                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index.html">home 01</a></li>
-                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-2.html">home 02</a></li>
-                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-3.html">home 03</a></li>
-                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-4.html">home 04</a></li>
-                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-5.html">home 05</a></li>
-                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="index-6.html">home 06</a></li>
-                    </ul>
+                    <a href="{{ route('home') }}" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">الصفحه الرئيسيه</a>
                 </li>
                 <li class="relative block border-b-primary border-b">
-                    <a href="about.html" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">About</a>
-                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="about.html">About</a></li>
-
-                        <li><a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="about-v2.html">About v2</a></li>
-                    </ul>
-
+                    <a href="{{ route('profile.edit') }}" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">الاعدادات</a>
                 </li>
                 <li class="relative block border-b-primary border-b">
-                    <a href="#" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">Properties</a>
+                    <a href="#" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">عقارات</a>
                     <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
                         <li>
-                            <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">Properties</a>
+                            <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">عقارات اضيفت حديثا</a>
                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-
-
-
+                                @foreach ($catogerys as $item)
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="properties-v1.html"> properties v1</a>
+                                    <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="properties-v1.html">{{$item->name}}</a>
                                 </li>
-                                <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="properties-v2.html"> properties v2</a>
-                                </li>
-                                <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="add-properties.html">add properties </a>
-                                </li>
+                                @endforeach
 
                             </ul>
                         </li>
                         <li>
-                            <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">Properties with sidebar</a>
+                            <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">الأقتراحات</a>
                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-
                                 <li>
-                                    <a href="properties-left-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                        left side bar</a>
+                                    <a href="{{ route('newProperty') }}" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">عقارات اضيفت حديثا</a>
                                 </li>
                                 <li>
-                                    <a href="properties-right-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                        right side bar</a>
-                                </li>
-
-                                <li>
-                                    <a href="properties-list-left-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                        list left side bar</a>
-                                </li>
-
-                                <li>
-                                    <a href="properties-list-right-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                        list
-                                        right side bar</a>
+                                    <a href="{{ route('topView') }}" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">عقارات مميزه</a>
                                 </li>
                             </ul>
 
 
                         </li>
-                        <li>
-                            <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">Property Details</a>
-
-                            <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-
-                                <li>
-                                    <a href="add-properties.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">add
-                                        properties</a>
-                                </li>
-
-                                <li>
-                                    <a href="properties-details.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                        details</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
 
                     </ul>
                 </li>
-                <li class="relative block border-b-primary border-b"><a href="#" class="relative block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">Pages</a>
 
-                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-                        <li>
-                            <a href="service.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">Service</a>
-                        </li>
-                        <li>
-                            <a href="single-service.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">single service</a>
-                        </li>
-                        <li>
-                            <a href="contact-us.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">contact
-                                us</a>
-                        </li>
-                        <li>
-                            <a href="create-agency.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">create
-                                agency</a>
-                        </li>
-                        <li>
-                            <a href="login.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">login</a>
-                        </li>
-                        <li>
-                            <a href="register.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">register</a>
-                        </li>
-                    </ul>
+                <li class="relative block border-b-primary border-b">
+                    <a href="{{ route('blogview') }}" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">المدونه</a>
                 </li>
+                @guest
 
-                <li class="relative block border-b-primary border-b"><a href="#" class="relative block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">agency</a>
-
-                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-                        <li>
-                            <a href="agency.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agency</a>
-                        </li>
-                        <li>
-                            <a href="create-agency.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">create
-                                agency</a>
-                        </li>
-
-                        <li>
-                            <a href="agent.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agent</a>
-                        </li>
-
-                        <li>
-                            <a href="agency-details.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agency
-                                details</a>
-                        </li>
-
-                        <li>
-                            <a href="agent-details.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agent
-                                details</a>
-                        </li>
-
-                    </ul>
-
+                <li class="relative block border-b-primary border-b">
+                    <a href="{{ route('login') }}" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">تسجيل الدخول</a>
                 </li>
-
-                <li class="relative block border-b-primary border-b"><a href="#" class="relative block capitalize text-black hover:text-secondary text-base my-2 py-1 px-5">Blog</a>
-
-
-
-
-                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-                        <li>
-                            <a href="blog-grid.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
-                                grid</a>
-                        </li>
-                        <li>
-                            <a href="blog-grid-left-side-bar.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
-                                grid left side bar</a>
-                        </li>
-                        <li>
-                            <a href="blog-grid-right-side-bar.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
-                                grid right side bar</a>
-                        </li>
-                        <li>
-                            <a href="blog-details.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
-                                details</a>
-                        </li>
-
-                    </ul>
+                <li class="relative block border-b-primary border-b">
+                    <a href="{{ route('register') }}" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">تسجيل حساب جديد</a>
                 </li>
-                <li class="relative block border-b-primary border-b"><a href="contact.html" class="relative block capitalize text-black hover:text-secondary text-base my-2 py-1 px-5">Contact</a></li>
+                          
+                @endguest
+                @auth
+                <li class="relative block border-b-primary border-b">
+                    <a href="{{ route('logout') }}" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">تسجيل الخروج</a>
+                </li>
+                @endauth
+                <!--  -->
             </ul>
         </nav>
         <!-- offcanvas-menu end -->
-
+        @auth
         <div class="px-5 flex flex-wrap mt-3 sm:hidden">
-            <a href="#" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">Add
-                Property</a>
+            <a href="{{ route('propertyinsertweb') }}" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">إضافة عقار</a>
         </div>
+        @endauth
 
 
 

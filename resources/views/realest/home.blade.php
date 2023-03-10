@@ -102,7 +102,7 @@ button, input, optgroup, select, textarea{
         <!-- Addvanced search tab start -->
 
         <div
-            class="container mt-[80px] md:mt-[120px] lg:mt-[0px] z-[2] pl-[60px] lg:pl-[50px] 2xl::pl-[0px] lg:absolute lg:left-0 lg:right-0 lg:top-[100%] lg:translate-y-[-396px]">
+            class="search-container container mt-[80px] md:mt-[120px] lg:mt-[0px] z-[2] pl-[60px] lg:pl-[50px] 2xl::pl-[0px] lg:absolute lg:left-0 lg:right-0 lg:top-[100%] lg:translate-y-[-396px]">
             <div class="grid grid-cols-12">
 
                 <div class="col-span-12">
@@ -214,7 +214,7 @@ button, input, optgroup, select, textarea{
 
 
                                     <div
-                                        class="advanced-searrch-list flex lg:border-r lg:border-primary lg:mr-[40px] xl:mr-[50px]  mb-[45px] relative">
+                                        class="advanced-searrch-list advanced-searrch-list-custom  flex lg:border-r lg:border-primary lg:mr-[40px] xl:mr-[50px]  mb-[45px] relative">
 
                                         <div class="mr-4 self-start shrink-0">
                                         </div>
