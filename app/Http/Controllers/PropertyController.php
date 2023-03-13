@@ -174,7 +174,7 @@ class PropertyController extends Controller
     public function store(Request $request)
     {
        
-                 
+        
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'country' => 'required|string|max:255',
@@ -210,7 +210,7 @@ class PropertyController extends Controller
            'space.numeric' =>'يرجي ادخال المساحه عدد وليس اي شئ اخر',
            'price.numeric' =>'يرجي ادخال السعر عدد وليس اي شئ اخر',
 
-        ]);
+        ]);   
         $imagessss = $request->file('images');
       
         $filename = time().'.'.$imagessss[0]->getClientOriginalExtension();

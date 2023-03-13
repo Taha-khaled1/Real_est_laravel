@@ -1,4 +1,6 @@
+
 @extends('layouts.master_web')
+
 @section('css')
 
 @section('title')
@@ -68,19 +70,20 @@
 
         <div class="pt-[80px] lg:pt-[120px] add-properties-form-select">
             <div class="container">
-                <form action="#">
-
+                <form  action="{{ route("property.store") }}"  method="POST" > 
+                    {{ method_field('post') }}
+                    {{ csrf_field() }}
                     <div class="grid grid-cols-12 gap-x-[30px]">
 
                         <div class="mb-[45px] col-span-12 md:col-span-8">
                             <label class="text-white" class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary" for="property-title"> اسم العقار</label>
-                            <input id="property-title" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="الاسم">
+                            <input id="property-title"  name="name" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="الاسم">
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-4">
                             <label class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary" for="Price">سعر العقار</label>
                             <div class="relative">
-                            <input id="property-title"  class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="numbe requiredr" placeholder="السعر ..">
+                            <input id="property-title" name="price" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="numbe requiredr" placeholder="السعر ..">
                              
                             </div>
                         </div>
@@ -88,7 +91,7 @@
 
                         <div class="mb-[45px] col-span-12">
                             <label class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary" for="textarea">وصف العقار</label>
-                            <textarea class="h-[196px] xl:h-[360px] font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] resize-none" name="textarea" id="textarea" cols="30" rows="10" placeholder="اكتب الوصف هنا"></textarea>
+                            <textarea class="h-[196px] xl:h-[360px] font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] resize-none" name="description" id="textarea" cols="30" rows="10" placeholder="اكتب الوصف هنا"></textarea>
                         </div>
 
                     </div>
@@ -105,7 +108,7 @@
                         </div>
 
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="اسم الدوله">
+                            <input class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" name="country" required placeholder="اسم الدوله">
                         </div>
 
 
@@ -120,7 +123,7 @@
                             <label class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary" for="PropertyType1">عدد الحمامات</label>
 
                             <div class="relative">
-                                <select class="nice-select form-select" id="PropertyType1">
+                                <select class="nice-select form-select" id="PropertyType1" name="numbeer_toilet">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -140,7 +143,7 @@
                             <label class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary" for="PropertyStatus1">عدد الغرف</label>
 
                             <div class="relative">
-                                <select class="nice-select form-select" id="PropertyStatus1">
+                                <select class="nice-select form-select" id="PropertyStatus1" name="numbeer_room" >
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -168,7 +171,7 @@
 
                     <div class="grid grid-cols-12 gap-x-[30px]">
                         <div class="mb-[45px] col-span-12 md:col-span-6">
-                            <input id="Propertyinfo1" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" required placeholder="مساحة العقار لكل متر">
+                            <input id="Propertyinfo1" class="font-light w-full leading-[1.75] placeholder:opacity-100 placeholder:text-body border border-primary border-opacity-60 rounded-[8px] p-[15px] focus:border-[#FD6400] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] h-[60px] " type="text" name="space" required placeholder="مساحة العقار لكل متر">
                         </div>
 
 
@@ -178,7 +181,7 @@
 
 
                             <div class="relative">
-                                <select class="nice-select form-select" id="PropertyStatus1">
+                                <select class="nice-select form-select" id="PropertyStatus1" name="Rental_term">
                                     <option value="يومي">يومي</option>
                                     <option value="شهري">شهري</option>
                                     <option value="سنوي">سنوي</option>
@@ -201,7 +204,7 @@
 
 
                             <div class="relative">
-                                <select class="nice-select form-select" id="PropertyStatus1">
+                                <select class="nice-select form-select" id="PropertyStatus1" name="catogerie_id">
                                     @foreach ($catogerys as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
                                     @endforeach
@@ -220,7 +223,7 @@
 
 
                             <div class="relative">
-                                <select class="nice-select form-select" id="PropertyStatus1">
+                                <select class="nice-select form-select" id="PropertyStatus1"  name="property_direction" >
                                     <option value="شمالي">شمالي</option>
                                     <option value="غربي">غربي</option>
                                     <option value="جنوبي">جنوبي</option>
@@ -240,13 +243,13 @@
                     <div class="grid grid-cols-12 gap-x-[30px]">
                         <div class="mb-[45px] col-span-12">
 
-                            <label class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary">Add Images</label>
+                            <label class="mb-[20px] font-recoleta text-[18px] leading-none block text-primary">اضافة صوره</label>
                             <div class="py-[35px] px-[15px] flex flex-wrap items-center justify-center text-center border border-primary border-opacity-60 rounded-[8px]">
                                 <div class="relative">
-                                    <input class="absolute inset-0 z-[0] opacity-0 w-full" type="file" name="Images" id="Images">
+                                    <input class="absolute inset-0 z-[0] opacity-0 w-full" name="images[]" type="file" id="Images" multiple id="gallery-photo-add" enctype="multipart/form-data" multiple>
                                     <label for="Images" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[30px] py-[12px] capitalize font-medium text-white text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all flex flex-wrap items-center justify-center cursor-pointer"> <svg class="mr-[5px]" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M21.5853 8.39666C21.4868 8.25357 21.3542 8.1373 21.1995 8.05834C21.0448 7.97938 20.8729 7.94023 20.6992 7.94444H6.82698C6.53428 7.95684 6.25076 8.05025 6.00799 8.21425C5.76523 8.37825 5.57275 8.60641 5.45198 8.87333C5.44998 8.90181 5.44998 8.9304 5.45198 8.95888L3.66753 15.2778V4.27777H7.63365L9.22865 6.47166C9.28554 6.54951 9.36004 6.6128 9.44607 6.65635C9.53211 6.69989 9.62722 6.72246 9.72365 6.72221H19.5564C19.5564 6.39806 19.4277 6.08718 19.1984 5.85797C18.9692 5.62876 18.6584 5.49999 18.3342 5.49999H10.0353L8.62365 3.55666C8.50987 3.40095 8.36085 3.27438 8.18879 3.18728C8.01673 3.10019 7.8265 3.05505 7.63365 3.05555H3.66753C3.34338 3.05555 3.0325 3.18432 2.80329 3.41353C2.57408 3.64274 2.44531 3.95361 2.44531 4.27777V18.1439C2.45485 18.3638 2.55062 18.5711 2.71189 18.721C2.87316 18.8708 3.08695 18.9511 3.30698 18.9444H18.542C18.6783 18.9499 18.8126 18.9095 18.9234 18.8297C19.0341 18.75 19.115 18.6355 19.1531 18.5044L21.7136 9.27666C21.7614 9.12999 21.7747 8.97428 21.7524 8.82164C21.7302 8.66901 21.673 8.52357 21.5853 8.39666ZM18.0592 17.7222H4.21753L6.58865 9.28277C6.64651 9.20822 6.72869 9.15632 6.82087 9.1361H20.467L18.0592 17.7222Z" fill="#FAFAFA" />
-                                        </svg> Add Images</label>
+                                        </svg> اضافة صوره</label>
                                 </div>
                             </div>
                         </div>
@@ -257,14 +260,14 @@
 
 
 
-    <div class="container">
-        <div class="grid grid-cols-12 gap-x-[30px] mb-[-45px]">
+    <div class="container"  name="future[]" multiple="multiple">
+        <div class="grid grid-cols-12 gap-x-[30px] mb-[-45px]" name="future[]" multiple="multiple">
 
-            <div class="col-span-12 md:col-span-6 mb-[45px]">
-                <h3 class="mb-[40px] font-recoleta text-[18px] leading-none  text-primary">مميزات العقار
+            <div class="col-span-12 md:col-span-6 mb-[45px]" name="future[]" multiple="multiple">
+                <h3 class="mb-[40px] font-recoleta text-[18px] leading-none  text-primary" name="future[]" multiple="multiple">مميزات العقار
                 </h3>
-                <form action="/action_page.php" method="get" class="custom-check">
-                    <ul class="mb-[-30px] list-none text-[15px] lg:text-[16px] flex flex-wrap">
+              
+                    <ul class="mb-[-30px] list-none text-[15px] lg:text-[16px] flex flex-wrap" name="future[]" multiple="multiple" >
                         <li class="mb-[30px] capitalize w-1/2">
                             <input type="checkbox" id="checkbox" name="checkbox">
                             <label class="text-white" for="checkbox">سطح خاص</label>
@@ -321,7 +324,7 @@
 
 
                     </ul>
-                </form>
+             
 
                 <div class="mt-[50px] lg:mt-[80px]">
                     <button class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[40px] py-[15px] capitalize font-medium text-white text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">
@@ -339,6 +342,9 @@
             </div>
         </div>
     </div>
+
+
+
 </section>
 
                 </form>
