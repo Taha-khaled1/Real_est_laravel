@@ -12,6 +12,7 @@ use App\Models\Report ;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 
@@ -173,7 +174,7 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-       
+
         
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
@@ -190,7 +191,7 @@ class PropertyController extends Controller
             "Rental_term"=> 'required|string',
             'address' =>'required|string',
           //  "classification"=> "volvo",
-            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'images.*' => 'required|image|max:2048',
 
         ],[
             'name.required' =>'يرجي ادخال اسم العقار',
@@ -223,7 +224,7 @@ class PropertyController extends Controller
         $property->catogerie_id = $request->catogerie_id; 
         $property->user_id = Getuserid();  
         $property->picture =$path;
-        if (Getusertype()=='admin') {
+        if (Auth::User()->user_type=='admin') {
             $property->status =1; 
         } else {
             $property->status =0; 
@@ -263,7 +264,7 @@ class PropertyController extends Controller
         }
 
 
-        foreach ($request->future as $fut) {
+        foreach ($request->future as $fut) { 
             $model = new Facility();
             $model->facility = $fut;
             $model->property_id = $property->id;
@@ -274,7 +275,7 @@ class PropertyController extends Controller
 
 
 
-        session()->flash('Add', 'تم اضافة القسم بنجاح ');
+        session()->flash('Add', 'تم اضافة العقار بنجاح ');
         // $dataCatogery = Catogery::all();
         // return redirect('realest.property_insert_view',['catogery' => $dataCatogery]);
         return back();

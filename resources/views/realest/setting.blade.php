@@ -19,9 +19,9 @@
 								
 								<div class="pl-0">
 									<div class="main-profile-overview">
-										<div class="main-img-user profile-user">
-											<img alt="" src="{{URL::asset('logoapp (1).png')}}"><a class="fas fa-camera profile-edit" href="JavaScript:void(0);"></a>
-										</div>
+										
+											<img  src="{{URL::asset('BLOSSOM.png')}}" width="180px" height="150">        <a class="fas fa-camera profile-edit" href="JavaScript:void(0);"></a>
+									  	
 										<div class="d-flex justify-content-between mg-b-20">
 											<div>
 												<h5 class="main-profile-name">{{$setting->company_name}}</h5>

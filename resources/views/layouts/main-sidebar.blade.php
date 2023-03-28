@@ -5,14 +5,14 @@
 		<div class="app-sidebar__user clearfix">
 			<div class="dropdown user-pro-body">
 				<div class="">
-					<img alt="user-img" class="avatar avatar-xl brround" src="{{URL::asset('logoapp (1).png')}}"><span class="avatar-status profile-status bg-green"></span>
+					<img  src="{{URL::asset('BLOSSOM.png')}}" width="160px"> 
 				</div>
 				<div class="user-info">
 					<h4 class="font-weight-semibold mt-3 mb-0">{{Getusername()}}</h4>
 					<span class="mb-0 text-muted">{{Getuseremail()}}</span>
 				</div>
 			</div>
-		</div>
+		</div>  
 		<ul class="side-menu">
 			<li class="side-item side-item-category">الرئيسيه</li>
 			<li class="slide">

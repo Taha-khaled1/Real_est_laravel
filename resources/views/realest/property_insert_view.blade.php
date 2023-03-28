@@ -129,6 +129,9 @@ background-color: #33475b;
                     <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
 						<!--div-->
 						<div class="card">
+
+
+
 							<div class="card-body">
 
 								<div class="main-content-label mg-b-5">
@@ -300,12 +303,19 @@ background-color: #33475b;
                                     </div>
                                 </div>
                                
+
+   
+
+
+
                                 </div>
+
+
                                 <div id="map" style="height: 500px;width: 1000px; margin: 0 auto;"></div>
-                           <p></p>
-                           <p></p>
-                           <h3></h3>
-                            <button type="submit" class="btn btn-danger" style="width:200px; height:50px; background-color: blue; color:white; margin: 0 auto;">حفظ العقار</button>
+                      <br>
+                      <p></p>
+                                <button type="submit" class="btn btn-danger"
+                                style="width:200px; height:50px; background-color: blue; color:white; margin: 0 auto;">حفظ العقار</button>
                         
 				    </div>
 				<!-- row closed -->

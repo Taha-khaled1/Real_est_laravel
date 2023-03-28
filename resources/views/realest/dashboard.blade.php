@@ -149,11 +149,11 @@
 
 
 
-				</div> --}}
+				</div> 
 				<!-- row closed -->
 
 				<!-- row opened -->
-				<div class="row row-sm">
+				<div class="row row-sm">  
 					<div class="col-xl-4 col-md-12 col-lg-12">
 						<div class="card">
 							<div class="card-header pb-1">

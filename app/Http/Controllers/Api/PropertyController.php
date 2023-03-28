@@ -198,7 +198,13 @@ class PropertyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {     
+        
+        
+        
+     
+        
+ 
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'country' => 'required|string|max:255',
@@ -282,10 +288,10 @@ class PropertyController extends Controller
         $image->image_path = $path;
         $image->property_id = $property->id;
         $image->save();
-     
+       
         $futuress = explode(',', $request->future);
 
-        foreach ($futuress as $fut) {
+        foreach ($futuress as $fut) { 
             $model = new Facility();
             $model->facility = $fut;
             $model->property_id = $property->id;

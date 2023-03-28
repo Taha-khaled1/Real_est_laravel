@@ -16,13 +16,13 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->user_type=="admin") { 
+        if (auth()->user()->user_type=="admin") {  
             return $next($request);  // الكلمه دي يعني هيكمل عادي ويوجه للروت اللي طلبه
         
            
             
         }
         
-        return redirect('404'); 
+        return redirect('home'); 
     }
 }

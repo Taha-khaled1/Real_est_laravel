@@ -81,7 +81,7 @@
 
                                 <a href="{{ route('blogview') }}" class="transition-all hover:text-secondary">المدونه</a>
                   
-
+  
                             </li>
 
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">

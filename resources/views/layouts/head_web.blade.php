@@ -26,4 +26,4 @@
 
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="{{URL::asset('assets/css/styleweb.css')}}" />
+    <link rel="stylesheet" href="{{URL::asset('assets/css/styleweb.css')}}" />  
