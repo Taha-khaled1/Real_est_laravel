@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\CountryController;
 use App\Http\Controllersntroller;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CatogeryController;
@@ -119,7 +121,21 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/catogeryupdate', 'update')->name('catogery.update');
         Route::post('/catogerydestroy', 'destroy')->name('catogery.destroy');
     });
-
+    Route::controller(CountryController::class)->group(function () {
+        // Route::get('/catogery', 'index')->name('catogery');
+         Route::get('/countryview', 'index')->name('countryview');
+         Route::post('/countrystore', 'store')->name('country.store');
+         Route::post('/countryupdate', 'update')->name('country.update');
+         Route::post('/countrydestroy', 'destroy')->name('country.destroy');
+     });
+    
+     Route::controller(CityController::class)->group(function () {
+        // Route::get('/catogery', 'index')->name('catogery'); 
+         Route::get('/cityview', 'index')->name('cityview');
+         Route::post('/citystore', 'store')->name('city.store');
+         Route::post('/cityupdate', 'update')->name('city.update');
+         Route::post('/citydestroy', 'destroy')->name('city.destroy');
+     });
 
     Route::controller(SettingController::class)->group(function () {
         Route::get('/setting', 'index')->name('setting');
