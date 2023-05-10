@@ -18,9 +18,7 @@ class AdminMiddleware
     {
         if (auth()->user()->user_type=="admin") {  
             return $next($request);  // الكلمه دي يعني هيكمل عادي ويوجه للروت اللي طلبه
-        
-           
-            
+
         }
         
         return redirect('home'); 

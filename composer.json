@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3||^8.0",
+        "symfony/http-foundation": "^6.2.7",
         "guzzlehttp/guzzle": "^7.2",
         "ichtrojan/laravel-otp": "^1.4",
         "intervention/image": "^2.7",

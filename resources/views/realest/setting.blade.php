@@ -225,7 +225,7 @@
 									<div class="form-group ">
 										<div class="row">
 											<div class="col-md-3">
-												<label class="form-label">جوجل</label>
+												<label class="form-label">انستقرام</label>
 											</div>
 											<div class="col-md-9">
 												<input type="text" class="form-control"  placeholder="google" value="{{$setting->google}}" name="google" id="google">
@@ -256,15 +256,14 @@
 									<div class="form-group ">
 										<div class="row">
 											<div class="col-md-3">
-												<label class="form-label"  name="example" id="example">معلومات السيرة الذاتية</label>
+												<label class="form-label"  name="example" id="example">الوصف</label>
 											</div>
 											<div class="col-md-9">
-												<textarea class="form-control" name="example-textarea-input" rows="4" placeholder="">{{$setting->biographical_information}}</textarea>
+												<textarea class="form-control" name="aboutcompany" rows="4" placeholder="">{{$setting->biographical_information}}</textarea>
 											</div>
 										</div>
 									</div>
 							
-								
 							</div>
 							<div class="card-footer text-left">
 								<button type="submit" class="btn btn-primary waves-effect waves-light">تحديث البروفيل</button>

@@ -123,7 +123,7 @@
 
     <!-- service Section Start-->
 
-    <section class="py-[80px] lg:py-[120px]">
+    {{-- <section class="py-[80px] lg:py-[120px]">
         <div class="container">
             <div class="grid grid-cols-12">
                 <div class="col-span-12">
@@ -174,7 +174,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- service Section End-->
 

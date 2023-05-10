@@ -68,10 +68,25 @@ class SettingController extends Controller
      * @param  \App\Models\Setting  $setting
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
-    {
-        return $request;
-    }
+    
+        public function update(Request $request)
+        {
+        $setting= Setting::first();
+        $setting->company_name =$request->username;
+        $setting->email =$request->email;
+        $setting->website_link =$request->Website;
+        $setting->company_phone =$request->phone;
+        $setting->company_address =$request->address;
+        $setting->twitter =$request->twitter;
+        $setting->facebook =$request->facebook;
+        $setting->google =$request->google;
+        $setting->linkedin =$request->linkedin;
+        $setting->github =$request->github;
+        $setting->biographical_information = $request->aboutcompany;
+        $setting->save();
+       return back();
+        }
+    
 
     /**
      * Remove the specified resource from storage.

@@ -1,1 +1,1 @@
-welcome
+{{$data->name}}
