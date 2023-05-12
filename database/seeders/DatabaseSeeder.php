@@ -40,6 +40,8 @@ class DatabaseSeeder extends Seeder
             ReportTableSeeder::class,
             EnquyrisTableSeeder::class,
             BlogsTableSeeder::class,
+            CountryTableSeeder::class,
+            CityTableSeeder::class,
         ]);
     }
 
