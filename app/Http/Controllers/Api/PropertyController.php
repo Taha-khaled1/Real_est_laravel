@@ -307,7 +307,8 @@ class PropertyController extends Controller
         return response()->json( [            
             'status_code' => 200,
             'message' => 'Success',
-            'property' => $properties->where('status',1)],200);
+            'property' => $properties->where('status',1)],200
+        ); 
        
     
     }
